@@ -9,13 +9,7 @@ Grado en Ingeniería Mecánica | Marzo 2026
 
 Memoria técnica para el diseño y dimensionamiento de una instalación completa 
 de vapor industrial destinada al suministro de energía térmica a una parcela 
-industrial. El proyecto abarca:
-
-- Red de distribución de vapor sobrecalentado (220°C, 10 bar)
-- Red de retorno de condensados con vapor flash
-- Caldera Viessmann VITOMAX 100-HS (5400 kg/h)
-- 4 consumidores industriales (C1-C4)
-- Aislamiento térmico según RITE/IDAE
+industrial. 
 
 ---
 
