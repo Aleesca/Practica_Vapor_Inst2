@@ -1,0 +1,212 @@
+\ProvidesPackage{preamble}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\AddToHook{cmd/section/before}{\clearpage}	%Seccion en nueva pg.
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage{textcase}
+\usepackage{anyfontsize}
+\usepackage{mathptmx}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[bottom]{footmisc}  % Fuerza footnotes al final de la página
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{graphicx}
+\usepackage{tocloft}
+\usepackage{float}  % Permite añadir H para poder forzar posiciones de figuras.
+\usepackage{url}    % Para escritura de URLs.
+\usepackage{cite}   % Manejo de citas en estilo IEEE y controla orden con \bstctlcite
+\usepackage{tocloft}   %
+\usepackage{etoolbox} % Para modificar el comportamiento de \appendix
+\usepackage{pdflscape}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{tabularray}
+\usepackage{booktabs}  % Tablas con \toprule, \midrule, \bottomrule
+\usepackage{tikz}
+\usepackage{pgf}
+\usetikzlibrary{babel,external}
+\tikzexternalize[prefix=TikZ-Cache/] % Crea una carpeta para las imágenes pre-compiladas
+
+
+
+% --- AJUSTE DE ESPACIADO PARA TÍTULOS DE ÍNDICES ---
+
+% Numeracion de imagenes y tablas
+\usepackage{chngcntr} 			
+\counterwithin{figure}{section} % Añade 1.1 en lugar de 1.
+\counterwithin{table}{section}
+
+% Numeracion de ecuaciones
+\usepackage{amsmath}
+\usepackage{amssymb}  % Para símbolos matemáticos como \checkmark
+\numberwithin{equation}{section}	% Añade 1.1 ...
+
+% Formato de pagina, margenes...
+\pagestyle{fancy}	
+ 	\geometry{
+ 	a4paper,
+ 	left=30mm,
+ 	top=30mm,
+	bottom=25mm,
+	right=25mm,
+	headheight = 2cm
+ 	}
+\setlength{\parindent}{0.5cm}
+ 
+% Formato de titulos, subtitulos...
+\titleformat{\section}{\normalfont\fontsize{28pt}{28pt}\selectfont\bfseries}{\thesection.}{0.5em}{}
+
+\titleformat{\subsection}{\normalfont\fontsize{14pt}{14pt}\selectfont\bfseries\MakeTextUppercase}{\thesubsection.}{0.5em}{}
+
+\titleformat{\subsubsection}{\normalfont\fontsize{12pt}{12pt}\selectfont\bfseries}{\thesubsubsection.}{0.5em}{}
+
+\titlespacing*{\section}{0pt}{0pt}{12pt}	% Linea debajo
+\titlespacing*{\subsection}{0pt}{18pt}{12pt} 
+ 
+% Pies de imagen y tabla
+\usepackage{caption}
+\usepackage{subcaption} % Para subfiguras
+\DeclareCaptionFont{fuenteimg}{\normalfont\fontsize{12pt}{12pt}\selectfont}	% Define fuente pie a 12 pt
+\captionsetup[figure]{font=fuenteimg,labelsep=period} %La pone
+\captionsetup[table]{font=fuenteimg,labelsep=period}
+\captionsetup[subfigure]{font=fuenteimg,labelsep=period,justification=centering} % Alinea captions de subfiguras centrados 
+
+% Encabezado y pie
+\fancyhf{}
+\fancyhf{} 
+\lhead{\includegraphics[height=1.2cm]{Figuras/ule.jpg}}
+\chead{Escuela de Ingenierías \\ Industrial, Informática y Aeroespacial}
+\rhead{Página \textbf{\thepage} de \textbf{\pageref*{LastPage}}} %El * en \pageref quita la ref. que añade hyperref por error.
+\lfoot{Instalaciones II}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+% Ajusta el ancho de las líneas del encabezado y pie al ancho del texto
+\setlength{\headwidth}{\textwidth}
+
+% Configuración para evitar que el texto sobresalga de los márgenes
+\sloppy  % Permite mayor flexibilidad en el espaciado entre palabras
+\emergencystretch=1em  % Espacio adicional para evitar desbordamiento
+\tolerance=2000  % Tolerancia al espaciado entre palabras
+\hbadness=2000   % Suprime advertencias de overfull hbox menores
+
+
+% Modifica table of contents (TOC)
+\renewcommand{\cftsubsecfont}{\scshape} %Subsec en mayuscula en TOC
+
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} %Pts en sec.
+
+\renewcommand{\cfttoctitlefont}{\normalfont\fontsize{28pt}{28pt}\selectfont\bfseries} % Cambia fuente de la plabra "Indice"
+\setlength{\cftaftertoctitleskip}{2cm} % Espacio entre secciones en TOC
+\cftsetindents{section}{1em}{1em} % Deja los numeros separados                                                                                                                                
+\cftsetindents{subsection}{1em}{2.5em} % Aumenta espacio para numeración de subsecciones  
+\setlength{\cftsubsecindent}{\dimexpr\cftsecindent+\cftsecnumwidth} % Deja las sec y subsec con sangrado
+\setlength{\cftsubsubsecindent}{\dimexpr\cftsubsecindent+\cftsubsecnumwidth}
+
+% Modifica List of Figures LOF
+\renewcommand{\cftloftitlefont}{\normalfont\fontsize{18pt}{18pt}\selectfont\bfseries} % fuente de "Índice de figuras (LOF)"
+\setlength{\cftafterloftitleskip}{1cm}
+% Ajuste de indentación y ancho de número para figuras en LOF
+% Sangría para List of Figures: indentación y anchura del número
+\cftsetindents{figure}{1.5em}{1cm}
+% restaurar comportamiento predeterminado de presentación de número
+%\renewcommand{\cftfigpresnum}{Figura~\thefigure\quad}
+%\renewcommand{\cftfigaftersnum}{}
+
+% Modifica List of Tables LOT
+\renewcommand{\cftlottitlefont}{\normalfont\fontsize{18pt}{18pt}\selectfont\bfseries} % fuente de "Índice de tablas (LOT)"
+\setlength{\cftafterlottitleskip}{1cm}
+% Ajuste de indentación y ancho de número para tablas en LOT
+% Sangría para List of Tables: indentación y anchura del número
+\cftsetindents{table}{1.5em}{1cm}
+% restaurar comportamiento predeterminado de presentación de número
+%\renewcommand{\cfttabpresnum}{Tabla~\thetable\quad}
+%\renewcommand{\cfttabaftersnum}{}
+
+% Se activan hipervinculos
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linktoc=all,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdfstartview={FitH},
+    pdfpagemode={UseNone}
+}
+
+% Redefinir formato de referencias de figuras y tablas
+\AtBeginDocument{%
+  \renewcommand{\figureautorefname}{Figura}%
+  \def\figurename{Figura}%
+  \renewcommand{\tableautorefname}{Tabla}%
+  \def\tablename{Tabla}%
+}
+
+% Comando robusto para referencias de figuras
+\makeatletter
+\newcommand{\figref}[1]{%
+  \hyperref[#1]{Figura~\ref*{#1}}%
+}
+
+% Comando robusto para referencias de tablas
+\newcommand{\tabref}[1]{%
+  \hyperref[#1]{Tabla~\ref*{#1}}%
+}
+
+% Comando robusto para referencias de anejos
+\newcommand{\anejoref}[1]{%
+  \hyperref[#1]{Anexo~\ref*{#1}}%
+}
+
+% Comando robusto para referencias de apartados
+\newcommand{\apartadoref}[1]{%
+  \hyperref[#1]{apartado~\ref*{#1}}%
+}
+\newcommand{\Apartadoref}[1]{%
+  \hyperref[#1]{Apartado~\ref*{#1}}%
+}
+\makeatother
+
+% --- Custom Appendix Style ---
+\newcounter{appendixcounter}
+\renewcommand{\theappendixcounter}{\arabic{appendixcounter}} % Anexo 1, Anexo 2
+
+\newcommand{\myappendix}[1]{%
+    \cleardoublepage
+    \thispagestyle{empty}
+    \refstepcounter{appendixcounter}
+    \vspace*{\fill}
+    \begin{center}
+        \parbox{0.9\textwidth}{\centering\Huge\bfseries Anexo \theappendixcounter. #1}
+    \end{center}
+    \vspace*{\fill}
+    \addcontentsline{toc}{section}{Anexo \theappendixcounter: #1}
+    \normalfont % Reset font to normal
+    \cleardoublepage
+}
+    \cleardoublepage
+    \thispagestyle{empty}
+    \refstepcounter{appendixcounter}
+    \vspace*{\fill}
+    \begin{center}
+        \parbox{0.9\textwidth}{\centering\Huge\bfseries Anexo \theappendixcounter. #1}
+    \end{center}
+    \vspace*{\fill}
+    \addcontentsline{toc}{section}{Anexo \theappendixcounter: #1}
+    \normalfont % Reset font to normal
+    \cleardoublepage
+}
+
+
+
+% Datos del documento
+%\title{}
+%\author{Alberto España Carrete}

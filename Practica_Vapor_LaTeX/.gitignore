@@ -1,0 +1,15 @@
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.pdf
+*.synctex*
+*.auxlock
+TikZ-Cache/
+*.synctex(busy)
+*.synctex(busy).gz
+*.synctex.gz
+*.yaml
+*.pdf

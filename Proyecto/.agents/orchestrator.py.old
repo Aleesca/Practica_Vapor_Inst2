@@ -1,0 +1,83 @@
+import os
+import re
+
+# Configuración de rutas
+PLAN_FILE = 'Planning/index.md'
+CONTENT_FILE = 'Practica_Vapor_LaTeX/staging.tex'
+PROGRESS_FILE = '.agents/progress.txt'
+
+def get_next_task():
+    """Busca la primera tarea con [ ] y devuelve su índice, descripción y todas las líneas."""
+    if not os.path.exists(PLAN_FILE):
+        return None, None, []
+    
+    with open(PLAN_FILE, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+    
+    for i, line in enumerate(lines):
+        # Regex compatible con Python 3.13 para detectar casillas [ ]
+        match = re.search(r'^\s*[\-\*]\s*\[\s*\]\s*(.*)', line)
+        if match:
+            return i, match.group(1).strip(), lines
+    return None, None, lines
+
+def generate_prompt(task_desc):
+    """Crea el prompt de sistema para una ventana de contexto limpia."""
+    learnings = ""
+    if os.path.exists(PROGRESS_FILE):
+        try:
+            with open(PROGRESS_FILE, 'r', encoding='utf-8') as f:
+                learnings = f.read().strip()
+        except:
+            pass
+    
+    # Usamos f-string con doble barra para evitar SyntaxWarning en \i
+    prompt = f"""
+### Ralph Loop: Tarea de Redacción Aislada
+**Tarea:** {task_desc}
+
+**Instrucciones de Contexto Limpio:**
+1. Activa `steam_knowledge_skill` para investigar los datos técnicos en `Anotaciones/` y manuales.
+2. Activa `latex_drafting_skill` para formatear el resultado siguiendo `plantilla.tex`.
+3. Respeta las reglas de `booktabs` para tablas y `\\includegraphics` con subcarpetas para figuras.
+4. **Aprendizajes Previos:** {learnings if learnings else 'Ninguno'}
+
+Responde ÚNICAMENTE con el código LaTeX resultante para esta sección.
+"""
+    return prompt
+
+def validate_latex(code):
+    """Verifica estándares de LaTeX usando raw strings (r"") para evitar SyntaxWarnings."""
+    issues = []
+    if r"\begin{figure}" in code and r"\includegraphics" not in code:
+        issues.append("Entorno de figura sin comando de imagen.")
+    if r"\begin{tabular}" in code and r"\toprule" not in code:
+        issues.append("Tabla detectada sin estándar booktabs.")
+    if r"\begin{table}" in code and r"\caption" not in code:
+        issues.append(r"Tabla sin leyenda (\caption).")
+    return issues
+
+def mark_task_completed(task_index, lines):
+    """Actualiza index.md marcando la tarea como [x]."""
+    lines[task_index] = lines[task_index].replace('[ ]', '[x]')
+    with open(PLAN_FILE, 'w', encoding='utf-8') as f:
+        f.writelines(lines)
+
+def append_to_tex(content):
+    """Añade el código generado al archivo de staging LaTeX."""
+    if not os.path.exists(CONTENT_FILE):
+        with open(CONTENT_FILE, 'w', encoding='utf-8') as f:
+            f.write("% Archivo generado por el Orquestador Ralph Loop\n")
+            
+    with open(CONTENT_FILE, 'a', encoding='utf-8') as f:
+        f.write("\n" + content + "\n")
+
+if __name__ == "__main__":
+    idx, task, all_lines = get_next_task()
+    if task:
+        print(f"--- Ralph Loop Orchestrator ---")
+        print(f"Tarea pendiente: {task}")
+        prompt = generate_prompt(task)
+        print(f"\nGenerando prompt para el agente:\n{prompt}")
+    else:
+        print("No se encontraron tareas pendientes en Planning/index.md.")

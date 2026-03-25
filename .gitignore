@@ -1,0 +1,50 @@
+# Windows
+desktop.ini
+Thumbs.db
+ehthumbs.db
+
+# IDE / Editor
+.vscode/
+.codex/
+.gemini/
+.opencode/
+
+# Python
+.ruff_cache/
+__pycache__/
+*.pyc
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.synctex*
+*.auxlock
+*.fdb_latexmk
+*.fls
+*.bbl
+*.blg
+*.run.xml
+*.bcf
+*.indent.log
+*.staging.log
+*.plot.log
+
+# LaTeX backups and compiled PDFs (optional - remove if you want to track PDFs)
+*.backup
+
+# TikZ cache
+TikZ-Cache/
+
+# Windows reserved names
+nul
+
+# Old git backup
+Practica_Vapor_LaTeX_git_backup/
+
+# Misc
+*.tmp
+*.bak

@@ -1,0 +1,476 @@
+========================================
+[2026-03-25 | Sesión 1]
+Tarea completada: 1.1 - Objetivo del proyecto
+
+Fuentes consultadas:
+- Proyecto/Especificaciones/intro_especs.md
+- Proyecto/Anotaciones/datos_partida.md
+- Proyecto/Anotaciones/intro.md
+- Proyecto/Anotaciones/aislamiento.md
+- Proyecto/Especificaciones/bases_diseño_seleccion_equipos_specs.md
+
+Aspectos clave:
+- Instalación de vapor industrial en Salamanca (parcela A3)
+- 4 consumidores (C1-C4) con caudales 340-2038 kg/h
+- Vapor sobrecalentado 220°C, caldera Viessmann VITOMAX 100-HS
+- Instalación existente sin ampliaciones futuras
+
+Código generado: 45 líneas LaTeX
+Validación: EXITOSA (PASS)
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (checkbox marcado)
+- Practica_Vapor_LaTeX/staging.tex (código añadido)
+========================================
+
+========================================
+[2026-03-25 | Sesión 1]
+Tarea completada: 1.2 - Descripción de la planta y ubicación
+
+Fuentes consultadas:
+- Proyecto/Anotaciones/datos_partida.md
+- Proyecto/Anotaciones/intro.md
+- Proyecto/Anotaciones/Red_vapor.md
+- Proyecto/Anotaciones/enterramiento.md
+- Proyecto/Especificaciones/intro_especs.md
+
+Aspectos clave:
+- Ubicación: Salamanca, parcela A3, altitud 700 m
+- Topología ramificada con 3 nodos (P, S, T)
+- 7 tramos de red, longitud total 351.93 m
+- 6 tramos aéreos (5-6 m altura), 1 soterrado (P-C1, 88.19 m)
+- Figura incluida: plano_vapor-Parcela.pdf
+
+Correcciones aplicadas:
+- Añadido paquete booktabs a preamble.sty
+
+Código generado: 72 líneas LaTeX
+Validación: EXITOSA (con corrección de dependencia)
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (checkbox marcado)
+- Practica_Vapor_LaTeX/staging.tex (código añadido, líneas 46-117)
+- Practica_Vapor_LaTeX/preamble.sty (añadido booktabs)
+========================================
+
+========================================
+[2026-03-25 | Sesión 1]
+Tarea completada: 1.3 - Puntos de consumo y requerimientos iniciales
+
+Fuentes consultadas:
+- Proyecto/Anotaciones/datos_partida.md
+- Proyecto/Anotaciones/Red_vapor.md
+- Proyecto/Especificaciones/intro_especs.md
+- Proyecto/Especificaciones/bases_diseño_seleccion_equipos_specs.md
+- Proyecto/Especificaciones/red_vapor_specs.md
+- Proyecto/Especificaciones/red_condensados_specs.md
+- Proyecto/Anotaciones/Directrices_Dimensionamiento.md
+
+Aspectos clave:
+- 4 consumidores: C1 (679 kg/h, 4 bar), C2 (1359 kg/h, 7 bar), C3 (340 kg/h, 7 bar), C4 (2038 kg/h, 7 bar)
+- Caudal total: 4416 kg/h → 5078.4 kg/h (K=1.15) → 5400 kg/h (comercial)
+- Vapor sobrecalentado: 220°C, 9.068 bar(g), entalpía 2874 kJ/kg
+- C1 requiere válvula reductora (presión disponible 8.818 bar > requerida 4 bar)
+- 3 subsubsections: caudal total, condiciones vapor, consideraciones C1
+
+Código generado: 87 líneas LaTeX (líneas 118-204)
+Validación: EXITOSA (PASS)
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (checkbox marcado)
+- Practica_Vapor_LaTeX/staging.tex (código añadido)
+========================================
+
+=== SECCIÓN 1 COMPLETADA ===
+Total líneas staging.tex: 204
+Subsecciones: 1.1, 1.2, 1.3
+Próxima: Sección 2 - Metodología
+========================================
+
+========================================
+[2026-03-25 | Sesión 1]
+Tarea completada: 2.1.1 - Propiedades del vapor utilizado
+
+Fuentes consultadas:
+- Proyecto/Anotaciones/datos_partida.md
+- Proyecto/Especificaciones/intro_especs.md
+- Proyecto/Especificaciones/bases_diseño_seleccion_equipos_specs.md
+- Proyecto/Especificaciones/red_vapor_specs.md
+- Proyecto/Especificaciones/red_condensados_specs.md
+- Proyecto/Especificaciones/conclusiones_y_limitaciones_specs.md
+
+Aspectos clave:
+- Primera tarea de Sección 2: Metodología
+- Vapor sobrecalentado: 220°C, 10 bar(a), ΔT ≈ 40°C sobre saturación
+- Propiedades: h=2874 kJ/kg, ρ=4.85 kg/m³, μ=1.74×10⁻⁵ Pa·s
+- Comparación con vapor saturado a misma presión
+- 4 ventajas técnicas del vapor sobrecalentado documentadas
+
+Estructura generada:
+- \section{Metodología}
+- \subsection{Bases de Diseño y Selección de Equipos Generales}
+- \subsubsection{Propiedades del vapor utilizado}
+
+Código generado: 90 líneas LaTeX (líneas 205-294)
+Validación: EXITOSA (PASS) - 50/50 puntos
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (checkbox marcado)
+- Practica_Vapor_LaTeX/staging.tex (código añadido)
+========================================
+
+========================================
+[2026-03-25 | Sesión 1]
+Tarea completada: 2.1.2 - Normativa de aplicación (RITE, IDAE, etc.)
+
+Fuentes consultadas:
+- Proyecto/Especificaciones/aislamiento_termico_detalles_instalacion_specs.md
+- Proyecto/Especificaciones/intro_especs.md
+- Proyecto/Especificaciones/red_vapor_specs.md
+- Proyecto/Especificaciones/red_condensados_specs.md
+- Proyecto/Anotaciones/aislamiento.md
+- Proyecto/Anotaciones/Directrices_Dimensionamiento.md
+- Proyecto/Anotaciones/adicional/Seleccion_diametros-codos.md
+
+Aspectos clave:
+- RITE (RD 1027/2007): T_superficial < 30°C (obligatorio)
+- ISO 12241:2022: Metodología de cálculo aislamiento
+- Guías técnicas: IDAE, EREN (2010), Spirax Sarco
+- Criterios: v_vapor ≈ 20 m/s (máx 30), v_condensados 15-20 m/s
+- Normas tuberías: DIN 2448 (europeo), Schedule API (americano)
+- 5 \paragraph{} y 3 tablas generadas
+
+Código generado: 112 líneas LaTeX (líneas 295-406)
+Validación: EXITOSA (PASS)
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (checkbox marcado)
+- Practica_Vapor_LaTeX/staging.tex (código añadido)
+========================================
+
+========================================
+[2026-03-25 | Sesión 1]
+Tarea completada: 2.1.3 - Cálculo de la demanda total y márgenes de seguridad
+
+Fuentes consultadas:
+- Proyecto/Anotaciones/datos_partida.md
+- Proyecto/Anotaciones/Red_vapor.md
+- Proyecto/Especificaciones/bases_diseño_seleccion_equipos_specs.md
+- Proyecto/Especificaciones/intro_especs.md
+- Proyecto/Especificaciones/red_vapor_specs.md
+
+Aspectos clave:
+- Factor K = 1.15 (15% para pérdidas por fugas únicamente)
+- NO incluye factor de simultaneidad (todos funcionan a plena carga)
+- NO incluye margen de ampliación futura (instalación existente)
+- Demanda nominal: 4416 kg/h → Diseño: 5078.4 kg/h → Comercial: 5400 kg/h
+- Potencia térmica: ~4217 kW (basada en entalpía 2874 kJ/kg)
+- Margen de reserva: +6.3% sobre caudal de diseño, +22.3% sobre nominal
+
+Estructura generada:
+- \subsubsection{Cálculo de la demanda total y márgenes de seguridad}
+- 3 tablas: demanda consumidores, aplicación factor K, margen reserva
+- Ecuación de demanda con factor K
+
+Código generado: 111 líneas LaTeX (líneas 407-517)
+Validación: EXITOSA (PASS)
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (checkbox marcado)
+- Practica_Vapor_LaTeX/staging.tex (código añadido)
+========================================
+
+========================================
+[2026-03-25 | Sesión 1]
+Tarea completada: 2.1.4 - Selección de la caldera de vapor (Vitomax) y condiciones de salida
+
+Fuentes consultadas:
+- Proyecto/Anotaciones/datos_partida.md
+- Proyecto/Especificaciones/bases_diseño_seleccion_equipos_specs.md
+- Proyecto/Especificaciones/intro_especs.md
+- Proyecto/Especificaciones/red_vapor_specs.md
+- Practica_Vapor_LaTeX/Figuras/Vitomax_100HS_33-A.pdf (referenciado)
+
+Aspectos clave:
+- Caldera Viessmann VITOMAX 100-HS M33A (pirotubular alta eficiencia)
+- Capacidad: 5400 kg/h (caudal comercial)
+- Presión diseño: 10 bar(g), operación: 9.068 bar(g) corregido altitud
+- Temperatura salida: 220°C (sobrecalentado, ΔT≈40°C sobre saturación)
+- Potencia térmica: 4217 kW (balance entálpico h_v - h_w)
+- Margen reserva: 6.3% sobre caudal diseño, 22.3% sobre nominal
+
+Estructura generada:
+- \subsubsection{Selección de la caldera de vapor y condiciones de salida}
+- 4 tablas: especificaciones, comparación demanda, condiciones salida, potencias
+- 3 ecuaciones: balance entálpico general y cálculos específicos
+- 1 figura: referencia a ficha técnica Vitomax
+
+Código generado: 173 líneas LaTeX (líneas 519-691)
+Validación: EXITOSA (PASS)
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (checkbox marcado)
+- Practica_Vapor_LaTeX/staging.tex (código añadido)
+========================================
+
+=== SUBSECCIÓN 2.1 COMPLETADA ===
+Total líneas staging.tex: 691
+Subsubsecciones: 2.1.1, 2.1.2, 2.1.3, 2.1.4
+Próxima: Subsección 2.2 - Dimensionado Hidráulico de la Red de Vapor
+========================================
+
+========================================
+[2026-03-25 | Sesión 1]
+Tarea completada: 2.2.1 - Criterios de dimensionado (velocidad, caída de presión, rugosidad)
+
+Fuentes consultadas:
+- Proyecto/Anotaciones/Red_vapor.md
+- Proyecto/Anotaciones/Directrices_Dimensionamiento.md
+- Proyecto/Especificaciones/red_vapor_specs.md
+- Proyecto/Especificaciones/bases_diseño_seleccion_equipos_specs.md
+- Proyecto/Anotaciones/adicional/Seleccion_diametros-codos.md
+
+Aspectos clave:
+- Primera tarea de Subsección 2.2: incluye \subsection{} + \subsubsection{}
+- Velocidad diseño: 20 m/s (objetivo), 30 m/s (máximo absoluto)
+- Pérdida de carga admisible: 1 bar total en la red
+- Material: Acero al carbono, rugosidad ε = 0.045 mm
+- Normas: DIN 2448 (europea), Schedule 40/80/160 (API)
+- Ecuaciones: Darcy-Weisbach, continuidad, longitud equivalente
+- Propiedades vapor: ρ=4.85 kg/m³, μ=1.74×10⁻⁵ Pa·s
+
+Estructura generada:
+- \subsection{Dimensionado Hidráulico de la Red de Vapor}
+- \subsubsection{Criterios de dimensionado}
+- 5 párrafos: velocidad, caída presión, rugosidad, ecuaciones, propiedades
+- 5 tablas: velocidades, rugosidades, Le/D, propiedades vapor, resumen
+- 9 ecuaciones con labels
+
+Código generado: 227 líneas LaTeX (líneas 692-918)
+Validación: EXITOSA (PASS)
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (checkbox marcado)
+- Practica_Vapor_LaTeX/staging.tex (código añadido)
+========================================
+
+========================================
+[2026-03-25 | Sesión 1]
+Tarea completada: 2.2.2 - Cálculo de longitudes equivalentes por accesorios
+
+Fuentes consultadas:
+- Proyecto/Anotaciones/Red_vapor.md
+- Proyecto/Especificaciones/red_vapor_specs.md
+- Proyecto/Anotaciones/adicional/Seleccion_diametros-codos.md
+- Practica_Vapor_LaTeX/Figuras/perdidas_carga_accesorios.png
+
+Aspectos clave:
+- Tabla completa de coeficientes Le/D (15 tipos de accesorios)
+- Selección de codo radio mediano (Le/D=26): 18% menos pérdidas
+- Criterio 20% para tramos sin accesorios significativos
+- Accesorios por tramo: codos 90°, Tés (recta/derivación)
+- Ejemplo numérico completo: tramo P-S (L_eq=25.44 m)
+- Longitud total de cálculo red: 427.56 m (incremento 18.5%)
+
+Estructura generada:
+- \subsubsection{Cálculo de longitudes equivalentes por accesorios}
+- 7 párrafos temáticos
+- 4 tablas: Le/D, accesorios, criterio 20%, resumen
+- 7 ecuaciones con desarrollo
+- 1 figura: tabla pérdidas accesorios (PNG)
+
+Código generado: 202 líneas LaTeX (líneas 920-1121)
+Validación: EXITOSA (PASS)
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (checkbox marcado)
+- Practica_Vapor_LaTeX/staging.tex (código añadido)
+========================================
+
+========================================
+[2026-03-25 | Sesión 1]
+Tarea completada: 2.2.3 - Tramo 1 (Caldera-P)
+
+Fuentes consultadas:
+- Proyecto/Anotaciones/Red_vapor.md
+- Proyecto/Especificaciones/red_vapor_specs.md
+- Proyecto/Anotaciones/aislamiento.md
+
+Aspectos clave:
+- Tramo principal: transporta 100% del caudal (5400 kg/h)
+- Longitud: 12.74 m real, 15.288 m cálculo (20% L_eq sin accesorios)
+- Tubería: DN 150 Schedule 80 (D_int=146.4 mm)
+- Velocidad: 19.17 m/s (cumple <30 m/s)
+- Pérdida de carga: 0.01 bar (mínima de la red)
+- Justificación Schedule 80: resistencia mecánica salida caldera
+
+Estructura generada:
+- \subsubsection{Tramo 1: Caldera-P}
+- 8 párrafos: datos, cálculo D, justificación, verificación, resultados
+- 5 tablas + 2 figuras (hoja cálculo y croquis)
+- Ecuaciones: caudal volumétrico, diámetro, velocidad, Reynolds, Darcy-Weisbach
+
+Código generado: 231 líneas LaTeX (líneas 1122-1352)
+Validación: EXITOSA (PASS)
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (checkbox marcado)
+- Practica_Vapor_LaTeX/staging.tex (código añadido)
+========================================
+
+========================================
+[2026-03-25 | Sesión 1 - LOTE CONTINUO]
+SECCIÓN 2.2 COMPLETADA EN MODO LOTE
+
+Tareas procesadas automáticamente:
+- 2.2.4: Tramo 2 P-C1 (enterrado) ✓
+- 2.2.5: Tramo 3 P-S ✓
+- 2.2.6: Tramo 4 S-C2 ✓
+- 2.2.7: Tramos 5-6-7 (S-T, T-C3, T-C4) ✓
+- 2.2.8: Resumen red de vapor ✓
+
+Resumen técnico por tramo:
+| Tramo | Tubería | D_int | v (m/s) | ΔP (bar) |
+|-------|---------|-------|---------|----------|
+| TR1 Caldera-P | Sch.80 DN150 | 146.4 | 19.17 | 0.01 |
+| TR2 P-C1 | Sch.160 DN80 | 66.6 | 18.93 | 0.24 |
+| TR3 P-S | DIN DN125 | 131.7 | 20.28 | 0.16 |
+| TR4 S-C2 | DIN DN80 | 82.5 | 21.45 | 0.07 |
+| TR5 S-T | DIN DN100 | 107.1 | 20.79 | 0.12 |
+| TR6 T-C3 | Sch.40 DN50 | 52.5 | 20.42 | 0.07 |
+| TR7 T-C4 | Sch.40 DN100 | 102.3 | 20.11 | 0.09 |
+
+Verificaciones globales:
+- Velocidades: 18.93-21.45 m/s (OK, objetivo 20 m/s)
+- ΔP máximo acumulado: 0.38 bar hasta C4 (OK, < 1 bar)
+- Presiones consumidores: todos > 8.69 bar(g) (OK, req. 4-7 bar)
+
+Código generado total: ~370 líneas LaTeX
+staging.tex final: ~1870 líneas
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (5 checkboxes marcados)
+- Practica_Vapor_LaTeX/staging.tex (código añadido)
+========================================
+
+=== SUBSECCIÓN 2.2 COMPLETADA ===
+Total tareas: 8/8 completadas
+Próxima: Subsección 2.3 - Dimensionado Red de Condensados
+========================================
+
+========================================
+[2026-03-25 | Sesión 2]
+SECCIÓN 2.3 COMPLETADA - Dimensionado Hidráulico de la Red de Condensados
+
+Tareas procesadas:
+- 2.3.1: Consideraciones retorno condensados y vapor flash ✓
+- 2.3.2: Cálculo porcentaje vapor flash ✓
+- 2.3.3: Selección purgadores y equipos separación ✓
+- 2.3.4: Dimensionado tramos red condensados (7 tramos) ✓
+- 2.3.5: Resumen red condensados ✓
+
+Aspectos técnicos clave:
+- Presión red condensados: 3 bar(g) (criterio P_min - 1 bar)
+- Vapor flash: 7.45% (402.54 kg/h de 5403.95 kg/h total)
+- Velocidad diseño bifásico: 15-20 m/s
+- Material: Acero Schedule 40 (resistencia CO₂)
+
+Resumen por tramo:
+| Tramo | Origen-Destino | DN | v (m/s) | ΔP (bar) |
+|-------|----------------|-----|---------|----------|
+| TR1 | Caldera-P | 65 | 19.31 | 0.02 |
+| TR2 | P-C1 | 32 | 17.78 | 0.25 |
+| TR3 | P-S | 65 | 19.13 | 0.14 |
+| TR4 | S-C2 | 50 | 18.04 | 0.05 |
+| TR5 | S-T | 65 | 17.70 | 0.08 |
+| TR6 | T-C3 | 25 | 17.96 | 0.05 |
+| TR7 | T-C4 | 50 | 17.41 | 0.06 |
+
+Verificaciones:
+- Velocidades: 17.41-19.31 m/s (OK, criterio 15-20 m/s)
+- ΔP máximo acumulado: 0.30 bar hasta C4 (OK)
+- 7 figuras incluidas (TR1-TR7)
+
+Contenido generado:
+- 6 tablas booktabs
+- 7 figuras de cálculos de tramos
+- 3 ecuaciones numeradas
+- ~330 líneas LaTeX (líneas 1848-2177)
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (5 checkboxes marcados [x])
+- Practica_Vapor_LaTeX/staging.tex (código añadido)
+========================================
+
+=== SUBSECCIÓN 2.3 COMPLETADA ===
+Total tareas: 5/5 completadas
+staging.tex: 2177 líneas
+Próxima: Subsección 2.4 - Aislamiento Térmico y Detalles de Instalación
+========================================
+
+========================================
+[2026-03-25 | Sesión 3]
+SECCIÓN 2.4 COMPLETADA - Aislamiento Térmico y Detalles de Instalación
+
+Tareas procesadas:
+- 2.4.1: Criterios de aislamiento térmico ✓
+- 2.4.2: Aislamiento de tuberías aéreas ✓
+- 2.4.3.1: Condiciones del terreno y profundidad ✓
+- 2.4.3.2: Diseño de la canalización/zanja ✓
+- 2.4.3.3: Cálculo de resistencias térmicas combinadas ✓
+- 2.4.3.4: Determinación del espesor óptimo ✓
+- 2.4.4: Cuadro resumen de espesores de aislamiento ✓
+
+Aspectos técnicos clave:
+- Material aislante: Lana de roca λ_aisl = 0.04 W/(m·K)
+- Criterio RITE: T_surf < 30°C (protección quemaduras)
+- Temperaturas: Vapor 220°C, Condensado 143.6°C
+- Condiciones ambientales: T_amb=15°C, h_ext=25 W/(m²·K), T_terr=10°C
+
+Criterios de estandarización (rangos de DN):
+- Vapor (220°C): DN≥125→100mm, DN 50-100→80mm, DN<50→60mm
+- Condensados (143.6°C): DN≥50→50mm, DN<50→40mm
+- Tramo enterrado TR2: 50mm vapor, 40mm cond. (restricción geométrica)
+
+Resumen de pérdidas térmicas:
+| Red | Longitud (m) | Pérdidas (kW) |
+|-----|-------------|---------------|
+| Vapor (7 tramos) | 351.93 | 20.24 |
+| Condensados (7 tramos) | 321.61 | 10.57 |
+| **TOTAL INSTALACIÓN** | **673.54** | **30.81** |
+
+Balance energético:
+- Potencia térmica caldera: 4,217 kW
+- Pérdidas totales: 30.81 kW
+- **Porcentaje de pérdidas: 0.73%** (excelente, << 2-3% recomendado IDAE)
+
+Tramo enterrado (TR2):
+- Profundidad del eje: h_eje = 1.09 m
+- Geometría zanja: B=1.50m, H=1.34m
+- Morfología: 6 capas estratificadas (losa HA-25, envolvente arena)
+- Pérdidas TR2: 7.08 kW (23% del total con solo 5.5% de longitud)
+- Resistencias térmicas: ΣR_vapor=3.467 m·K/W, ΣR_cond=4.747 m·K/W
+
+Contenido generado:
+- 8 tablas booktabs (3 resumen, 2 tramos aéreos, 1 morfología, 1 resistencias, 1 balance global)
+- 22 ecuaciones numeradas (modelo transferencia calor completo)
+- 1 figura (esquema_enterramiento.pdf)
+- 12 listas itemize/enumerate
+- ~579 líneas LaTeX (líneas 2176-2754)
+
+Verificaciones:
+- Todos los tramos aéreos: T_surf entre 16.3-18.2°C (cumple RITE)
+- Pérdidas totales << límite IDAE (2-3%)
+- Tramo enterrado: espesores justificados por restricciones geométricas
+- Balance energético global coherente
+
+Archivos modificados:
+- Proyecto/Planificacion/Planning/index.md (7 checkboxes marcados [x])
+- Practica_Vapor_LaTeX/staging.tex (código añadido: 2175→2754 líneas)
+========================================
+
+=== SUBSECCIÓN 2.4 COMPLETADA ===
+Total tareas: 7/7 completadas
+staging.tex: 2754 líneas (579 líneas nuevas)
+Próxima: Sección 3 - Conclusiones y Limitaciones
+========================================
