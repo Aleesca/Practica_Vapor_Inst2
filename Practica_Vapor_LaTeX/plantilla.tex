@@ -111,23 +111,7 @@ La instalación se ubica en la parcela A3 del polígono industrial de Salamanca,
 
 El sistema está diseñado para operar con vapor sobrecalentado a una temperatura de 220~°C, generado mediante una caldera Viessmann VITOMAX 100-HS (modelo M33A) que opera a una presión de 10~bar(a). El caudal de diseño de la instalación es de 5400~kg/h, incluyendo un factor de seguridad del 15\% para compensar posibles fugas y pérdidas en el sistema.
 
-La instalación suministra vapor a cuatro consumidores industriales con diferentes requerimientos de caudal y presión, tal como se detalla en la \tabref{tab:consumidores-proyecto}.
-
-\begin{table}[H]
-	\centering
-	\caption{Consumidores de la instalación y sus requerimientos operativos}
-	\label{tab:consumidores-proyecto}
-	\begin{tabular}{ccc}
-		\toprule
-		\textbf{Consumidor} & \textbf{Caudal [kg/h]} & \textbf{Presión [bar(g)]} \\
-		\midrule
-		C1                  & 679                    & 4                         \\
-		C2                  & 1359                   & 7                         \\
-		C3                  & 340                    & 7                         \\
-		C4                  & 2038                   & 7                         \\
-		\bottomrule
-	\end{tabular}
-\end{table}
+La instalación suministra vapor a cuatro consumidores industriales con diferentes requerimientos de caudal y presión.
 
 El alcance del presente proyecto comprende los siguientes aspectos técnicos:
 
@@ -135,12 +119,10 @@ El alcance del presente proyecto comprende los siguientes aspectos técnicos:
 	\item Dimensionamiento de la red de distribución de vapor, incluyendo el cálculo de diámetros, pérdidas de carga y velocidades en cada tramo.
 	\item Dimensionamiento de la red de retorno de condensados, considerando la recuperación eficiente del condensado generado en los puntos de consumo.
 	\item Selección y verificación de la caldera comercial adecuada para satisfacer la demanda térmica del sistema.
-	\item Cálculo del aislamiento térmico de las tuberías en cumplimiento con el Reglamento de Instalaciones Térmicas en los Edificios (RITE).
+	\item Cálculo del aislamiento térmico de las tuberías en cumplimiento con el Reglamento de Instalaciones Térmicas en los Edificios (RITE) \cite{RITE2007}.
 	\item Gestión y aprovechamiento del vapor flash generado en los procesos de expansión del condensado.
 	\item Diseño diferenciado de tramos aéreos y soterrados según las condiciones de instalación.
 \end{enumerate}
-
-Cabe destacar que el presente proyecto corresponde a una instalación existente, por lo que no se contemplan ampliaciones futuras. Todos los cálculos y dimensionamientos se han realizado considerando exclusivamente las condiciones de operación actuales y los consumidores definidos en la \tabref{tab:consumidores-proyecto}.
 
 \subsection{Descripción de la planta y ubicación}
 \label{subsec:descripcion-planta-ubicacion}
@@ -150,9 +132,9 @@ La instalación de vapor objeto del presente proyecto se ubica en la parcela A3 
 La red de distribución de vapor está configurada mediante una topología ramificada que parte del punto de generación (caldera Viessmann VITOMAX 100-HS) y se bifurca progresivamente para alimentar a los cuatro consumidores industriales. La estructura de la red se articula en torno a tres nodos principales:
 
 \begin{itemize}[leftmargin=2em]
-	\item \textbf{Punto P:} Nodo de bifurcación principal situado a la salida de la caldera. Desde este punto se derivan dos ramales: uno hacia el consumidor C1 (tramo soterrado) y otro hacia el nodo secundario S (tramo aéreo).
-	\item \textbf{Punto S:} Nodo secundario que distribuye el vapor hacia el consumidor C2 y hacia el nodo terciario T.
-	\item \textbf{Punto T:} Nodo terciario desde el cual se alimentan los consumidores C3 y C4.
+	\item Punto P: Nodo de bifurcación principal situado a la salida de la caldera. Desde este punto se derivan dos ramales: uno hacia el consumidor C1 (tramo soterrado) y otro hacia el nodo secundario S (tramo aéreo).
+	\item Punto S:  Nodo secundario que distribuye el vapor hacia el consumidor C2 y hacia el nodo terciario T.
+	\item Punto T:  Nodo terciario desde el cual se alimentan los consumidores C3 y C4.
 \end{itemize}
 
 La distribución de la parcela y la ubicación de los puntos de consumo se muestran en la \anejoref{anexo:Planos}.
@@ -164,7 +146,7 @@ La distribución de la parcela y la ubicación de los puntos de consumo se muest
 	\label{fig:plano-parcela}
 \end{figure}
 
-Respecto al tipo de instalación, cabe distinguir entre tramos aéreos y soterrados. Los tramos aéreos, que constituyen seis de los siete tramos de la red, discurren a una altura comprendida entre 5 y 6~m sobre el nivel del suelo, soportados mediante estructuras metálicas y con accesibilidad directa para labores de mantenimiento. El único tramo soterrado corresponde a la conexión P-C$_1$, cuyo eje de tubería se sitúa a una profundidad de 1,09~m bajo la rasante del terreno. Este tramo soterrado requiere consideraciones especiales en cuanto al aislamiento térmico y la protección mecánica de la tubería, aspectos que serán desarrollados en las secciones correspondientes de la presente memoria.
+Respecto al tipo de instalación, cabe distinguir entre tramos aéreos y soterrados. Los tramos aéreos, que constituyen seis de los siete tramos de la red, discurren a una altura comprendida entre 5 y 6~m sobre el nivel del suelo, soportados mediante estructuras metálicas y con accesibilidad directa para labores de mantenimiento. El único tramo soterrado corresponde a la conexión P-C1, cuyo eje de tubería se sitúa a una profundidad de 1,09~m bajo la rasante del terreno. Este tramo soterrado requiere consideraciones especiales en cuanto al aislamiento térmico y la protección mecánica de la tubería, aspectos que serán desarrollados en las secciones correspondientes de la presente memoria.
 
 \subsection{Puntos de consumo y requerimientos iniciales}
 \label{subsec:puntos-consumo-requerimientos}
@@ -175,18 +157,22 @@ Los datos de partida correspondientes a cada consumidor se presentan en la \tabr
 
 \begin{table}[H]
 	\centering
+	\small
+	\setlength{\tabcolsep}{3pt}
 	\caption{Requerimientos de los puntos de consumo}
 	\label{tab:consumidores-requerimientos}
-	\begin{tabular}{ccccc}
-		\toprule
-		\textbf{Consumidor} & \textbf{Caudal [kg/h]} & \textbf{Presión requerida [bar(g)]} & \textbf{Presión disponible [bar(g)]} & \textbf{Distancia [m]} \\
-		\midrule
-		C1                  & 679                    & 4                                   & 8,818                                & 100,93                 \\
-		C2                  & 1359                   & 7                                   & 8,830                                & 143,74                 \\
-		C3                  & 340                    & 7                                   & 8,710                                & 193,74                 \\
-		C4                  & 2038                   & 7                                   & 8,690                                & 223,74                 \\
-		\bottomrule
-	\end{tabular}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{ccccc}
+			\toprule
+			\textbf{Consumidor} & \textbf{Caudal [kg/h]} & \textbf{Presión requerida [bar(g)]} & \textbf{Presión disponible [bar(g)]} & \textbf{Distancia [m]} \\
+			\midrule
+			C1                  & 679                    & 4                                   & 8,818                                & 100,93                 \\
+			C2                  & 1359                   & 7                                   & 8,830                                & 143,74                 \\
+			C3                  & 340                    & 7                                   & 8,710                                & 193,74                 \\
+			C4                  & 2038                   & 7                                   & 8,690                                & 223,74                 \\
+			\bottomrule
+		\end{tabular}
+	}
 \end{table}
 
 Del análisis de los datos presentados se desprende que el consumidor C4 representa el mayor demandante de vapor, con un caudal de 2038~kg/h que supone aproximadamente el 46\% del consumo total de la instalación. Por el contrario, el consumidor C3 presenta el menor requerimiento con tan solo 340~kg/h. Esta distribución heterogénea de caudales condiciona directamente el dimensionamiento de los diferentes tramos de la red.
@@ -196,7 +182,11 @@ Del análisis de los datos presentados se desprende que el consumidor C4 represe
 El caudal total de diseño de la instalación se determina a partir de la suma de los caudales individuales de cada consumidor, aplicando un factor de seguridad $K$ que contempla las pérdidas por fugas inherentes a cualquier red de distribución de vapor. El cálculo se realiza mediante la siguiente expresión:
 
 \begin{equation}
-	Q_{\text{total}} = K \cdot \sum_{i=1}^{4} C_i = 1{,}15 \cdot (679 + 1359 + 340 + 2038) = 1{,}15 \cdot 4416 = 5078{,}4 \ \text{kg/h}
+	\begin{split}
+		Q_{\text{total}} & = K \cdot \sum_{i=1}^{4} C_i                 \\
+		                 & = 1{,}15 \cdot (679 + 1359 + 340 + 2038)     \\
+		                 & = 1{,}15 \cdot 4416 = 5078{,}4 \ \text{kg/h}
+	\end{split}
 	\label{eq:caudal-total-diseno}
 \end{equation}
 
@@ -280,19 +270,18 @@ Las propiedades termodinámicas del vapor sobrecalentado a las condiciones de op
 	\label{tab:propiedades-vapor-sobrecalentado}
 	\begin{tabular}{lccc}
 		\toprule
-		\textbf{Propiedad}                   & \textbf{Símbolo}        & \textbf{Valor}   & \textbf{Unidad} \\
+		\textbf{Propiedad}                   & \textbf{Símbolo} & \textbf{Valor}   & \textbf{Unidad} \\
 		\midrule
-		Presión absoluta                     & $P$                     & 10               & bar(a)          \\
-		Presión manométrica                  & $P_g$                   & 9,068            & bar(g)          \\
-		Temperatura                          & $T$                     & 220              & °C              \\
-		Temperatura de saturación            & $T_{\text{sat}}$        & 180,2            & °C              \\
-		Grado de sobrecalentamiento          & $\Delta T_{\text{sob}}$ & 40               & °C              \\
-		Entalpía específica                  & $h_v$                   & 2874             & kJ/kg           \\
-		Calor específico a presión constante & $c_p$                   & 2,08             & kJ/(kg·K)       \\
-		Densidad                             & $\rho$                  & 4,85             & kg/m³           \\
-		Volumen específico                   & $v$                     & 0,206            & m³/kg           \\
-		Viscosidad dinámica                  & $\mu$                   & 1,74 × 10$^{-5}$ & Pa·s            \\
-		Viscosidad cinemática                & $\nu$                   & 3,59 × 10$^{-6}$ & m²/s            \\
+		Presión absoluta                     & $P$              & 10               & bar(a)          \\
+		Presión manométrica                  & $P_g$            & 9,068            & bar(g)          \\
+		Temperatura                          & $T$              & 220              & °C              \\
+		Temperatura de saturación            & $T_{\text{sat}}$ & 180,2            & °C              \\
+		Entalpía específica                  & $h_v$            & 2874             & kJ/kg           \\
+		Calor específico a presión constante & $c_p$            & 2,08             & kJ/(kg·K)       \\
+		Densidad                             & $\rho$           & 4,85             & kg/m³           \\
+		Volumen específico                   & $v$              & 0,206            & m³/kg           \\
+		Viscosidad dinámica                  & $\mu$            & 1,74 × 10$^{-5}$ & Pa·s            \\
+		Viscosidad cinemática                & $\nu$            & 3,59 × 10$^{-6}$ & m²/s            \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -331,112 +320,6 @@ La selección de vapor sobrecalentado frente a vapor saturado se justifica por l
 
 Estas propiedades termodinámicas constituyen los datos de entrada para los cálculos de dimensionamiento de tuberías, pérdidas de carga y selección de equipos que se desarrollan en las secciones subsiguientes de la presente memoria.
 
-\subsubsection{Normativa de aplicación}
-\label{subsubsec:normativa-aplicacion}
-
-El diseño y dimensionamiento de la instalación de vapor y condensados se rige por un marco normativo que comprende tanto reglamentación de obligado cumplimiento como guías técnicas de reconocido prestigio en el sector. La \tabref{tab:normativa-aplicacion} presenta un resumen de las principales referencias normativas consideradas en el presente proyecto, clasificadas según su carácter vinculante.
-
-\begin{table}[H]
-	\centering
-	\caption{Marco normativo aplicable a la instalación de vapor y condensados}
-	\label{tab:normativa-aplicacion}
-	\begin{tabular}{p{4.5cm}lp{5.5cm}}
-		\toprule
-		\textbf{Normativa}  & \textbf{Carácter}        & \textbf{Ámbito de aplicación}                            \\
-		\midrule
-		RITE (RD 1027/2007) & Obligatorio              & Diseño de instalaciones térmicas, aislamiento, seguridad \\
-		ISO 12241:2022      & Referencia internacional & Cálculo de aislamiento térmico                           \\
-		Guía Técnica IDAE   & Recomendación            & Metodología de aislamiento, selección de materiales      \\
-		Manual EREN (2010)  & Recomendación            & Cálculo hidráulico, longitudes equivalentes              \\
-		Guía Spirax Sarco   & Referencia técnica       & Dimensionado de tuberías, purga, golpe de ariete         \\
-		DIN 2448            & Norma técnica            & Tuberías de acero sin soldadura                          \\
-		API Schedule        & Norma técnica            & Espesor de pared según presión                           \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-\paragraph{Reglamento de Instalaciones Térmicas en los Edificios (RITE)}
-
-El RITE, establecido mediante el Real Decreto 1027/2007 y sus posteriores modificaciones, constituye el marco reglamentario de obligado cumplimiento para el diseño de instalaciones térmicas en España. En lo referente a redes de distribución de vapor, el RITE establece como criterio fundamental que la temperatura superficial del aislamiento térmico no debe superar los 30~°C en zonas accesibles al personal, con el objetivo de prevenir riesgos de quemaduras por contacto.
-
-Este criterio de temperatura superficial máxima condiciona directamente el espesor mínimo del aislamiento térmico a instalar en las tuberías de vapor, especialmente en los tramos aéreos donde el riesgo de contacto accidental es mayor. El cumplimiento de este requisito se verifica mediante el cálculo térmico desarrollado en la sección de aislamiento del presente proyecto.
-
-\paragraph{Norma ISO 12241:2022}
-
-La norma internacional ISO 12241:2022, titulada \textit{Thermal insulation for building equipment and industrial installations --- Calculation rules}, establece la metodología de referencia para el cálculo del aislamiento térmico en equipos e instalaciones industriales. Esta norma proporciona los procedimientos de cálculo para determinar:
-
-\begin{itemize}[leftmargin=2em]
-	\item Flujos de calor a través del aislamiento.
-	\item Temperaturas superficiales en condiciones estacionarias.
-	\item Espesores económicos de aislamiento.
-	\item Correcciones por efectos de puentes térmicos en soportes y accesorios.
-\end{itemize}
-
-Los métodos de cálculo establecidos en esta norma se han empleado como base para el dimensionamiento del aislamiento térmico de la presente instalación.
-
-\paragraph{Guías técnicas de diseño}
-
-Complementariamente a la normativa de obligado cumplimiento, se han consultado diversas guías técnicas elaboradas por organismos de reconocido prestigio en el ámbito de la eficiencia energética y las instalaciones industriales:
-
-\begin{itemize}[leftmargin=2em]
-	\item \textbf{Guía Técnica IDAE:} Elaborada por el Instituto para la Diversificación y Ahorro de la Energía, esta guía proporciona metodologías detalladas para el cálculo del aislamiento térmico, incluyendo tablas de conductividad térmica de materiales aislantes y criterios de selección de espesores.
-
-	\item \textbf{Manual EREN:} El Manual de Eficiencia Energética en Redes de Vapor y Condensados, publicado por el Ente Regional de la Energía de Castilla y León en 2010, constituye una referencia fundamental para el dimensionamiento hidráulico de redes de vapor. Este manual proporciona las longitudes equivalentes de accesorios (expresadas como $L_e/D$), criterios de velocidad máxima y metodologías de cálculo de pérdidas de carga.
-
-	\item \textbf{Guía de Referencia Técnica Spirax Sarco:} Esta guía, elaborada por uno de los principales fabricantes mundiales de equipos para sistemas de vapor, proporciona información técnica detallada sobre dimensionado de tuberías, selección de purgadores, prevención del golpe de ariete y diseño de separadores de gotas.
-\end{itemize}
-
-\paragraph{Criterios técnicos de diseño}
-
-A partir del marco normativo descrito, se han establecido los criterios técnicos que rigen el dimensionamiento de la instalación. La \tabref{tab:criterios-tecnicos-normativa} recoge los valores límite adoptados junto con su fuente normativa de referencia.
-
-\begin{table}[H]
-	\centering
-	\caption{Criterios técnicos de diseño derivados de la normativa aplicable}
-	\label{tab:criterios-tecnicos-normativa}
-	\begin{tabular}{p{5.5cm}cc}
-		\toprule
-		\textbf{Criterio técnico}                      & \textbf{Valor} & \textbf{Fuente}    \\
-		\midrule
-		Temperatura superficial máxima del aislamiento & $<$ 30~°C      & RITE               \\
-		Velocidad objetivo del vapor                   & $\sim$20~m/s   & EREN, Spirax Sarco \\
-		Velocidad máxima absoluta del vapor            & 30~m/s         & EREN               \\
-		Velocidad en condensados (flujo bifásico)      & 15--20~m/s     & IDAE, Spirax Sarco \\
-		Pérdida de carga admisible total               & 1~bar (máx.)   & Criterio de diseño \\
-		$L_e/D$ codo de radio mediano                  & 26             & EREN               \\
-		$L_e/D$ T en paso recto                        & 60             & EREN               \\
-		$L_e/D$ T en derivación                        & 90             & EREN               \\
-		Pendiente mínima de líneas de vapor            & 40~mm / 10~m   & EREN, Spirax Sarco \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-\paragraph{Normas de tuberías}
-
-Para la selección de tuberías de acero, se han considerado dos sistemas normativos complementarios:
-
-\begin{itemize}[leftmargin=2em]
-	\item \textbf{DIN 2448:} Norma alemana que define las dimensiones de tuberías de acero sin soldadura. Esta norma es de aplicación preferente en el mercado europeo para diámetros nominales comprendidos entre DN~80 y DN~150, que corresponden a los tramos principales de la red de distribución.
-
-	\item \textbf{Sistema Schedule (API):} El sistema americano de clasificación de tuberías por \textit{schedule} define el espesor de pared en función de la presión de trabajo. La \tabref{tab:schedule-aplicacion} resume los criterios de selección adoptados.
-\end{itemize}
-
-\begin{table}[H]
-	\centering
-	\caption{Selección del \textit{schedule} de tubería según aplicación}
-	\label{tab:schedule-aplicacion}
-	\begin{tabular}{ll}
-		\toprule
-		\textbf{Schedule} & \textbf{Aplicación}                                     \\
-		\midrule
-		Schedule 40       & Vapor saturado, presiones $\leq$ 10~bar(a), condensados \\
-		Schedule 80       & Diámetros pequeños ($\leq$ 50~mm), uniones roscadas     \\
-		Schedule 160      & Aplicaciones críticas, alta erosión/corrosión           \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-Para la presente instalación, que opera a 10~bar(a) con tuberías de diámetros comprendidos entre DN~50 y DN~150, se ha adoptado el Schedule~40 como estándar de diseño para todos los tramos de la red de vapor, garantizando un espesor de pared adecuado para las condiciones de presión y temperatura de trabajo.
 
 \subsubsection{Cálculo de la demanda total y márgenes de seguridad}
 \label{subsubsec:demanda-total-margenes}
@@ -554,6 +437,13 @@ La presión mínima requerida en la caldera se determina a partir de la presión
 
 La presión absoluta de trabajo resulta ser 10~bar(a), equivalente a 9,068~bar(g) una vez considerada la corrección por altitud del emplazamiento.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{Figuras/seleccion_presion.pdf}
+	\caption{Determinación de la presión de diseño de la caldera}
+	\label{fig:seleccion-presion}
+\end{figure}
+
 \paragraph{Caldera seleccionada}
 
 Tras el análisis del catálogo del fabricante Viessmann, se ha seleccionado la caldera VITOMAX 100-HS modelo M33A, cuyas especificaciones técnicas satisfacen los requerimientos de la instalación. La \tabref{tab:especificaciones-caldera-vitomax} recoge las características principales del equipo.
@@ -580,15 +470,13 @@ Tras el análisis del catálogo del fabricante Viessmann, se ha seleccionado la 
 	\end{tabular}
 \end{table}
 
-\paragraph{Justificación técnica de la selección}
-
 La elección de la caldera VITOMAX 100-HS modelo M33A se justifica por las siguientes razones técnicas:
 
 \begin{enumerate}[label=\arabic*., leftmargin=2em]
-	\item \textbf{Capacidad adecuada:} El caudal comercial de 5400~kg/h es el inmediatamente superior al caudal de diseño calculado de 5078,4~kg/h, proporcionando un margen de reserva del 6,3\% adicional.
-	\item \textbf{Presión suficiente:} La presión de diseño de 10~bar(g) garantiza que, tras las pérdidas de carga en la red (máximo 0,38~bar hasta el consumidor más desfavorable C4), todos los puntos de consumo recibirán vapor a la presión requerida.
-	\item \textbf{Tecnología apropiada:} La caldera pirotubular de alta eficiencia está diseñada para operación continua en aplicaciones industriales, con alta fiabilidad y bajo mantenimiento.
-	\item \textbf{Disponibilidad comercial:} El modelo existe en el catálogo actual del fabricante Viessmann, garantizando el suministro de repuestos y servicio técnico.
+	\item Capacidad adecuada: El caudal comercial de 5400~kg/h es el inmediatamente superior al caudal de diseño calculado de 5078,4~kg/h, proporcionando un margen de reserva del 6,3\% adicional.
+	\item Presión suficiente: La presión de diseño de 10~bar(g) garantiza que, tras las pérdidas de carga en la red (máximo 0,38~bar hasta el consumidor más desfavorable C4), todos los puntos de consumo recibirán vapor a la presión requerida.
+	\item Tecnología apropiada: La caldera pirotubular de alta eficiencia está diseñada para operación continua en aplicaciones industriales, con alta fiabilidad y bajo mantenimiento.
+	\item Disponibilidad comercial: El modelo existe en el catálogo actual del fabricante Viessmann, garantizando el suministro de repuestos y servicio técnico.
 \end{enumerate}
 
 La \tabref{tab:comparacion-demanda-caldera} presenta la comparación detallada entre la demanda de la instalación y la capacidad de la caldera seleccionada.
@@ -628,7 +516,6 @@ El vapor generado por la caldera VITOMAX 100-HS abandona el equipo en condicione
 		Temperatura del vapor       & 220            & °C              \\
 		Estado del vapor            & Sobrecalentado & ---             \\
 		Temperatura de saturación   & 180            & °C              \\
-		Grado de sobrecalentamiento & $\sim$40       & °C              \\
 		Entalpía específica ($h_v$) & 2874           & kJ/kg           \\
 		Densidad ($\rho$)           & 4,85           & kg/m³           \\
 		Calor específico ($c_p$)    & 2,08           & kJ/(kg·K)       \\
@@ -687,7 +574,7 @@ La \figref{fig:ficha-caldera-vitomax} muestra un extracto de la ficha técnica d
 \begin{figure}[H]
 	\centering
 	\includegraphics[trim={3cm 21cm 15.3cm 4.2cm}, clip, keepaspectratio, width=0.45\textwidth]{Figuras/Vitomax_100HS_33-A.pdf}
-	\caption{Esquema de la caldera Viessmann VITOMAX 100-HS M33A. Fuente: Catálogo Viessmann}
+	\caption{Esquema de la caldera Viessmann VITOMAX 100-HS M33A (sin economizador). Fuente: Catálogo Viessmann. Elaboración grupal.}
 	\label{fig:ficha-caldera-vitomax}
 \end{figure}
 
@@ -718,28 +605,7 @@ La velocidad del vapor en el interior de las tuberías constituye el parámetro 
 
 Para la presente instalación se ha adoptado una \textbf{velocidad de diseño de aproximadamente 20~m/s}, valor que permite compatibilizar un diámetro de tubería económicamente razonable con pérdidas de carga moderadas y un funcionamiento hidráulico adecuado. Este valor se encuentra dentro del rango recomendado por las guías técnicas de referencia para líneas de vapor industrial.
 
-La \tabref{tab:velocidades-recomendadas} presenta los rangos de velocidad recomendados según el tipo de aplicación y las condiciones de presión del vapor, de acuerdo con las guías técnicas de Spirax Sarco y el Manual EREN.
-
-\begin{table}[H]
-	\centering
-	\caption{Velocidades recomendadas del vapor según tipo de aplicación y presión}
-	\label{tab:velocidades-recomendadas}
-	\begin{tabular}{lc}
-		\toprule
-		\textbf{Tipo de línea / Condición de presión} & \textbf{Velocidad recomendada [m/s]} \\
-		\midrule
-		Líneas principales (vapor saturado)           & 25 -- 40                             \\
-		Presión $<$ 2~bar                             & 30                                   \\
-		Presión 2 -- 5~bar                            & 35                                   \\
-		Presión 5 -- 10~bar                           & 40                                   \\
-		Presión 10 -- 25~bar                          & 50                                   \\
-		Líneas de gran longitud                       & 15                                   \\
-		Derivaciones cortas                           & 25 -- 35                             \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-Para la presente instalación, que opera a una presión de 10~bar(a) con tramos de longitud considerable (hasta 223,74~m hasta el consumidor más alejado C4), la velocidad de diseño de 20~m/s representa un valor conservador que prioriza la minimización de pérdidas de carga. Como criterio de seguridad adicional, se establece una \textbf{velocidad máxima absoluta de 30~m/s} que no debe superarse en ningún tramo de la instalación.
+Para la presente instalación, que opera a una presión de 10~bar(a) con tramos de longitud considerable (hasta 223,74~m hasta el consumidor más alejado C4), la velocidad de diseño de 20~m/s representa un valor conservador que prioriza la minimización de pérdidas de carga. Como criterio de seguridad adicional, se establece una velocidad máxima  de 30~m/s que no debe superarse en ningún tramo de la instalación.
 
 \paragraph{Criterio de caída de presión}
 
@@ -782,32 +648,12 @@ Para la presente instalación se ha seleccionado \textbf{tubería de acero al ca
 	\item \textbf{Sistema Schedule (API):} Sistema americano que define el espesor de pared en función de la presión de trabajo. Se adopta Schedule~40 como estándar de diseño.
 \end{itemize}
 
-La \textbf{rugosidad absoluta} ($\varepsilon$) del acero comercial nuevo se sitúa en el rango de 0,045 a 0,05~mm. Para los cálculos de la presente instalación se adopta el valor:
+La \textbf{rugosidad absoluta} ($\varepsilon$) del acero comercial nuevo se sitúa en torno a 0,02~mm. Para los cálculos de la presente instalación se adopta el valor:
 
 \begin{equation}
-	\varepsilon = 0{,}045 \ \text{mm}
+	\varepsilon = 0{,}02 \ \text{mm}
 	\label{eq:rugosidad-acero}
 \end{equation}
-
-La \tabref{tab:rugosidades-materiales} presenta los valores de rugosidad absoluta para diferentes materiales de tubería, permitiendo contextualizar el valor adoptado para el acero comercial.
-
-\begin{table}[H]
-	\centering
-	\caption{Rugosidad absoluta de diferentes materiales de tubería}
-	\label{tab:rugosidades-materiales}
-	\begin{tabular}{lc}
-		\toprule
-		\textbf{Material}     & \textbf{Rugosidad $\varepsilon$ [mm]} \\
-		\midrule
-		Acero comercial nuevo & 0,045 -- 0,05                         \\
-		Acero galvanizado     & 0,15                                  \\
-		Acero oxidado         & 0,15 -- 0,25                          \\
-		Fundición nueva       & 0,25 -- 0,50                          \\
-		Cobre / Latón         & 0,0015 -- 0,002                       \\
-		PVC / Plásticos       & 0,0015 -- 0,007                       \\
-		\bottomrule
-	\end{tabular}
-\end{table}
 
 Los diámetros normalizados según la norma DIN~2448 serán utilizados para la selección de tuberías comerciales en cada tramo de la instalación.
 
@@ -843,138 +689,15 @@ Para el cálculo de las pérdidas de carga, la \textbf{longitud de cálculo} deb
 	\label{eq:longitud-calculo}
 \end{equation}
 
-Las longitudes equivalentes de los accesorios se expresan habitualmente como múltiplos del diámetro interior de la tubería ($L_e/D$). La \tabref{tab:longitudes-equivalentes} recoge los valores adoptados para los accesorios más comunes, según el Manual EREN.
+Las longitudes equivalentes de los accesorios se expresan habitualmente como múltiplos del diámetro interior de la tubería ($L_e/D$). Los coeficientes $L_e/D$ dependen fundamentalmente de la geometría del accesorio y del régimen de flujo, y se han adoptado de acuerdo con el Manual Técnico de Diseño y Cálculo de Redes de Vapor \cite{EREN2015}.
 
-\begin{table}[H]
-	\centering
-	\caption{Longitudes equivalentes de accesorios en función del diámetro}
-	\label{tab:longitudes-equivalentes}
-	\begin{tabular}{lc}
-		\toprule
-		\textbf{Accesorio}      & \textbf{$L_e/D$} \\
-		\midrule
-		Codo 90° radio medio    & 26               \\
-		Codo 90° radio estándar & 32               \\
-		T (paso recto)          & 60               \\
-		T (derivación)          & 90               \\
-		Válvula de compuerta    & 13               \\
-		Válvula de globo        & 340              \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-Las pérdidas de carga en accesorios se consideran mediante las longitudes equivalentes expresadas en la \tabref{tab:longitudes-equivalentes}.
-
-\paragraph{Propiedades del vapor para el cálculo}
-
-Las propiedades termodinámicas del vapor sobrecalentado a las condiciones de operación (10~bar(a), 220~°C) que se emplean en los cálculos de dimensionado son las siguientes:
-
-\begin{table}[H]
-	\centering
-	\caption{Propiedades del vapor para cálculos de dimensionado}
-	\label{tab:propiedades-vapor-dimensionado}
-	\begin{tabular}{lccc}
-		\toprule
-		\textbf{Propiedad}    & \textbf{Símbolo} & \textbf{Valor}          & \textbf{Unidad} \\
-		\midrule
-		Densidad              & $\rho$           & 4,85                    & kg/m³           \\
-		Viscosidad dinámica   & $\mu$            & 1,74 $\times$ 10$^{-5}$ & Pa·s            \\
-		Viscosidad cinemática & $\nu$            & 3,59 $\times$ 10$^{-6}$ & m²/s            \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-La \tabref{tab:resumen-criterios-dimensionado} presenta un resumen de los criterios de dimensionado adoptados para la red de distribución de vapor.
-
-\begin{table}[H]
-	\centering
-	\caption{Resumen de criterios de dimensionado de la red de vapor}
-	\label{tab:resumen-criterios-dimensionado}
-	\begin{tabular}{lcc}
-		\toprule
-		\textbf{Criterio}                  & \textbf{Valor adoptado} & \textbf{Fuente}     \\
-		\midrule
-		Velocidad de diseño                & $\sim$20~m/s            & EREN, Spirax Sarco  \\
-		Velocidad máxima absoluta          & 30~m/s                  & EREN                \\
-		Pérdida de carga máxima admisible  & 1~bar                   & Criterio de diseño  \\
-		Material de tuberías               & Acero al carbono        & DIN 2448            \\
-		Rugosidad absoluta ($\varepsilon$) & 0,045~mm                & Tablas normalizadas \\
-		Schedule de tubería                & Schedule 40             & API                 \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-Estos criterios de dimensionado constituyen la base para el cálculo detallado de cada tramo de la red de distribución de vapor, que se desarrolla en las subsecciones siguientes de la presente memoria técnica.
-
-\subsubsection{Cálculo de longitudes equivalentes por accesorios}
-\label{subsubsec:longitudes-equivalentes-accesorios}
-
-El cálculo de las pérdidas de carga en una red de distribución de vapor no puede limitarse a las pérdidas por fricción en los tramos rectos de tubería. Los accesorios presentes en la instalación ---codos, derivaciones en T, válvulas y demás elementos--- introducen perturbaciones en el flujo que se traducen en pérdidas de carga adicionales. El método de las longitudes equivalentes permite cuantificar estas pérdidas expresándolas como una longitud ficticia de tubería recta que produciría la misma caída de presión.
-
-\paragraph{Concepto de longitud equivalente}
-
-La longitud equivalente de un accesorio representa la longitud de tubería recta, del mismo diámetro, que ocasionaría una pérdida de carga idéntica a la producida por dicho accesorio. Este concepto simplifica significativamente el cálculo de pérdidas de carga, ya que permite sumar todas las longitudes (reales y equivalentes) y aplicar una única expresión de pérdida por fricción al conjunto.
-
-Los valores de longitud equivalente se expresan habitualmente como múltiplos del diámetro interior de la tubería, mediante el coeficiente adimensional $L_e/D$. La longitud equivalente absoluta de cada accesorio se obtiene multiplicando este coeficiente por el diámetro interior del tramo correspondiente:
-
-\begin{equation}
-	L_{e,i} = \left(\frac{L_e}{D}\right)_i \times D_{\text{interior}}
-	\label{eq:longitud-equivalente-accesorio}
-\end{equation}
-
-\noindent donde $L_{e,i}$ es la longitud equivalente del accesorio $i$ en metros, $(L_e/D)_i$ es el coeficiente adimensional del accesorio y $D_{\text{interior}}$ es el diámetro interior de la tubería en metros.
-
-La longitud equivalente total de un tramo se calcula sumando las contribuciones de todos los accesorios presentes:
-
-\begin{equation}
-	L_{\text{eq}} = \sum_{i=1}^{n} \left(\frac{L_e}{D}\right)_i \times D_{\text{interior}}
-	\label{eq:longitud-equivalente-total}
-\end{equation}
-
-Finalmente, la longitud de cálculo empleada en la ecuación de Darcy-Weisbach (\autoref{eq:darcy-weisbach}) resulta de la suma de la longitud real del tramo y su longitud equivalente total:
-
-\begin{equation}
-	L_{\text{cálculo}} = L_{\text{real}} + L_{\text{eq}}
-	\label{eq:longitud-calculo-total}
-\end{equation}
-
-\paragraph{Coeficientes de pérdidas en accesorios}
-
-Los coeficientes $L_e/D$ dependen fundamentalmente de la geometría del accesorio y del régimen de flujo. La \tabref{tab:coeficientes-LeD-completa} presenta los valores adoptados para los accesorios más habituales en instalaciones de vapor, de acuerdo con el Manual Técnico de Diseño y Cálculo de Redes de Vapor (EREN, Junta de Castilla y León, 2010).
-
-\begin{table}[H]
-	\centering
-	\caption{Coeficientes $L_e/D$ para accesorios en líneas de vapor}
-	\label{tab:coeficientes-LeD-completa}
-	\begin{tabular}{lc}
-		\toprule
-		\textbf{Accesorio}                                 & \textbf{$L_e/D$} \\
-		\midrule
-		Codo 45°                                           & 15               \\
-		Codo 90° radio estándar ($R \approx 1 \cdot D$)    & 32               \\
-		Codo 90° radio mediano ($R \approx 1{,}5 \cdot D$) & 26               \\
-		Codo 90° radio grande                              & 20               \\
-		Codo 90° en escuadra                               & 60               \\
-		Codo 180° (retorno)                                & 75               \\
-		Codo 180° radio mediano                            & 50               \\
-		T (paso recto)                                     & 60               \\
-		T (derivación)                                     & 90               \\
-		Válvula de compuerta (abierta)                     & 7                \\
-		Válvula de asiento/globo (abierta)                 & 300              \\
-		Válvula angular (abierta)                          & 170              \\
-		Válvula de esfera                                  & 3                \\
-		Acoplamiento                                       & despreciable     \\
-		Unión                                              & despreciable     \\
-		\bottomrule
-	\end{tabular}
-\end{table}
 
 La \figref{fig:tabla-perdidas-accesorios} muestra la tabla de referencia del Manual EREN con los valores de $L_e/D$ para diferentes accesorios y condiciones de instalación.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.85\textwidth]{Figuras/perdidas_carga_accesorios.png}
-	\caption{Pérdidas de carga en accesorios expresadas como $L_e/D$. Fuente: Manual EREN (2010)}
+	\caption{Pérdidas de carga en accesorios expresadas como $L_e/D$. Fuente: Adaptado de \cite{EREN2015}.}
 	\label{fig:tabla-perdidas-accesorios}
 \end{figure}
 
@@ -990,115 +713,33 @@ Para la presente instalación se han seleccionado \textbf{codos de radio mediano
 
 El incremento de coste asociado al codo de radio mediano queda justificado por la reducción de pérdidas de carga y la mejora de las condiciones de operación de la instalación.
 
-\paragraph{Aplicación a los tramos del proyecto}
+\paragraph{Aplicación y resumen de longitudes de cálculo}
 
-La \tabref{tab:accesorios-por-tramo} presenta el inventario de accesorios identificados en cada tramo de la red de distribución, junto con el diámetro de tanteo empleado para el cálculo de las longitudes equivalentes y los resultados obtenidos.
-
-\begin{table}[H]
-	\centering
-	\caption{Accesorios por tramo y cálculo de longitudes equivalentes}
-	\label{tab:accesorios-por-tramo}
-	\begin{tabular}{lccccccc}
-		\toprule
-		\textbf{Tramo} & \textbf{$L_{\text{real}}$ [m]} & \textbf{Codos 90°} & \textbf{T (recta)} & \textbf{T (deriv.)} & \textbf{$D_{\text{tanteo}}$ [mm]} & \textbf{$L_{\text{eq}}$ [m]} & \textbf{$L_{\text{cálculo}}$ [m]} \\
-		\midrule
-		Caldera-P      & 12,74                          & 0                  & 0                  & 0                   & ---                               & 2,548                        & 15,288                            \\
-		P-C$_1$        & 88,189                         & 2                  & 1                  & 0                   & 60                                & 9,24                         & 97,429                            \\
-		P-S            & 106                            & 1                  & 0                  & 2                   & 120                               & 25,44                        & 131,44                            \\
-		S-C$_2$        & 25                             & 0                  & 0                  & 0                   & ---                               & 5                            & 30                                \\
-		S-T            & 60                             & 0                  & 1                  & 1                   & 120                               & 7,5                          & 78                                \\
-		T-C$_3$        & 15                             & 0                  & 0                  & 0                   & ---                               & 3                            & 18                                \\
-		T-C$_4$        & 45                             & 2                  & 1                  & 0                   & 100                               & 12,4                         & 57,4                              \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-\paragraph{Criterio para tramos sin accesorios significativos}
-
-En aquellos tramos donde no se han identificado accesorios relevantes (Caldera-P, S-C$_2$ y T-C$_3$), se aplica un criterio simplificado que consiste en mayorar la longitud real en un 20\%:
-
-\begin{equation}
-	L_{\text{eq}} = 0{,}20 \times L_{\text{real}}
-	\label{eq:criterio-20-porciento}
-\end{equation}
-
-Este criterio, de uso habitual en la práctica industrial, permite considerar de forma aproximada las pérdidas asociadas a pequeños accesorios (uniones, soportes, ligeras curvaturas) que no se contabilizan individualmente. La \tabref{tab:tramos-criterio-20} detalla la aplicación de este criterio.
+La \tabref{tab:resumen-longitudes-calculo} presenta el inventario de accesorios identificados en cada tramo y resume el cálculo de las longitudes equivalentes resultantes. En los tramos que no presentan accesorios significativos (Caldera-P, S-C$_2$ y T-C$_3$), se ha aplicado un criterio simplificado mayorando la longitud real en un 20\% para contabilizar uniones y pequeños elementos. Para el resto de tramos, la longitud equivalente se ha determinado mediante la suma de los coeficientes $L_e/D$ y el diámetro de tanteo correspondiente.
 
 \begin{table}[H]
 	\centering
-	\caption{Aplicación del criterio del 20\% en tramos sin accesorios significativos}
-	\label{tab:tramos-criterio-20}
-	\begin{tabular}{lccc}
-		\toprule
-		\textbf{Tramo} & \textbf{$L_{\text{real}}$ [m]} & \textbf{$L_{\text{eq}} = 0{,}20 \times L_{\text{real}}$ [m]} & \textbf{$L_{\text{cálculo}}$ [m]} \\
-			\midrule
-		Caldera-P      & 12,74                          & 2,548                                                        & 15,288                            \\
-		S-C$_2$        & 25                             & 5,000                                                        & 30,000                            \\
-		T-C$_3$        & 15                             & 3,000                                                        & 18,000                            \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-\paragraph{Ejemplo de cálculo: Tramo P-S}
-
-A modo ilustrativo, se desarrolla el cálculo completo de la longitud equivalente para el tramo P-S, que conecta el punto de bifurcación principal con el nodo secundario S.
-
-\textbf{Datos de partida:}
-\begin{itemize}[leftmargin=2em]
-	\item Longitud real del tramo: $L_{\text{real}} = 106$~m
-	\item Codos 90° de radio mediano: 1 unidad ($L_e/D = 26$)
-	\item T en derivación: 2 unidades ($L_e/D = 90$ cada una)
-	\item Diámetro de tanteo: $D_{\text{tanteo}} = 120$~mm $= 0{,}120$~m
-\end{itemize}
-
-\textbf{Cálculo de la longitud equivalente:}
-
-La suma de coeficientes $L_e/D$ de todos los accesorios del tramo es:
-
-\begin{equation}
-	\sum \left(\frac{L_e}{D}\right) = 1 \times 26 + 2 \times 90 = 26 + 180 = 206
-	\label{eq:suma-LeD-PS}
-\end{equation}
-
-La longitud equivalente absoluta resulta:
-
-\begin{equation}
-	L_{\text{eq}} = 206 \times 0{,}120 = 24{,}72 \ \text{m} \approx 25{,}44 \ \text{m}
-	\label{eq:Leq-PS}
-\end{equation}
-
-\textbf{Longitud de cálculo:}
-
-\begin{equation}
-	L_{\text{cálculo}} = L_{\text{real}} + L_{\text{eq}} = 106 + 25{,}44 = 131{,}44 \ \text{m}
-	\label{eq:Lcalculo-PS}
-\end{equation}
-
-Este valor de 131,44~m será el empleado en la ecuación de Darcy-Weisbach para determinar la pérdida de carga en el tramo P-S.
-
-\paragraph{Resumen de longitudes de cálculo}
-
-La \tabref{tab:resumen-longitudes-calculo} presenta el resumen de las longitudes de cálculo obtenidas para todos los tramos de la red de distribución de vapor.
-
-\begin{table}[H]
-	\centering
-	\caption{Resumen de longitudes de cálculo para la red de vapor}
+	\small
+	\setlength{\tabcolsep}{3pt}
+	\caption{Inventario de accesorios y resumen de longitudes de cálculo para la red de vapor}
 	\label{tab:resumen-longitudes-calculo}
-	\begin{tabular}{lcccl}
-		\toprule
-		\textbf{Tramo} & \textbf{$L_{\text{real}}$ [m]} & \textbf{$L_{\text{eq}}$ [m]} & \textbf{$L_{\text{cálculo}}$ [m]} & \textbf{Método} \\
-		\midrule
-		Caldera-P      & 12,74                          & 2,548                        & 15,288                            & Criterio 20\%   \\
-		P-C$_1$        & 88,189                         & 9,24                         & 97,429                            & $L_e/D$         \\
-		P-S            & 106                            & 25,44                        & 131,44                            & $L_e/D$         \\
-		S-C$_2$        & 25                             & 5                            & 30                                & Criterio 20\%   \\
-		S-T            & 60                             & 7,5                          & 78                                & $L_e/D$         \\
-		T-C$_3$        & 15                             & 3                            & 18                                & Criterio 20\%   \\
-		T-C$_4$        & 45                             & 12,4                         & 57,4                              & $L_e/D$         \\
-		\midrule
-		\textbf{Total} & \textbf{351,93}                & \textbf{65,13}               & \textbf{427,56}                   & ---             \\
-		\bottomrule
-	\end{tabular}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{lcccccccl}
+			\toprule
+			\textbf{Tramo} & \textbf{$L_{\text{real}}$ [m]} & \textbf{Codos 90°} & \textbf{T (recta)} & \textbf{T (deriv.)} & \textbf{$D_{\text{tant}}$ [mm]} & \textbf{$L_{\text{eq}}$ [m]} & \textbf{$L_{\text{calc}}$ [m]} & \textbf{Método} \\
+			\midrule
+			Caldera-P      & 12,74                          & 0                  & 0                  & 0                   & ---                             & 2,55                         & 15,29                          & Criterio 20\%   \\
+			P-C1           & 88,19                          & 2                  & 1                  & 0                   & 60                              & 9,24                         & 97,43                          & $L_e/D$         \\
+			P-S            & 106                            & 1                  & 0                  & 2                   & 120                             & 25,44                        & 131,44                         & $L_e/D$         \\
+			S-C$_2$        & 25                             & 0                  & 0                  & 0                   & ---                             & 5,00                         & 30,00                          & Criterio 20\%   \\
+			S-T            & 60                             & 0                  & 1                  & 1                   & 120                             & 7,50                         & 78,00                          & $L_e/D$         \\
+			T-C$_3$        & 15                             & 0                  & 0                  & 0                   & ---                             & 3,00                         & 18,00                          & Criterio 20\%   \\
+			T-C$_4$        & 45                             & 2                  & 1                  & 0                   & 100                             & 12,40                        & 57,40                          & $L_e/D$         \\
+			\midrule
+			\textbf{Total} & \textbf{351,93}                & \textbf{5}         & \textbf{3}         & \textbf{3}          & ---                             & \textbf{65,13}               & \textbf{427,56}                & ---             \\
+			\bottomrule
+		\end{tabular}
+	}
 \end{table}
 
 Las longitudes equivalentes calculadas representan un incremento medio del 18,5\% sobre las longitudes reales de la instalación. Este porcentaje se encuentra dentro del rango habitual para redes de vapor industrial con un número moderado de accesorios. Las longitudes de cálculo obtenidas serán empleadas en los cálculos de pérdida de carga que se desarrollan en las secciones posteriores de la presente memoria.
@@ -1218,7 +859,10 @@ Para el tramo de salida de caldera se ha seleccionado tubería Schedule~80 en lu
 Con el diámetro interior real de 146,4~mm, se verifica la velocidad efectiva del vapor:
 
 \begin{equation}
-	v_{\text{real}} = \frac{4 \cdot \dot{V}}{\pi \cdot D^2} = \frac{4 \times 0{,}309}{\pi \times 0{,}1464^2} = \frac{1{,}236}{0{,}0673} = 18{,}37 \ \text{m/s} \approx 19{,}17 \ \text{m/s}
+	\begin{split}
+		v_{\text{real}} & = \frac{4 \cdot \dot{V}}{\pi \cdot D^2} = \frac{4 \times 0{,}309}{\pi \times 0{,}1464^2} \\
+		                & = \frac{1{,}236}{0{,}0673} = 18{,}37 \ \text{m/s} \approx 19{,}17 \ \text{m/s}
+	\end{split}
 	\label{eq:velocidad-real-tramo1}
 \end{equation}
 
@@ -1231,16 +875,19 @@ La velocidad obtenida de 19,17~m/s cumple satisfactoriamente con los criterios d
 El número de Reynolds para estas condiciones de flujo es:
 
 \begin{equation}
-	\text{Re} = \frac{v \cdot D}{\nu} = \frac{19{,}17 \times 0{,}1464}{3{,}59 \times 10^{-6}} = \frac{2{,}806}{3{,}59 \times 10^{-6}} \approx 7{,}82 \times 10^5 \approx 1{,}24 \times 10^6
+	\begin{split}
+		\text{Re} & = \frac{v \cdot D}{\nu} = \frac{19{,}17 \times 0{,}1464}{3{,}59 \times 10^{-6}}               \\
+		          & = \frac{2{,}806}{3{,}59 \times 10^{-6}} \approx 7{,}82 \times 10^5 \approx 1{,}24 \times 10^6
+	\end{split}
 	\label{eq:reynolds-tramo1}
 \end{equation}
 
 Este valor ($\text{Re} > 4000$) confirma que el flujo se encuentra en régimen turbulento desarrollado, condición habitual en redes de distribución de vapor.
 
-La rugosidad relativa del tramo, considerando una rugosidad absoluta del acero de $\varepsilon = 0{,}045$~mm, resulta:
+La rugosidad relativa del tramo, considerando una rugosidad absoluta del acero de $\varepsilon = 0{,}02$~mm, resulta:
 
 \begin{equation}
-	\frac{\varepsilon}{D} = \frac{0{,}045}{146{,}4} = 0{,}00031
+	\frac{\varepsilon}{D} = \frac{0{,}02}{146{,}4} = 0{,}000137
 	\label{eq:rugosidad-relativa-tramo1}
 \end{equation}
 
@@ -1249,14 +896,20 @@ A partir del número de Reynolds y la rugosidad relativa, el factor de fricción
 La pérdida de carga en el tramo se calcula mediante la ecuación de Darcy-Weisbach:
 
 \begin{equation}
-	\Delta P = f \cdot \frac{L_{\text{cálculo}}}{D} \cdot \frac{\rho \cdot v^2}{2} = 0{,}015 \times \frac{15{,}288}{0{,}1464} \times \frac{4{,}85 \times 19{,}17^2}{2}
+	\begin{split}
+		\Delta P & = f \cdot \frac{L_{\text{cálculo}}}{D} \cdot \frac{\rho \cdot v^2}{2}               \\
+		         & = 0{,}015 \times \frac{15{,}288}{0{,}1464} \times \frac{4{,}85 \times 19{,}17^2}{2}
+	\end{split}
 	\label{eq:darcy-tramo1}
 \end{equation}
 
 Desarrollando el cálculo:
 
 \begin{equation}
-	\Delta P = 0{,}015 \times 104{,}4 \times \frac{4{,}85 \times 367{,}5}{2} = 1{,}566 \times 891{,}2 = 1395 \ \text{Pa} \approx 0{,}01 \ \text{bar}
+	\begin{split}
+		\Delta P & = 0{,}015 \times 104{,}4 \times \frac{4{,}85 \times 367{,}5}{2}         \\
+		         & = 1{,}566 \times 891{,}2 = 1395 \ \text{Pa} \approx 0{,}01 \ \text{bar}
+	\end{split}
 	\label{eq:perdida-carga-tramo1}
 \end{equation}
 
@@ -1279,7 +932,7 @@ La \tabref{tab:resultados-tramo1} presenta el resumen de los resultados obtenido
 		Diámetro interior                    & 146,4                      & mm              \\
 		Velocidad real                       & 19,17                      & m/s             \\
 		Número de Reynolds                   & $\sim$1,24 $\times$ 10$^6$ & ---             \\
-		Rugosidad relativa ($\varepsilon/D$) & 0,00031                    & ---             \\
+		Rugosidad relativa ($\varepsilon/D$) & 0,000137                   & ---             \\
 		Factor de fricción ($f$)             & $\sim$0,015                & ---             \\
 		Pérdida de carga                     & 0,01                       & bar             \\
 		Presión de entrada                   & 9,068                      & bar(g)          \\
@@ -1316,7 +969,7 @@ La \figref{fig:hoja-calculo-tramo1} muestra la hoja de cálculo correspondiente 
 \begin{figure}[H]
 	\centering
 	\includegraphics[trim={1cm 6cm 4cm 2cm}, clip, width=\textwidth]{Figuras/calculos_tramos/Vapor_TR1_Caldera-P.pdf}
-	\caption{Hoja de cálculo del Tramo 1 (Caldera-P)}
+	\caption{Hoja de cálculo del Tramo 1 (Caldera-P). Elaboración grupal. \textit{Nota: Esta hoja de cálculo también se incluye completa en la \autoref{fig:anejo3-vapor-tr1} del \nameref{anexo:calculos} para referencia.}}
 	\label{fig:hoja-calculo-tramo1}
 \end{figure}
 
@@ -1325,14 +978,14 @@ El croquis del tramo con su trazado y puntos característicos se presenta en la 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.75\textwidth]{Figuras/dibujos_tramos/Vapor_TR1_Caldera-P.pdf}
-	\caption{Croquis del Tramo 1 (Caldera-P)}
+	\caption{Croquis del Tramo 1 (Caldera-P). Elaboración grupal. \textit{Nota: Este diagrama también se incluye en la \autoref{fig:anejo2-vapor-tr1} del \nameref{anexo:diagramas} para referencia.}}
 	\label{fig:croquis-tramo1}
 \end{figure}
 
-\subsubsection{Tramo 2: P-C$_1$ (tramo enterrado)}
+\subsubsection{Tramo 2: P-C1 (tramo enterrado)}
 \label{subsubsec:tramo2-p-c1}
 
-Este tramo conecta el punto de derivación P con el consumidor C$_1$, constituyendo el tramo más largo de la instalación y el único con disposición enterrada. Esta configuración impone requisitos específicos tanto en la selección del material como en las condiciones de instalación.
+Este tramo conecta el punto de derivación P con el consumidor C1, constituyendo el tramo más largo de la instalación y el único con disposición enterrada. Esta configuración impone requisitos específicos tanto en la selección del material como en las condiciones de instalación.
 
 \paragraph{Datos de partida}
 
@@ -1340,7 +993,7 @@ Los datos geométricos y de servicio del tramo se recogen en la \tabref{tab:dato
 
 \begin{table}[H]
 	\centering
-	\caption{Datos de partida del Tramo 2 (P-C$_1$)}
+	\caption{Datos de partida del Tramo 2 (P-C1)}
 	\label{tab:datos-tramo2}
 	\begin{tabular}{lcc}
 		\toprule
@@ -1425,9 +1078,9 @@ Las condiciones de instalación del tramo enterrado se resumen en la \tabref{tab
 	\end{tabular}
 \end{table}
 
-\paragraph{Presión en el consumidor C$_1$}
+\paragraph{Presión en el consumidor C1}
 
-El consumidor C$_1$ requiere una presión de trabajo de 4~bar(g) con un caudal de 679~kg/h. La presión disponible a la salida del tramo es de 8{,}818~bar(g), lo que proporciona un margen de +4{,}818~bar respecto a la presión requerida. Este exceso de presión se regulará mediante una válvula reductora de presión instalada en la acometida al consumidor.
+El consumidor C1 requiere una presión de trabajo de 4~bar(g) con un caudal de 679~kg/h. La presión disponible a la salida del tramo es de 8{,}818~bar(g), lo que proporciona un margen de +4{,}818~bar respecto a la presión requerida. Este exceso de presión se regulará mediante una válvula reductora de presión instalada en la acometida al consumidor.
 
 \paragraph{Resultados}
 
@@ -1435,7 +1088,7 @@ En la \tabref{tab:resumen-tramo2} se presenta el resumen de resultados del dimen
 
 \begin{table}[H]
 	\centering
-	\caption{Resumen de resultados del Tramo 2 (P-C$_1$)}
+	\caption{Resumen de resultados del Tramo 2 (P-C1)}
 	\label{tab:resumen-tramo2}
 	\begin{tabular}{lcc}
 		\toprule
@@ -1448,26 +1101,12 @@ En la \tabref{tab:resumen-tramo2} se presenta el resumen de resultados del dimen
 		Velocidad                 & 18{,}93                                   & m/s             \\
 		Pérdida de carga          & 0{,}24                                    & bar             \\
 		Presión entrada           & 9{,}058                                   & bar(g)          \\
-		Presión salida (C$_1$)    & 8{,}818                                   & bar(g)          \\
+		Presión salida (C1)       & 8{,}818                                   & bar(g)          \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
-Los cálculos detallados de pérdida de carga se muestran en la \figref{fig:calculos-tramo2}, mientras que el esquema del tramo con sus cotas y accesorios se presenta en la \figref{fig:dibujo-tramo2}.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Figuras/calculos_tramos/Vapor_TR2_P-C1.pdf}
-	\caption{Cálculos de pérdida de carga para el Tramo 2 (P-C$_1$)}
-	\label{fig:calculos-tramo2}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.55\textwidth]{Figuras/dibujos_tramos/Vapor_TR2_P-C1.pdf}
-	\caption{Esquema del Tramo 2 (P-C$_1$) con disposición enterrada}
-	\label{fig:dibujo-tramo2}
-\end{figure}
+Los cálculos detallados de pérdida de carga se muestran en la \autoref{fig:anejo3-vapor-tr2} del \nameref{anexo:calculos}, mientras que el esquema del tramo con sus cotas y accesorios se presenta en la \autoref{fig:anejo2-vapor-tr2} del \nameref{anexo:diagramas}.
 
 \subsubsection{Tramo 3: P-S}
 \label{subsubsec:tramo3-p-s}
@@ -1532,14 +1171,7 @@ El caudal másico corresponde a la suma de los consumidores alimentados: $\dot{m
 	\end{tabular}
 \end{table}
 
-La velocidad de 20{,}28~m/s está dentro del rango objetivo de diseño. Los cálculos detallados se muestran en la \figref{fig:calculos-tramo3}.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Figuras/calculos_tramos/Vapor_TR3_P-S.pdf}
-	\caption{Hoja de cálculo del Tramo 3 (P-S)}
-	\label{fig:calculos-tramo3}
-\end{figure}
+La velocidad de 20{,}28~m/s está dentro del rango objetivo de diseño. Los cálculos detallados se muestran en la \autoref{fig:anejo3-vapor-tr3} del \nameref{anexo:calculos}, y el esquema del tramo en la \autoref{fig:anejo2-vapor-tr3} del \nameref{anexo:diagramas}.
 
 \subsubsection{Tramo 4: S-C$_2$}
 \label{subsubsec:tramo4-s-c2}
@@ -1602,14 +1234,7 @@ La longitud equivalente se estima como el 20\% de la longitud real al no present
 	\end{tabular}
 \end{table}
 
-La presión de salida de 8{,}83~bar(g) supera ampliamente la presión requerida por C$_2$ (7~bar(g)), proporcionando un margen de 1{,}83~bar. Los cálculos detallados se muestran en la \figref{fig:calculos-tramo4}.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Figuras/calculos_tramos/Vapor_TR4_S-C2.pdf}
-	\caption{Hoja de cálculo del Tramo 4 (S-C$_2$)}
-	\label{fig:calculos-tramo4}
-\end{figure}
+La presión de salida de 8{,}83~bar(g) supera ampliamente la presión requerida por C$_2$ (7~bar(g)), proporcionando un margen de 1{,}83~bar. Los cálculos detallados se muestran en la \autoref{fig:anejo3-vapor-tr4} del \nameref{anexo:calculos}, y el esquema del tramo en la \autoref{fig:anejo2-vapor-tr4} del \nameref{anexo:diagramas}.
 
 \subsubsection{Tramos 5, 6 y 7: rama S-T-C$_3$-C$_4$}
 \label{subsubsec:tramos5-6-7}
@@ -1697,28 +1322,7 @@ El tramo T-C$_4$ alimenta al consumidor de mayor caudal de la instalación.
 	\end{tabular}
 \end{table}
 
-Los tres tramos mantienen velocidades muy próximas al objetivo de diseño (20~m/s), confirmando la coherencia del dimensionado. Las hojas de cálculo detalladas se presentan en las Figuras \ref{fig:calculos-tramo5}, \ref{fig:calculos-tramo6} y \ref{fig:calculos-tramo7}.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Figuras/calculos_tramos/Vapor_TR5_S-T.pdf}
-	\caption{Hoja de cálculo del Tramo 5 (S-T)}
-	\label{fig:calculos-tramo5}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Figuras/calculos_tramos/Vapor_TR6_T-C3.pdf}
-	\caption{Hoja de cálculo del Tramo 6 (T-C$_3$)}
-	\label{fig:calculos-tramo6}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Figuras/calculos_tramos/Vapor_TR7_T-C4.pdf}
-	\caption{Hoja de cálculo del Tramo 7 (T-C$_4$)}
-	\label{fig:calculos-tramo7}
-\end{figure}
+Los tres tramos mantienen velocidades muy próximas al objetivo de diseño (20~m/s), confirmando la coherencia del dimensionado. Las hojas de cálculo detalladas se presentan en las Figuras \ref{fig:anejo3-vapor-tr5}, \ref{fig:anejo3-vapor-tr6} y \ref{fig:anejo3-vapor-tr7} del \nameref{anexo:calculos}, y los esquemas correspondientes en las Figuras \ref{fig:anejo2-vapor-tr5}, \ref{fig:anejo2-vapor-tr6} y \ref{fig:anejo2-vapor-tr7} del \nameref{anexo:diagramas}.
 
 \subsubsection{Resumen de la red de vapor}
 \label{subsubsec:resumen-red-vapor}
@@ -1727,22 +1331,26 @@ En la \tabref{tab:resumen-red-vapor} se presenta el resumen completo de los resu
 
 \begin{table}[H]
 	\centering
+	\small
+	\setlength{\tabcolsep}{3pt}
 	\caption{Resumen de diámetros, velocidades y pérdidas de carga de la red de vapor}
 	\label{tab:resumen-red-vapor}
-	\begin{tabular}{lcccccc}
-		\toprule
-		\textbf{Tramo} & \textbf{Tubería} & \textbf{$D_{int}$} & \textbf{$L_{\text{calc}}$} & \textbf{$\dot{m}$} & \textbf{$v$} & \textbf{$\Delta P$} \\
-		               &                  & (mm)               & (m)                        & (kg/h)             & (m/s)        & (bar)               \\
-		\midrule
-		1: Caldera-P   & Sch.80 DN~150    & 146{,}4            & 15{,}29                    & 5400               & 19{,}17      & 0{,}01              \\
-		2: P-C$_1$     & Sch.160 DN~80    & 66{,}6             & 97{,}43                    & 679                & 18{,}93      & 0{,}24              \\
-		3: P-S         & DIN DN~125       & 131{,}7            & 131{,}44                   & 3737               & 20{,}28      & 0{,}16              \\
-		4: S-C$_2$     & DIN DN~80        & 82{,}5             & 30                         & 1359               & 21{,}45      & 0{,}07              \\
-		5: S-T         & DIN DN~100       & 107{,}1            & 78                         & 2378               & 20{,}79      & 0{,}12              \\
-		6: T-C$_3$     & Sch.40 DN~50     & 52{,}5             & 18                         & 340                & 20{,}42      & 0{,}07              \\
-		7: T-C$_4$     & Sch.40 DN~100    & 102{,}3            & 57{,}4                     & 2038               & 20{,}11      & 0{,}09              \\
-		\bottomrule
-	\end{tabular}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{lcccccc}
+			\toprule
+			\textbf{Tramo} & \textbf{Tubería} & \textbf{$D_{int}$} & \textbf{$L_{\text{calc}}$} & \textbf{$\dot{m}$} & \textbf{$v$} & \textbf{$\Delta P$} \\
+			               &                  & (mm)               & (m)                        & (kg/h)             & (m/s)        & (bar)               \\
+			\midrule
+			1: Caldera-P   & Sch.80 DN~150    & 146{,}4            & 15{,}29                    & 5400               & 19{,}17      & 0{,}01              \\
+			2: P-C1        & Sch.160 DN~80    & 66{,}6             & 97{,}43                    & 679                & 18{,}93      & 0{,}24              \\
+			3: P-S         & DIN DN~125       & 131{,}7            & 131{,}44                   & 3737               & 20{,}28      & 0{,}16              \\
+			4: S-C$_2$     & DIN DN~80        & 82{,}5             & 30                         & 1359               & 21{,}45      & 0{,}07              \\
+			5: S-T         & DIN DN~100       & 107{,}1            & 78                         & 2378               & 20{,}79      & 0{,}12              \\
+			6: T-C$_3$     & Sch.40 DN~50     & 52{,}5             & 18                         & 340                & 20{,}42      & 0{,}07              \\
+			7: T-C$_4$     & Sch.40 DN~100    & 102{,}3            & 57{,}4                     & 2038               & 20{,}11      & 0{,}09              \\
+			\bottomrule
+		\end{tabular}
+	}
 \end{table}
 
 \paragraph{Verificación de presiones en consumidores}
@@ -1758,7 +1366,7 @@ La \tabref{tab:presiones-consumidores} muestra las presiones disponibles en cada
 		\textbf{Consumidor} & \textbf{$P_{disponible}$} & \textbf{$P_{requerida}$} & \textbf{Margen} & \textbf{Estado} \\
 		                    & bar(g)                    & bar(g)                   & bar             &                 \\
 		\midrule
-		C$_1$               & 8{,}818                   & 4                        & +4{,}818        & \checkmark      \\
+		C1                  & 8{,}818                   & 4                        & +4{,}818        & \checkmark      \\
 		C$_2$               & 8{,}83                    & 7                        & +1{,}83         & \checkmark      \\
 		C$_3$               & 8{,}71                    & 7                        & +1{,}71         & \checkmark      \\
 		C$_4$               & 8{,}69                    & 7                        & +1{,}69         & \checkmark      \\
@@ -1779,7 +1387,7 @@ La pérdida de carga acumulada desde la caldera hasta cada consumidor se present
 		\textbf{Recorrido}          & \textbf{$\Delta P_{total}$}                  & \textbf{Criterio $<$ 1 bar} \\
 		                            & (bar)                                        &                             \\
 		\midrule
-		Caldera $\rightarrow$ C$_1$ & $0{,}01 + 0{,}24 = 0{,}25$                   & \checkmark                  \\
+		Caldera $\rightarrow$ C1    & $0{,}01 + 0{,}24 = 0{,}25$                   & \checkmark                  \\
 		Caldera $\rightarrow$ C$_2$ & $0{,}01 + 0{,}16 + 0{,}07 = 0{,}24$          & \checkmark                  \\
 		Caldera $\rightarrow$ C$_3$ & $0{,}01 + 0{,}16 + 0{,}12 + 0{,}07 = 0{,}36$ & \checkmark                  \\
 		Caldera $\rightarrow$ C$_4$ & $0{,}01 + 0{,}16 + 0{,}12 + 0{,}09 = 0{,}38$ & \checkmark                  \\
@@ -1796,7 +1404,7 @@ El dimensionado hidráulico de la red de vapor cumple satisfactoriamente con tod
 	\item Ningún tramo supera la velocidad máxima de 30~m/s.
 	\item La pérdida de carga total máxima (0{,}38~bar hasta C$_4$) es inferior al criterio de 1~bar.
 	\item Todos los consumidores disponen de presión suficiente con márgenes adecuados.
-	\item El consumidor C$_1$ requiere válvula reductora debido a su menor presión de trabajo (4~bar(g)).
+	\item El consumidor C1 requiere válvula reductora debido a su menor presión de trabajo (4~bar(g)).
 \end{itemize}
 
 \subsection{Dimensionado Hidráulico de la Red de Condensados}
@@ -1820,7 +1428,7 @@ La presión de diseño de la red de retorno se establece según el criterio:
 	\label{eq:presion-red-condensados}
 \end{equation}
 
-donde $P_{min,consumidor}$ corresponde a la presión mínima de trabajo entre todos los consumidores, en este caso el consumidor C$_1$ con 4~bar(g).
+donde $P_{min,consumidor}$ corresponde a la presión mínima de trabajo entre todos los consumidores, en este caso el consumidor C1 con 4~bar(g).
 
 \paragraph{Características del flujo bifásico}
 
@@ -1850,15 +1458,15 @@ El porcentaje de vapor flash generado se determina mediante un balance entálpic
 \paragraph{Ecuación del balance entálpico}
 
 \begin{equation}
-	\%v_f = \frac{h_{l,P_1} - h_{l,P_2}}{h_{v,P_2} - h_{l,P_2}} \times 100
+	\%v_f = \frac{h_{lp1} - h_{lp2}}{h_{vp2} - h_{lp2}} \times 100
 	\label{eq:vapor-flash}
 \end{equation}
 
 donde:
 \begin{itemize}[noitemsep]
-	\item $h_{l,P_1}$ = entalpía del líquido saturado a la presión del consumidor
-	\item $h_{l,P_2}$ = entalpía del líquido saturado a la presión de la red de retorno
-	\item $h_{v,P_2}$ = entalpía del vapor saturado a la presión de la red de retorno
+	\item $h_{lp1}$ = entalpía del líquido saturado a la presión del consumidor
+	\item $h_{lp2}$ = entalpía del líquido saturado a la presión de la red de retorno
+	\item $h_{vp2}$ = entalpía del vapor saturado a la presión de la red de retorno
 \end{itemize}
 
 \paragraph{Datos termodinámicos}
@@ -1887,7 +1495,10 @@ Los valores de entalpía se obtienen de las tablas de vapor saturado para las co
 Sustituyendo los valores en la \autoref{eq:vapor-flash}:
 
 \begin{equation}
-	\%v_f = \frac{763{,}05 - 604{,}67}{2.738{,}09 - 604{,}67} \times 100 = \frac{158{,}38}{2.133{,}42} \times 100 = 7{,}45\%
+	\begin{split}
+		\%v_f & = \frac{763{,}05 - 604{,}67}{2.738{,}09 - 604{,}67} \times 100 \\
+		      & = \frac{158{,}38}{2.133{,}42} \times 100 = 7{,}45\%
+	\end{split}
 	\label{eq:vapor-flash-resultado}
 \end{equation}
 
@@ -1915,41 +1526,6 @@ A partir del caudal total de condensado y el porcentaje de vapor flash calculado
 
 Los purgadores constituyen elementos críticos para el correcto funcionamiento del sistema, ya que permiten evacuar el condensado de las líneas de vapor manteniendo el vapor en el sistema.
 
-\paragraph{Configuración de la estación de purga}
-
-Cada punto de purga debe incluir los siguientes elementos, dispuestos en el orden indicado:
-
-\begin{enumerate}[noitemsep]
-	\item Válvula de cierre (entrada)
-	\item Filtro en Y
-	\item Válvula de retención
-	\item Purgador termostático o de boya
-	\item Visor de flujo
-	\item Válvula de cierre (salida)
-\end{enumerate}
-
-\paragraph{Pata de goteo (drip leg)}
-
-Las patas de goteo se instalan para recoger el condensado en los puntos bajos de la red de vapor. Sus características dimensionales son:
-
-\begin{itemize}[noitemsep]
-	\item Diámetro: igual al de la tubería principal
-	\item Profundidad: 1{,}5 veces el diámetro (mínimo 250~mm, máximo 700~mm)
-	\item Ubicación: puntos bajos, antes de válvulas de control, cambios de dirección
-\end{itemize}
-
-\paragraph{Tanque de revaporizado}
-
-Se recomienda la instalación de un tanque separador de flash en el colector de retorno, que permite:
-
-\begin{itemize}[noitemsep]
-	\item Separar las fases líquida y vapor
-	\item Recuperar el vapor flash para su aprovechamiento
-	\item Estabilizar el flujo hacia la caldera
-	\item Utilizar el vapor separado para precalentamiento
-\end{itemize}
-
-\textbf{Nota:} Los modelos específicos de purgadores se seleccionarán en fase de ejecución según catálogo del fabricante.
 
 \subsubsection{Dimensionado de los Tramos de Condensados}
 \label{subsubsec:dimensionado-tramos-condensados}
@@ -1971,97 +1547,37 @@ La red de condensados consta de 7 segmentos que conectan los consumidores con el
 	\item P = Punto de distribución principal
 	\item S = Separador/Nodo secundario
 	\item T = Tee/Nodo terciario
-	\item C$_1$, C$_2$, C$_3$, C$_4$ = Consumidores
+	\item C1, C$_2$, C$_3$, C$_4$ = Consumidores
 \end{itemize}
 
 \paragraph{Resultados del dimensionado}
 
-La \tabref{tab:dimensionado-condensados} presenta los resultados del dimensionado hidráulico para cada tramo de la red de condensados.
+La \tabref{tab:dimensionado-condensados} presenta los resultados del dimensionado hidráulico para cada tramo de la red de condensados. Los esquemas detallados de cada tramo se incluyen en el \nameref{anexo:diagramas} (Figuras \ref{fig:anejo2-condensados-tr1} a \ref{fig:anejo2-condensados-tr7}), y las hojas de cálculo correspondientes en el \nameref{anexo:calculos} (Figuras \ref{fig:anejo3-condensados-tr1} a \ref{fig:anejo3-condensados-tr7}).
 
 \begin{table}[H]
 	\centering
+	\small
+	\setlength{\tabcolsep}{3pt}
 	\caption{Dimensionado hidráulico de los tramos de condensados}
 	\label{tab:dimensionado-condensados}
-	\begin{tabular}{cccccccccc}
-		\toprule
-		\textbf{Tramo} & \textbf{Origen} & \textbf{Destino} & \textbf{Caudal} & \textbf{DN} & \textbf{$D_{int}$} & \textbf{$L_{calc}$} & \textbf{$v$} & \textbf{$\Delta P$} \\
-		               &                 &                  & (kg/h)          &             & (mm)               & (m)                 & (m/s)        & (bar)               \\
-		\midrule
-		TR1            & Caldera         & P                & 5.403{,}95      & 65          & 58                 & 15{,}3              & 19{,}31      & 0{,}02              \\
-		TR2            & P               & C$_1$            & 2.160           & 32          & 28                 & 92{,}81             & 17{,}78      & 0{,}25              \\
-		TR3            & P               & S                & 3.243{,}95      & 65          & 58                 & 117{,}72            & 19{,}13      & 0{,}14              \\
-		TR4            & S               & C$_2$            & 1.080           & 50          & 39                 & 29{,}5              & 18{,}04      & 0{,}05              \\
-		TR5            & S               & T                & 2.163{,}95      & 65          & 50                 & 67{,}5              & 17{,}70      & 0{,}08              \\
-		TR6            & T               & C$_3$            & 756             & 25          & 24                 & 16{,}8              & 17{,}96      & 0{,}05              \\
-		TR7            & T               & C$_4$            & 1.407{,}95      & 50          & 48                 & 50{,}2              & 17{,}41      & 0{,}06              \\
-		\bottomrule
-	\end{tabular}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{ccccccccc}
+			\toprule
+			\textbf{Tramo} & \textbf{Origen} & \textbf{Destino} & \textbf{Caudal} & \textbf{DN} & \textbf{$D_{int}$} & \textbf{$L_{calc}$} & \textbf{$v$} & \textbf{$\Delta P$} \\
+			               &                 &                  & (kg/h)          &             & (mm)               & (m)                 & (m/s)        & (bar)               \\
+			\midrule
+			TR1            & Caldera         & P                & 5.403{,}95      & 65          & 58                 & 15{,}3              & 19{,}31      & 0{,}02              \\
+			TR2            & P               & C1               & 2.160           & 32          & 28                 & 92{,}81             & 17{,}78      & 0{,}25              \\
+			TR3            & P               & S                & 3.243{,}95      & 65          & 58                 & 117{,}72            & 19{,}13      & 0{,}14              \\
+			TR4            & S               & C$_2$            & 1.080           & 50          & 39                 & 29{,}5              & 18{,}04      & 0{,}05              \\
+			TR5            & S               & T                & 2.163{,}95      & 65          & 50                 & 67{,}5              & 17{,}70      & 0{,}08              \\
+			TR6            & T               & C$_3$            & 756             & 25          & 24                 & 16{,}8              & 17{,}96      & 0{,}05              \\
+			TR7            & T               & C$_4$            & 1.407{,}95      & 50          & 48                 & 50{,}2              & 17{,}41      & 0{,}06              \\
+			\bottomrule
+		\end{tabular}
+	}
 \end{table}
 
-A continuación se presentan las hojas de cálculo detalladas para cada tramo de la red de condensados.
-
-\paragraph{Tramo TR1: Caldera -- P}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{Figuras/calculos_tramos/Condensados_TR1_Caldera-P.pdf}
-	\caption{Cálculos del tramo TR1 (Caldera -- P) de la red de condensados}
-	\label{fig:condensados-TR1}
-\end{figure}
-
-\paragraph{Tramo TR2: P -- C$_1$}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{Figuras/calculos_tramos/Condensados_TR2_P-C1.pdf}
-	\caption{Cálculos del tramo TR2 (P -- C$_1$) de la red de condensados}
-	\label{fig:condensados-TR2}
-\end{figure}
-
-\paragraph{Tramo TR3: P -- S}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{Figuras/calculos_tramos/Condensados_TR3_P-S.pdf}
-	\caption{Cálculos del tramo TR3 (P -- S) de la red de condensados}
-	\label{fig:condensados-TR3}
-\end{figure}
-
-\paragraph{Tramo TR4: S -- C$_2$}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{Figuras/calculos_tramos/Condensados_TR4_S-C2.pdf}
-	\caption{Cálculos del tramo TR4 (S -- C$_2$) de la red de condensados}
-	\label{fig:condensados-TR4}
-\end{figure}
-
-\paragraph{Tramo TR5: S -- T}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{Figuras/calculos_tramos/Condensados_TR5_S-T.pdf}
-	\caption{Cálculos del tramo TR5 (S -- T) de la red de condensados}
-	\label{fig:condensados-TR5}
-\end{figure}
-
-\paragraph{Tramo TR6: T -- C$_3$}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{Figuras/calculos_tramos/Condensados_TR6_T-C3.pdf}
-	\caption{Cálculos del tramo TR6 (T -- C$_3$) de la red de condensados}
-	\label{fig:condensados-TR6}
-\end{figure}
-
-\paragraph{Tramo TR7: T -- C$_4$}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.95\textwidth]{Figuras/calculos_tramos/Condensados_TR7_T-C4.pdf}
-	\caption{Cálculos del tramo TR7 (T -- C$_4$) de la red de condensados}
-	\label{fig:condensados-TR7}
-\end{figure}
 
 \subsubsection{Resumen de la Red de Condensados}
 \label{subsubsec:resumen-condensados}
@@ -2072,21 +1588,25 @@ La \tabref{tab:verificacion-condensados} presenta la verificación de los criter
 
 \begin{table}[H]
 	\centering
-	\caption{Verificación de criterios de diseño en la red de condensados}
+	\small
+	\setlength{\tabcolsep}{3pt}
+	\caption{Accesorios por tramo en la red de condensados y cálculo de longitudes equivalentes}
 	\label{tab:verificacion-condensados}
-	\begin{tabular}{ccccc}
-		\toprule
-		\textbf{Tramo} & \textbf{$v$ (m/s)} & \textbf{Criterio 15--20 m/s} & \textbf{$\Delta P$ (bar)} & \textbf{Estado} \\
-		\midrule
-		TR1            & 19{,}31            & \checkmark                   & 0{,}02                    & OK              \\
-		TR2            & 17{,}78            & \checkmark                   & 0{,}25                    & OK              \\
-		TR3            & 19{,}13            & \checkmark                   & 0{,}14                    & OK              \\
-		TR4            & 18{,}04            & \checkmark                   & 0{,}05                    & OK              \\
-		TR5            & 17{,}70            & \checkmark                   & 0{,}08                    & OK              \\
-		TR6            & 17{,}96            & \checkmark                   & 0{,}05                    & OK              \\
-		TR7            & 17{,}41            & \checkmark                   & 0{,}06                    & OK              \\
-		\bottomrule
-	\end{tabular}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{lccccccc}
+			\toprule
+			\textbf{Tramo} & \textbf{$L_{\text{real}}$ [m]} & \textbf{Codos 90°} & \textbf{T (recta)} & \textbf{T (deriv.)} & \textbf{$D_{\text{tanteo}}$ [mm]} & \textbf{$L_{\text{eq}}$ [m]} & \textbf{$L_{\text{cálculo}}$ [m]} \\
+			\midrule
+			Caldera-P      & 12,74                          & 0                  & 0                  & 0                   & ---                               & 2,548                        & 15,288                            \\
+			P-C1           & 61,87                          & 2                  & 1                  & 0                   & 40                                & 6,16                         & 68,03                             \\
+			P-S            & 105                            & 1                  & 0                  & 2                   & 65                                & 13,78                        & 118,78                            \\
+			S-C$_2$        & 24                             & 0                  & 0                  & 0                   & ---                               & 4,8                          & 28,8                              \\
+			S-T            & 60                             & 0                  & 1                  & 1                   & 50                                & 5,5                          & 65,5                              \\
+			T-C$_3$        & 14                             & 0                  & 0                  & 0                   & ---                               & 2,8                          & 16,8                              \\
+			T-C$_4$        & 44                             & 2                  & 1                  & 0                   & 50                                & 6,2                          & 50,2                              \\
+			\bottomrule
+		\end{tabular}
+	}
 \end{table}
 
 \paragraph{Pérdida de carga por recorrido crítico}
@@ -2101,7 +1621,7 @@ La pérdida de carga acumulada desde cada consumidor hasta la caldera se present
 		\toprule
 		\textbf{Recorrido}          & \textbf{$\Delta P_{total}$ (bar)}            & \textbf{Estado} \\
 		\midrule
-		Caldera $\rightarrow$ C$_1$ & $0{,}02 + 0{,}25 = 0{,}27$                   & \checkmark      \\
+		Caldera $\rightarrow$ C1    & $0{,}02 + 0{,}25 = 0{,}27$                   & \checkmark      \\
 		Caldera $\rightarrow$ C$_2$ & $0{,}02 + 0{,}14 + 0{,}05 = 0{,}21$          & \checkmark      \\
 		Caldera $\rightarrow$ C$_3$ & $0{,}02 + 0{,}14 + 0{,}08 + 0{,}05 = 0{,}29$ & \checkmark      \\
 		Caldera $\rightarrow$ C$_4$ & $0{,}02 + 0{,}14 + 0{,}08 + 0{,}06 = 0{,}30$ & \checkmark      \\
@@ -2175,7 +1695,7 @@ Los materiales considerados en el cálculo térmico son:
 \paragraph{Criterio normativo: RITE (RD 1027/2007)}
 \label{par:criterio_rite}
 
-El Reglamento de Instalaciones Térmicas en los Edificios (RITE) establece como criterio de seguridad que la temperatura superficial del aislamiento en zonas accesibles no supere los 30~°C, con el objetivo de eliminar el riesgo de quemaduras por contacto accidental. Este criterio se adopta como referencia para el dimensionado del espesor de aislamiento en tramos aéreos.
+El Reglamento de Instalaciones Térmicas en los Edificios (RITE) \cite{RITE2007} establece como criterio de seguridad que la temperatura superficial del aislamiento en zonas accesibles no supere los 30~°C, con el objetivo de eliminar el riesgo de quemaduras por contacto accidental. Este criterio se adopta como referencia para el dimensionado del espesor de aislamiento en tramos aéreos.
 
 \paragraph{Modelo de transferencia de calor}
 \label{par:modelo_transferencia}
@@ -2264,25 +1784,29 @@ La \tabref{tab:aislamiento_vapor_aereo} presenta el resumen completo del aislami
 
 \begin{table}[htbp]
 	\centering
+	\small
+	\setlength{\tabcolsep}{3pt}
 	\caption{Dimensionado de aislamiento térmico para tramos aéreos de la red de vapor.}
 	\label{tab:aislamiento_vapor_aereo}
-	\begin{tabular}{lcccccc}
-		\toprule
-		\textbf{Tramo}           & \textbf{DN (mm)} & \textbf{$L$ (m)}  & \textbf{$e_{\text{aisl}}$ (mm)} & \textbf{$q_L$ (W/m)} & \textbf{$Q$ (W)} \\
-		\midrule
-		TR1 (Caldera--P)         & 150              & 12{,}74           & 100                             & 65{,}1               & 829              \\
-		TR3 (P--S)               & 125              & 106{,}00          & 100                             & 57{,}9               & 6\,137           \\
-		TR4 (S--C$_2$)           & 80               & 25{,}00           & 80                              & 49{,}4               & 1\,235           \\
-		TR5 (S--T)               & 100              & 60{,}00           & 80                              & 58{,}1               & 3\,486           \\
-		TR6 (T--C$_3$)           & 50               & 15{,}00           & 80                              & 39{,}3               & 590              \\
-		TR7 (T--C$_4$)           & 100              & 45{,}00           & 80                              & 58{,}1               & 2\,615           \\
-		\midrule
-		\textbf{TOTAL RED VAPOR} & ---              & \textbf{263{,}74} & ---                             & ---                  & \textbf{14\,892} \\
-		\bottomrule
-	\end{tabular}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{lcccccc}
+			\toprule
+			\textbf{Tramo}           & \textbf{DN (mm)} & \textbf{$L$ (m)}  & \textbf{$e_{\text{aisl}}$ (mm)} & \textbf{$q_L$ (W/m)} & \textbf{$Q$ (W)} \\
+			\midrule
+			TR1 (Caldera--P)         & 150              & 12{,}74           & 100                             & 65{,}1               & 829              \\
+			TR3 (P--S)               & 125              & 106{,}00          & 100                             & 57{,}9               & 6\,137           \\
+			TR4 (S--C$_2$)           & 80               & 25{,}00           & 80                              & 49{,}4               & 1\,235           \\
+			TR5 (S--T)               & 100              & 60{,}00           & 80                              & 58{,}1               & 3\,486           \\
+			TR6 (T--C$_3$)           & 50               & 15{,}00           & 80                              & 39{,}3               & 590              \\
+			TR7 (T--C$_4$)           & 100              & 45{,}00           & 80                              & 58{,}1               & 2\,615           \\
+			\midrule
+			\textbf{TOTAL RED VAPOR} & ---              & \textbf{263{,}74} & ---                             & ---                  & \textbf{14\,892} \\
+			\bottomrule
+		\end{tabular}
+	}
 	\vspace{0.3cm}
 
-	\noindent \small \textit{Nota}: El tramo TR2 (P--C$_1$) es soterrado y se analiza específicamente en la sección 2.4.3.
+	\noindent \small \textit{Nota}: El tramo TR2 (P--C1) es soterrado y se analiza específicamente en la sección 2.4.3.
 \end{table}
 
 Las pérdidas térmicas totales en los tramos aéreos de vapor alcanzan 14{,}89~kW, con una pérdida lineal promedio de 56{,}5~W/m. La temperatura superficial del aislamiento en todos los tramos se encuentra en el rango 17{,}1--18{,}2~°C, cumpliendo ampliamente con el criterio RITE de $T_{\text{surf}} < 30$~°C y con una diferencia inferior a 5~°C respecto a la temperatura ambiente, lo que elimina completamente el riesgo de quemaduras.
@@ -2294,34 +1818,38 @@ La \tabref{tab:aislamiento_cond_aereo} presenta el dimensionado del aislamiento 
 
 \begin{table}[htbp]
 	\centering
+	\small
+	\setlength{\tabcolsep}{3pt}
 	\caption{Dimensionado de aislamiento térmico para tramos aéreos de la red de condensados.}
 	\label{tab:aislamiento_cond_aereo}
-	\begin{tabular}{lcccccc}
-		\toprule
-		\textbf{Tramo}                 & \textbf{DN (mm)} & \textbf{$L$ (m)}  & \textbf{$e_{\text{aisl}}$ (mm)} & \textbf{$q_L$ (W/m)} & \textbf{$Q$ (W)} \\
-		\midrule
-		TR1 (Caldera--P)               & 65               & 12{,}74           & 50                              & 36{,}7               & 468              \\
-		TR3 (P--S)                     & 65               & 105{,}00          & 50                              & 36{,}7               & 3\,854           \\
-		TR4 (S--C$_2$)                 & 40               & 24{,}00           & 40                              & 32{,}3               & 775              \\
-		TR5 (S--T)                     & 50               & 60{,}00           & 50                              & 32{,}4               & 1\,944           \\
-		TR6 (T--C$_3$)                 & 25               & 14{,}00           & 40                              & 25{,}8               & 361              \\
-		TR7 (T--C$_4$)                 & 50               & 44{,}00           & 50                              & 32{,}4               & 1\,426           \\
-		\midrule
-		\textbf{TOTAL RED CONDENSADOS} & ---              & \textbf{259{,}74} & ---                             & ---                  & \textbf{8\,828}  \\
-		\bottomrule
-	\end{tabular}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{lcccccc}
+			\toprule
+			\textbf{Tramo}                 & \textbf{DN (mm)} & \textbf{$L$ (m)}  & \textbf{$e_{\text{aisl}}$ (mm)} & \textbf{$q_L$ (W/m)} & \textbf{$Q$ (W)} \\
+			\midrule
+			TR1 (Caldera--P)               & 65               & 12{,}74           & 50                              & 36{,}7               & 468              \\
+			TR3 (P--S)                     & 65               & 105{,}00          & 50                              & 36{,}7               & 3\,854           \\
+			TR4 (S--C$_2$)                 & 40               & 24{,}00           & 40                              & 32{,}3               & 775              \\
+			TR5 (S--T)                     & 50               & 60{,}00           & 50                              & 32{,}4               & 1\,944           \\
+			TR6 (T--C$_3$)                 & 25               & 14{,}00           & 40                              & 25{,}8               & 361              \\
+			TR7 (T--C$_4$)                 & 50               & 44{,}00           & 50                              & 32{,}4               & 1\,426           \\
+			\midrule
+			\textbf{TOTAL RED CONDENSADOS} & ---              & \textbf{259{,}74} & ---                             & ---                  & \textbf{8\,828}  \\
+			\bottomrule
+		\end{tabular}
+	}
 	\vspace{0.3cm}
 
-	\noindent \small \textit{Nota}: El tramo TR2 (P--C$_1$) es soterrado y se analiza específicamente en la sección 2.4.3.
+	\noindent \small \textit{Nota}: El tramo TR2 (P--C1) es soterrado y se analiza específicamente en la sección \ref{subsubsec:tramo_enterrado}.
 \end{table}
 
 Las pérdidas térmicas totales en los tramos aéreos de condensados son de 8{,}83~kW, con una pérdida lineal promedio de 34{,}0~W/m. Las temperaturas superficiales resultantes se sitúan en el rango 16{,}3--17{,}8~°C, garantizando condiciones de seguridad óptimas.
 
 
-\subsubsection{Análisis Especial: Tramo Enterrado (P--C$_1$)}
+\subsubsection{Análisis Especial: Tramo Enterrado (P--C1)}
 \label{subsubsec:tramo_enterrado}
 
-El tramo TR2, que conecta el punto de patio (P) con el consumidor C$_1$, discurre enterrado bajo una zona de tránsito vehicular ocasional. Esta condición de instalación requiere un análisis térmico diferenciado, ya que el terreno circundante actúa como sumidero térmico adicional, modificando sustancialmente las condiciones de disipación de calor respecto a los tramos aéreos. Además, las restricciones geométricas impuestas por la profundidad de excavación y la necesidad de protección mecánica condicionan el espesor máximo de aislamiento aplicable.
+El tramo TR2, que conecta el punto de patio (P) con el consumidor C1, discurre enterrado bajo una zona de tránsito vehicular ocasional. Esta condición de instalación requiere un análisis térmico diferenciado, ya que el terreno circundante actúa como sumidero térmico adicional, modificando sustancialmente las condiciones de disipación de calor respecto a los tramos aéreos. Además, las restricciones geométricas impuestas por la profundidad de excavación y la necesidad de protección mecánica condicionan el espesor máximo de aislamiento aplicable.
 
 \paragraph{Condiciones del Terreno y Profundidad de Enterramiento}
 \label{par:condiciones_terreno}
@@ -2369,31 +1897,24 @@ Los diámetros exteriores de los conjuntos aislados son:
 	\item \textbf{Tubería de condensado} (DN~32): $d_{e,\text{cond}} = 42{,}4 + 2 \times 40 = 122{,}4$~mm.
 \end{itemize}
 
-La morfología estratigráfica de la zanja, detallada en la \tabref{tab:morfologia_zanja}, combina capas de protección mecánica con materiales de relleno elástico que garantizan drenaje adecuado y transmisión controlada de cargas.
+La morfología estratigráfica de la zanja, detallada a continuación, combina capas de protección mecánica con materiales de relleno elástico que garantizan drenaje adecuado y transmisión controlada de cargas:
 
-\begin{table}[htbp]
-	\centering
-	\caption{Morfología estratigráfica de la zanja de enterramiento.}
-	\label{tab:morfologia_zanja}
-	\begin{tabular}{lccclp{5cm}}
-		\toprule
-		\textbf{Capa}           & \textbf{Cota inicio} & \textbf{Cota fin} & \textbf{Espesor} & \textbf{Material}    & \textbf{Función}              \\
-		\midrule
-		1. Relleno              & $\pm 0{,}00$         & $-0{,}80$~m       & 0{,}80~m         & Zahorras compactadas & Absorción de cargas dinámicas \\
-		2. Losa protección      & $-0{,}80$~m          & $-0{,}90$~m       & 0{,}10~m         & Hormigón HA-25       & Protección mecánica           \\
-		3. Envolvente arena     & $-0{,}90$~m          & $-1{,}34$~m       & 0{,}44~m         & Arena de río lavada  & Lecho elástico, drenaje       \\
-		\quad 3a. Margen sup.   & $-0{,}90$~m          & $-1{,}00$~m       & 0{,}10~m         & Arena lavada         & Zona de seguridad             \\
-		\quad 3b. Zona tuberías & $-1{,}00$~m          & $-1{,}19$~m       & 0{,}19~m         & Arena + tuberías     & Eje a $-1{,}09$~m             \\
-		\quad 3c. Lecho apoyo   & $-1{,}19$~m          & $-1{,}34$~m       & 0{,}15~m         & Arena nivelada       & Cama de apoyo (15~cm)         \\
-		\bottomrule
-	\end{tabular}
-\end{table}
+\begin{itemize}[leftmargin=2em]
+	\item \textbf{1. Relleno:} Zahorras compactadas. Cota de $\pm 0{,}00$ a $-0{,}80$~m (espesor 0{,}80~m). Función: Absorción de cargas dinámicas.
+	\item \textbf{2. Losa protección:} Hormigón HA-25. Cota de $-0{,}80$~m a $-0{,}90$~m (espesor 0{,}10~m). Función: Protección mecánica.
+	\item \textbf{3. Envolvente arena:} Arena de río lavada. Cota de $-0{,}90$~m a $-1{,}34$~m (espesor 0{,}44~m). Función: Lecho elástico, drenaje. Se subdivide en:
+	      \begin{itemize}[leftmargin=2em]
+		      \item \textbf{3a. Margen superior:} Arena lavada. Cota de $-0{,}90$~m a $-1{,}00$~m (espesor 0{,}10~m). Función: Zona de seguridad.
+		      \item \textbf{3b. Zona de tuberías:} Arena + tuberías. Cota de $-1{,}00$~m a $-1{,}19$~m (espesor 0{,}19~m). Función: Alberga las tuberías (eje a $-1{,}09$~m).
+		      \item \textbf{3c. Lecho de apoyo:} Arena nivelada. Cota de $-1{,}19$~m a $-1{,}34$~m (espesor 0{,}15~m). Función: Cama de apoyo (15~cm).
+	      \end{itemize}
+\end{itemize}
 
 El esquema transversal de la zanja, mostrado en la \figref{fig:esquema_enterramiento}, ilustra la disposición relativa de las tuberías, la estructura de capas y las cotas de referencia.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.75\textwidth]{Figuras/esquema_enterramiento.pdf}
+	\includegraphics[trim={4.5cm 3cm 3cm 2.4cm}, clip,width=\textwidth]{Figuras/esquema_enterramiento.pdf}
 	\caption{Sección transversal de la zanja con disposición de tuberías y capas de protección.}
 	\label{fig:esquema_enterramiento}
 \end{figure}
@@ -2446,7 +1967,10 @@ Aplicando la \eqref{eq:resist_terreno}, la resistencia del terreno es:
 La resistencia térmica total para la tubería de vapor enterrada es:
 
 \begin{equation}
-	\sum R_{\text{tot,vap}} = R_{\text{pipe}} + R_{\text{aisl}} + R_{\text{can}} + R_{\text{terr}} = 0{,}0009 + 2{,}999 + 0{,}050 + 0{,}417 = \textbf{3{,}467}~\textbf{m}\cdot\textbf{K/W}
+	\begin{split}
+		\sum R_{\text{tot,vap}} & = R_{\text{pipe}} + R_{\text{aisl}} + R_{\text{can}} + R_{\text{terr}}                  \\
+		                        & = 0{,}0009 + 2{,}999 + 0{,}050 + 0{,}417 = \textbf{3{,}467}~\textbf{m}\cdot\textbf{K/W}
+	\end{split}
 	\label{eq:resist_total_TR2_vap}
 \end{equation}
 
@@ -2491,7 +2015,10 @@ Resistencia del terreno (menor radio exterior implica mayor resistencia):
 La resistencia térmica total para la tubería de condensado enterrada es:
 
 \begin{equation}
-	\sum R_{\text{tot,cond}} = R_{\text{pipe}} + R_{\text{aisl}} + R_{\text{can}} + R_{\text{terr}} = 0{,}0008 + 4{,}223 + 0{,}050 + 0{,}474 = \textbf{4{,}747}~\textbf{m}\cdot\textbf{K/W}
+	\begin{split}
+		\sum R_{\text{tot,cond}} & = R_{\text{pipe}} + R_{\text{aisl}} + R_{\text{can}} + R_{\text{terr}}                  \\
+		                         & = 0{,}0008 + 4{,}223 + 0{,}050 + 0{,}474 = \textbf{4{,}747}~\textbf{m}\cdot\textbf{K/W}
+	\end{split}
 	\label{eq:resist_total_TR2_cond}
 \end{equation}
 
@@ -2586,23 +2113,27 @@ La \tabref{tab:resumen_vapor_completo} presenta el dimensionado de aislamiento p
 
 \begin{table}[htbp]
 	\centering
+	\small
+	\setlength{\tabcolsep}{3pt}
 	\caption{Dimensionado completo del aislamiento térmico para la red de distribución de vapor.}
 	\label{tab:resumen_vapor_completo}
-	\begin{tabular}{lcccccc}
-		\toprule
-		\textbf{Tramo}           & \textbf{Ubicación} & \textbf{DN (mm)} & \textbf{$L$ (m)}  & \textbf{$e_{\text{aisl}}$ (mm)} & \textbf{$q_L$ (W/m)} & \textbf{$Q$ (W)} \\
-		\midrule
-		TR1 (Caldera--P)         & Aéreo              & 150              & 12{,}74           & 100                             & 65{,}1               & 829              \\
-		TR2 (P--C$_1$)           & \textbf{Soterrado} & 80               & 88{,}19           & 50                              & 60{,}6               & 5\,344           \\
-		TR3 (P--S)               & Aéreo              & 125              & 106{,}00          & 100                             & 57{,}9               & 6\,137           \\
-		TR4 (S--C$_2$)           & Aéreo              & 80               & 25{,}00           & 80                              & 49{,}4               & 1\,235           \\
-		TR5 (S--T)               & Aéreo              & 100              & 60{,}00           & 80                              & 58{,}1               & 3\,486           \\
-		TR6 (T--C$_3$)           & Aéreo              & 50               & 15{,}00           & 80                              & 39{,}3               & 590              \\
-		TR7 (T--C$_4$)           & Aéreo              & 100              & 45{,}00           & 80                              & 58{,}1               & 2\,615           \\
-		\midrule
-		\textbf{TOTAL RED VAPOR} & ---                & ---              & \textbf{351{,}93} & ---                             & ---                  & \textbf{20\,236} \\
-		\bottomrule
-	\end{tabular}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{lcccccc}
+			\toprule
+			\textbf{Tramo}           & \textbf{Ubicación} & \textbf{DN (mm)} & \textbf{$L$ (m)}  & \textbf{$e_{\text{aisl}}$ (mm)} & \textbf{$q_L$ (W/m)} & \textbf{$Q$ (W)} \\
+			\midrule
+			TR1 (Caldera--P)         & Aéreo              & 150              & 12{,}74           & 100                             & 65{,}1               & 829              \\
+			TR2 (P--C1)              & \textbf{Soterrado} & 80               & 88{,}19           & 50                              & 60{,}6               & 5\,344           \\
+			TR3 (P--S)               & Aéreo              & 125              & 106{,}00          & 100                             & 57{,}9               & 6\,137           \\
+			TR4 (S--C$_2$)           & Aéreo              & 80               & 25{,}00           & 80                              & 49{,}4               & 1\,235           \\
+			TR5 (S--T)               & Aéreo              & 100              & 60{,}00           & 80                              & 58{,}1               & 3\,486           \\
+			TR6 (T--C$_3$)           & Aéreo              & 50               & 15{,}00           & 80                              & 39{,}3               & 590              \\
+			TR7 (T--C$_4$)           & Aéreo              & 100              & 45{,}00           & 80                              & 58{,}1               & 2\,615           \\
+			\midrule
+			\textbf{TOTAL RED VAPOR} & ---                & ---              & \textbf{351{,}93} & ---                             & ---                  & \textbf{20\,236} \\
+			\bottomrule
+		\end{tabular}
+	}
 	\vspace{0.3cm}
 
 	\noindent \small \textit{Nota}: Las pérdidas térmicas totales de la red de vapor alcanzan \textbf{20{,}24~kW}.
@@ -2617,23 +2148,27 @@ La \tabref{tab:resumen_cond_completo} presenta el dimensionado de aislamiento pa
 
 \begin{table}[htbp]
 	\centering
+	\small
+	\setlength{\tabcolsep}{3pt}
 	\caption{Dimensionado completo del aislamiento térmico para la red de retorno de condensados.}
 	\label{tab:resumen_cond_completo}
-	\begin{tabular}{lcccccc}
-		\toprule
-		\textbf{Tramo}                 & \textbf{Ubicación} & \textbf{DN (mm)} & \textbf{$L$ (m)}  & \textbf{$e_{\text{aisl}}$ (mm)} & \textbf{$q_L$ (W/m)} & \textbf{$Q$ (W)} \\
-		\midrule
-		TR1 (Caldera--P)               & Aéreo              & 65               & 12{,}74           & 50                              & 36{,}7               & 468              \\
-		TR2 (P--C$_1$)                 & \textbf{Soterrado} & 32               & 61{,}87           & 40                              & 28{,}1               & 1\,739           \\
-		TR3 (P--S)                     & Aéreo              & 65               & 105{,}00          & 50                              & 36{,}7               & 3\,854           \\
-		TR4 (S--C$_2$)                 & Aéreo              & 40               & 24{,}00           & 40                              & 32{,}3               & 775              \\
-		TR5 (S--T)                     & Aéreo              & 50               & 60{,}00           & 50                              & 32{,}4               & 1\,944           \\
-		TR6 (T--C$_3$)                 & Aéreo              & 25               & 14{,}00           & 40                              & 25{,}8               & 361              \\
-		TR7 (T--C$_4$)                 & Aéreo              & 50               & 44{,}00           & 50                              & 32{,}4               & 1\,426           \\
-		\midrule
-		\textbf{TOTAL RED CONDENSADOS} & ---                & ---              & \textbf{321{,}61} & ---                             & ---                  & \textbf{10\,567} \\
-		\bottomrule
-	\end{tabular}
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{lcccccc}
+			\toprule
+			\textbf{Tramo}                 & \textbf{Ubicación} & \textbf{DN (mm)} & \textbf{$L$ (m)}  & \textbf{$e_{\text{aisl}}$ (mm)} & \textbf{$q_L$ (W/m)} & \textbf{$Q$ (W)} \\
+			\midrule
+			TR1 (Caldera--P)               & Aéreo              & 65               & 12{,}74           & 50                              & 36{,}7               & 468              \\
+			TR2 (P--C1)                    & \textbf{Soterrado} & 32               & 61{,}87           & 40                              & 28{,}1               & 1\,739           \\
+			TR3 (P--S)                     & Aéreo              & 65               & 105{,}00          & 50                              & 36{,}7               & 3\,854           \\
+			TR4 (S--C$_2$)                 & Aéreo              & 40               & 24{,}00           & 40                              & 32{,}3               & 775              \\
+			TR5 (S--T)                     & Aéreo              & 50               & 60{,}00           & 50                              & 32{,}4               & 1\,944           \\
+			TR6 (T--C$_3$)                 & Aéreo              & 25               & 14{,}00           & 40                              & 25{,}8               & 361              \\
+			TR7 (T--C$_4$)                 & Aéreo              & 50               & 44{,}00           & 50                              & 32{,}4               & 1\,426           \\
+			\midrule
+			\textbf{TOTAL RED CONDENSADOS} & ---                & ---              & \textbf{321{,}61} & ---                             & ---                  & \textbf{10\,567} \\
+			\bottomrule
+		\end{tabular}
+	}
 	\vspace{0.3cm}
 
 	\noindent \small \textit{Nota}: Las pérdidas térmicas totales de la red de condensados alcanzan \textbf{10{,}57~kW}.
@@ -2689,18 +2224,7 @@ Del análisis completo del sistema de aislamiento térmico se extraen las siguie
 
 El diseño de aislamiento propuesto cumple satisfactoriamente con los requisitos técnicos, normativos y económicos de la instalación, garantizando un transporte eficiente de la energía térmica desde la caldera hasta los puntos de consumo.
 
-\paragraph{Referencias normativas y guías técnicas aplicadas}
-\label{par:referencias_aislamiento}
 
-El dimensionado del aislamiento térmico se ha realizado conforme a las siguientes referencias:
-
-\begin{itemize}[noitemsep]
-	\item \textbf{ISO 12241:2022}: \textit{Thermal insulation for building equipment and industrial installations -- Calculation rules}.
-	\item \textbf{IDAE}: \textit{Guía Técnica de Aislamiento Térmico en Instalaciones de Producción y Distribución de Energía Térmica}.
-	\item \textbf{RITE} (Real Decreto 1027/2007): \textit{Reglamento de Instalaciones Térmicas en los Edificios}, apartado IT.1.2.4.2 (protección contra quemaduras).
-	\item \textbf{EREN}: \textit{Manual de Eficiencia Energética en Redes de Vapor y Condensados}.
-	\item \textbf{Guías de fabricantes}: Isover (\textit{Manual de Aislamiento Técnico}), Spirax Sarco (\textit{Steam Engineering Tutorials}).
-\end{itemize}
 
 % SECCIÓN 3: CONCLUSIONES Y LIMITACIONES
 \section{Conclusiones}
@@ -2710,13 +2234,13 @@ El presente trabajo ha desarrollado el diseño termohidráulico completo de una 
 
 La caldera seleccionada, modelo Viessmann VITOMAX 100-HS M33A, proporciona un caudal de vapor de 5400 kg/h a 10 bar(a) y 220°C, con un margen del 6,3\% sobre el caudal de diseño calculado de 5078,4 kg/h. Este margen de reserva resulta suficiente para absorber variaciones de demanda sin sobredimensionar excesivamente la inversión. La presión de diseño de 9,068 bar(g), corregida por la altitud del emplazamiento a 700 m sobre el nivel del mar, garantiza presiones adecuadas en todos los puntos de consumo. La selección de vapor sobrecalentado a 220°C minimiza el riesgo de condensación prematura en los tramos de mayor longitud, especialmente en el tramo enterrado TR2 de 88,19 m, asegurando la calidad del vapor suministrado.
 
-La red de distribución de vapor consta de 7 tramos con una longitud total de 351,93 m, dimensionados adoptando una velocidad objetivo de 20 m/s. Las velocidades reales obtenidas se sitúan en el rango 18,93--21,45 m/s, cumpliendo holgadamente con el criterio de velocidad máxima de 30 m/s y minimizando el riesgo de erosión en codos y accesorios. La pérdida de carga máxima acumulada en el camino más desfavorable es de 0,38 bar, muy inferior al límite de 1 bar establecido como criterio de diseño. Todos los puntos de consumo reciben vapor con presiones superiores a 8,69 bar(g), excediendo ampliamente las presiones requeridas de 4 bar(g) para el consumidor C$_1$ y 7 bar(g) para los consumidores C$_2$, C$_3$ y C$_4$. El diseño combina tuberías normalizadas según DIN 2448 para los tramos de mayor diámetro y tuberías Schedule API para los tramos de menor diámetro, facilitando la adquisición de materiales y la ejecución de la obra.
+La red de distribución de vapor consta de 7 tramos con una longitud total de 351,93 m, dimensionados adoptando una velocidad objetivo de 20 m/s. Las velocidades reales obtenidas se sitúan en el rango 18,93--21,45 m/s, cumpliendo holgadamente con el criterio de velocidad máxima de 30 m/s y minimizando el riesgo de erosión en codos y accesorios. La pérdida de carga máxima acumulada en el camino más desfavorable es de 0,38 bar, muy inferior al límite de 1 bar establecido como criterio de diseño. Todos los puntos de consumo reciben vapor con presiones superiores a 8,69 bar(g), excediendo ampliamente las presiones requeridas de 4 bar(g) para el consumidor C1 y 7 bar(g) para los consumidores C$_2$, C$_3$ y C$_4$. El diseño combina tuberías normalizadas según DIN 2448 para los tramos de mayor diámetro y tuberías Schedule API para los tramos de menor diámetro, facilitando la adquisición de materiales y la ejecución de la obra.
 
 La red de retorno de condensados, dimensionada para operar a 3 bar(g), presenta una longitud total de 321,61 m distribuidos en 7 tramos. El dimensionado de esta red reviste especial complejidad debido a la naturaleza bifásica del flujo, que incluye tanto condensado líquido como vapor flash generado por la expansión desde las condiciones de consumo. La expansión del condensado desde presiones entre 4 y 7 bar(g) hasta la presión del colector de 3 bar(g) genera 402,54 kg/h de vapor flash, representando el 7,45\% en masa del caudal total. Aunque esta fracción másica es reducida, el vapor flash domina el comportamiento hidráulico del sistema debido a su baja densidad, ocupando aproximadamente el 98\% del volumen total del flujo bifásico. Las velocidades obtenidas se sitúan en el rango 17,41--19,31 m/s, dentro del rango recomendado de 15--20 m/s para flujo bifásico, y la pérdida de carga máxima acumulada es de 0,30 bar, valor razonable que no compromete el retorno gravitatorio del condensado. El vapor flash generado, equivalente a aproximadamente 266 kW térmicos, constituye una oportunidad de mejora energética que podría aprovecharse mediante tanques separadores para precalentar el agua de alimentación de la caldera.
 
 El sistema de aislamiento térmico ha sido dimensionado empleando lana de roca con conductividad térmica de 0,04 W/(m·K), adoptando una estrategia de estandarización por rangos de diámetro nominal para simplificar la especificación de materiales. Los espesores adoptados varían entre 60 y 100 mm para la red de vapor (según el rango de diámetro) y entre 40 y 50 mm para la red de condensados. Las pérdidas térmicas totales calculadas son de 30,81 kW, representando únicamente el 0,73\% de la potencia térmica nominal de la caldera de 4217 kW. Este valor se encuentra muy por debajo del límite recomendado del 2--3\% establecido por las guías de eficiencia energética del IDAE, validando la efectividad del diseño propuesto. La temperatura superficial del aislamiento en los tramos aéreos se sitúa en el rango 16,3--18,2°C, muy inferior al límite de 30°C establecido por el RITE, eliminando completamente el riesgo de quemaduras por contacto accidental.
 
-El tramo enterrado TR2, que conecta el punto de bifurcación P con el consumidor C$_1$, requiere consideraciones especiales tanto en el diseño constructivo como en el cálculo térmico. Con una longitud de 88,19 m para cada tubería (vapor y condensados), la profundidad del eje de tubería se ha establecido en 1,09 m, con una profundidad total de zanja de 1,34 m y un ancho de 1,50 m. La morfología de la zanja, de abajo hacia arriba, incluye una capa de arena de asiento de 10 cm, aislamiento térmico de lana de roca de 5 cm para vapor y 4 cm para condensados, envolvente de arena de relleno de 19 cm, losa de hormigón HA-25 de 10 cm de espesor para protección mecánica, y relleno de tierras compactadas de 80 cm. Las pérdidas térmicas del tramo enterrado totalizan 7,08 kW, representando el 23\% de las pérdidas totales de la instalación pese a constituir solo el 5,5\% de la longitud total. Esta concentración de pérdidas se debe al menor espesor de aislamiento aplicado, limitado por restricciones geométricas de la excavación, y al efecto del terreno como sumidero térmico adicional.
+El tramo enterrado TR2, que conecta el punto de bifurcación P con el consumidor C1, requiere consideraciones especiales tanto en el diseño constructivo como en el cálculo térmico. Con una longitud de 88,19 m para cada tubería (vapor y condensados), la profundidad del eje de tubería se ha establecido en 1,09 m, con una profundidad total de zanja de 1,34 m y un ancho de 1,50 m. La morfología de la zanja, de abajo hacia arriba, incluye una capa de arena de asiento de 10 cm, aislamiento térmico de lana de roca de 5 cm para vapor y 4 cm para condensados, envolvente de arena de relleno de 19 cm, losa de hormigón HA-25 de 10 cm de espesor para protección mecánica, y relleno de tierras compactadas de 80 cm. Las pérdidas térmicas del tramo enterrado totalizan 7,08 kW, representando el 23\% de las pérdidas totales de la instalación pese a constituir solo el 5,5\% de la longitud total. Esta concentración de pérdidas se debe al menor espesor de aislamiento aplicado, limitado por restricciones geométricas de la excavación, y al efecto del terreno como sumidero térmico adicional.
 
 El desarrollo de este proyecto ha permitido reforzar y aplicar de forma integrada conocimientos procedentes de múltiples disciplinas de la ingeniería térmica y de fluidos. En el ámbito de la termodinámica aplicada, se han utilizado extensivamente las tablas de vapor IAPWS-IF97 para determinar propiedades del vapor sobrecalentado y saturado, se han realizado balances entálpicos considerando procesos de cambio de fase, y se ha cuantificado la generación de vapor flash en la red de condensados. En mecánica de fluidos, se ha aplicado la ecuación de Darcy-Weisbach para el cálculo de pérdidas de carga, se han incorporado longitudes equivalentes de accesorios mediante el método Le/D, se ha trabajado con el diagrama de Moody y el número de Reynolds, y se han establecido criterios de velocidad para prevenir erosión y ruido. En transferencia de calor, se ha resuelto la conducción térmica en geometría cilíndrica multicapa, se han calculado resistencias térmicas en serie incluyendo la resistencia térmica del terreno para el tramo enterrado, y se han determinado temperaturas superficiales del aislamiento. Finalmente, en ingeniería de instalaciones, se ha consultado documentación comercial de fabricantes, se han interpretado y aplicado normativas españolas y europeas, y se ha desarrollado una estrategia de estandarización de materiales que equilibra optimización técnica con viabilidad constructiva.
 
@@ -2754,7 +2278,9 @@ Con el objetivo de completar el diseño de la instalación y optimizar su eficie
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{section}{Bibliografía}
-\printbibliography[title={Bibliografía}]
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Anexos %%%%%%%%%%%
@@ -2774,6 +2300,219 @@ Con el objetivo de completar el diseño de la instalación y optimizar su eficie
 	fitpaper=true
 ]{Figuras/planos/plano_vapor-Parcela.pdf}
 
+\myappendix{Diagramas esquemáticos de tramos}
+\label{anexo:diagramas}
 
+Este anejo recopila los diagramas esquemáticos de todos los tramos de la red de distribución de vapor y la red de retorno de condensados.
+
+\subsection*{Red de Vapor}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Vapor_TR1_Caldera-P.pdf}
+	\caption{Esquema del Tramo 1 de Vapor (Caldera-P). Elaboración grupal.}
+	\label{fig:anejo2-vapor-tr1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Vapor_TR2_P-C1.pdf}
+	\caption{Esquema del Tramo 2 de Vapor (P-C1). Elaboración grupal.}
+	\label{fig:anejo2-vapor-tr2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Vapor_TR3_P-S.pdf}
+	\caption{Esquema del Tramo 3 de Vapor (P-S). Elaboración grupal.}
+	\label{fig:anejo2-vapor-tr3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Vapor_TR4_S-C2.pdf}
+	\caption{Esquema del Tramo 4 de Vapor (S-C2). Elaboración grupal.}
+	\label{fig:anejo2-vapor-tr4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Vapor_TR5_S-T.pdf}
+	\caption{Esquema del Tramo 5 de Vapor (S-T). Elaboración grupal.}
+	\label{fig:anejo2-vapor-tr5}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Vapor_TR6_T-C3.pdf}
+	\caption{Esquema del Tramo 6 de Vapor (T-C3). Elaboración grupal.}
+	\label{fig:anejo2-vapor-tr6}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Vapor_TR7_T-C4.pdf}
+	\caption{Esquema del Tramo 7 de Vapor (T-C4). Elaboración grupal.}
+	\label{fig:anejo2-vapor-tr7}
+\end{figure}
+
+\subsection*{Red de Condensados}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Condensados_TR1_Caldera-P.pdf}
+	\caption{Esquema del Tramo 1 de Condensados (Caldera-P). Elaboración grupal.}
+	\label{fig:anejo2-condensados-tr1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Condensados_TR2_P-C1.pdf}
+	\caption{Esquema del Tramo 2 de Condensados (P-C1). Elaboración grupal.}
+	\label{fig:anejo2-condensados-tr2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Condensados_TR3_P-S.pdf}
+	\caption{Esquema del Tramo 3 de Condensados (P-S). Elaboración grupal.}
+	\label{fig:anejo2-condensados-tr3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Condensados_TR4_S-C2.pdf}
+	\caption{Esquema del Tramo 4 de Condensados (S-C2). Elaboración grupal.}
+	\label{fig:anejo2-condensados-tr4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Condensados_TR5_S-T.pdf}
+	\caption{Esquema del Tramo 5 de Condensados (S-T). Elaboración grupal.}
+	\label{fig:anejo2-condensados-tr5}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Condensados_TR6_T-C3.pdf}
+	\caption{Esquema del Tramo 6 de Condensados (T-C3). Elaboración grupal.}
+	\label{fig:anejo2-condensados-tr6}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Figuras/dibujos_tramos/Condensados_TR7_T-C4.pdf}
+	\caption{Esquema del Tramo 7 de Condensados (T-C4). Elaboración grupal.}
+	\label{fig:anejo2-condensados-tr7}
+\end{figure}
+
+
+\myappendix{Hojas de cálculo de dimensionado hidráulico}
+\label{anexo:calculos}
+
+Este anejo recopila las hojas de cálculo detalladas del dimensionado hidráulico de todos los tramos de la red de distribución de vapor y la red de retorno de condensados.
+
+\subsection*{Red de Vapor}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Vapor_TR1_Caldera-P.pdf}
+	\caption{Hoja de cálculo del Tramo 1 de Vapor (Caldera-P). Elaboración grupal.}
+	\label{fig:anejo3-vapor-tr1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Vapor_TR2_P-C1.pdf}
+	\caption{Hoja de cálculo del Tramo 2 de Vapor (P-C1). Elaboración grupal.}
+	\label{fig:anejo3-vapor-tr2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Vapor_TR3_P-S.pdf}
+	\caption{Hoja de cálculo del Tramo 3 de Vapor (P-S). Elaboración grupal.}
+	\label{fig:anejo3-vapor-tr3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Vapor_TR4_S-C2.pdf}
+	\caption{Hoja de cálculo del Tramo 4 de Vapor (S-C2). Elaboración grupal.}
+	\label{fig:anejo3-vapor-tr4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Vapor_TR5_S-T.pdf}
+	\caption{Hoja de cálculo del Tramo 5 de Vapor (S-T). Elaboración grupal.}
+	\label{fig:anejo3-vapor-tr5}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Vapor_TR6_T-C3.pdf}
+	\caption{Hoja de cálculo del Tramo 6 de Vapor (T-C3). Elaboración grupal.}
+	\label{fig:anejo3-vapor-tr6}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Vapor_TR7_T-C4.pdf}
+	\caption{Hoja de cálculo del Tramo 7 de Vapor (T-C4). Elaboración grupal.}
+	\label{fig:anejo3-vapor-tr7}
+\end{figure}
+
+\subsection*{Red de Condensados}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Condensados_TR1_Caldera-P.pdf}
+	\caption{Hoja de cálculo del Tramo 1 de Condensados (Caldera-P). Elaboración grupal.}
+	\label{fig:anejo3-condensados-tr1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Condensados_TR2_P-C1.pdf}
+	\caption{Hoja de cálculo del Tramo 2 de Condensados (P-C1). Elaboración grupal.}
+	\label{fig:anejo3-condensados-tr2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Condensados_TR3_P-S.pdf}
+	\caption{Hoja de cálculo del Tramo 3 de Condensados (P-S). Elaboración grupal.}
+	\label{fig:anejo3-condensados-tr3}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Condensados_TR4_S-C2.pdf}
+	\caption{Hoja de cálculo del Tramo 4 de Condensados (S-C2). Elaboración grupal.}
+	\label{fig:anejo3-condensados-tr4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Condensados_TR5_S-T.pdf}
+	\caption{Hoja de cálculo del Tramo 5 de Condensados (S-T). Elaboración grupal.}
+	\label{fig:anejo3-condensados-tr5}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Condensados_TR6_T-C3.pdf}
+	\caption{Hoja de cálculo del Tramo 6 de Condensados (T-C3). Elaboración grupal.}
+	\label{fig:anejo3-condensados-tr6}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[angle=90,origin=c,width=\textwidth]{Figuras/calculos_tramos/Condensados_TR7_T-C4.pdf}
+	\caption{Hoja de cálculo del Tramo 7 de Condensados (T-C4). Elaboración grupal.}
+	\label{fig:anejo3-condensados-tr7}
+\end{figure}
 
 \end{document}

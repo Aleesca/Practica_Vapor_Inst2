@@ -69,6 +69,23 @@
 
 \titlespacing*{\section}{0pt}{0pt}{12pt}	% Linea debajo
 \titlespacing*{\subsection}{0pt}{18pt}{12pt} 
+
+% Paquete para subrayado
+\usepackage{ulem}
+\normalem  % Mantiene \emph como cursiva (no subrayado)
+
+% Redefinir formato de \paragraph
+\titleformat{\paragraph}[hang]
+    {\normalfont\normalsize}  % Sin negrita, tamaño normal
+    {\theparagraph}           % Numeración (si aplica)
+    {1em}                     % Espacio después del número
+    {\uline}                  % Título subrayado
+    
+\titlespacing*{\paragraph}
+    {0pt}                     % Sangría izquierda
+    {3.25ex plus 1ex minus .2ex}  % Espacio antes
+    {1.5em}                   % Espacio después (fuerza nueva línea)
+
  
 % Pies de imagen y tabla
 \usepackage{caption}
