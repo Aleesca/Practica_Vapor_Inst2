@@ -1,64 +1,65 @@
 \documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
 \usepackage{preamble}
 
 \begin{document}
 
- 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%% Portada %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{titlepage}
-     
-    
-    % --- LOGOTIPOS (ALINEADOS ARRIBA, IZQUIERDA Y DERECHA) ---
-    \noindent
-    \includegraphics[width=0.35\textwidth]{Figuras/ule.jpg}
-    \hfill
-    \includegraphics[height=2.5cm]{Figuras/escudo-ingenierias.png}
 
-    \vspace{3cm}
 
-    % --- BLOQUES DE TEXTO CENTRADOS ---
-    \begin{center}
-        {
-        \fontsize{22pt}{26pt}\selectfont\bfseries
-        Escuela de Ingenierías \\ Industrial, Informática y Aeroespacial
-        }
-        
-        \vspace{2cm}
-        
-        {\LARGE\bfseries GRADO EN INGENIERÍA MECÁNICA} \\ 
-        \vspace{0.5cm}
-        {\LARGE\bfseries INSTALACIONES II}
-        
-        \vspace{2cm}
-        
-        {\Large PRÁCTICA DE VAPOR}\\[2cm]
-    \end{center}
-    
-    \vfill
-    
-    % --- AUTORES Y TUTOR (ALINEADOS A LA DERECHA) ---
-    \begin{flushright}
-        \large
-        \begin{tabular}{@{}l@{ }l}
-            \textbf{Autores:} & Alberto España Carrete \\
-            & Carlos Fernandez Palanca \\
-            & Rubén Modino López \\
-            & Juan Diego Niño González \\ [5pt]
-            \textbf{Tutor:}   & Roberto Getino De La Mano
-        \end{tabular}
-    \end{flushright}
-    
-    \vspace{1.5cm}
-    
-    % --- FECHA (CENTRADA Y CON TAMAÑO ESPECÍFICO DE 22pt) ---
-    \begin{center}
-        {\fontsize{22pt}{26pt}\selectfont (Marzo, 2026)}
-    \end{center}
+	% --- LOGOTIPOS (ALINEADOS ARRIBA, IZQUIERDA Y DERECHA) ---
+	\noindent
+	\includegraphics[width=0.35\textwidth]{Figuras/ule.jpg}
+	\hfill
+	\includegraphics[height=2.5cm]{Figuras/escudo-ingenierias.png}
 
-    \thispagestyle{empty}
+	\vspace{3cm}
+
+	% --- BLOQUES DE TEXTO CENTRADOS ---
+	\begin{center}
+		{
+			\fontsize{22pt}{26pt}\selectfont\bfseries
+			Escuela de Ingenierías \\ Industrial, Informática y Aeroespacial
+		}
+
+		\vspace{2cm}
+
+		{\LARGE\bfseries GRADO EN INGENIERÍA MECÁNICA} \\
+		\vspace{0.5cm}
+		{\LARGE\bfseries INSTALACIONES II}
+
+		\vspace{2cm}
+
+		{\Large PRÁCTICA DE VAPOR}\\[2cm]
+	\end{center}
+
+	\vfill
+
+	% --- AUTORES Y TUTOR (ALINEADOS A LA DERECHA) ---
+	\begin{flushright}
+		\large
+		\begin{tabular}{@{}l@{ }l}
+			\textbf{Autores:} & Alberto España Carrete    \\
+			                  & Carlos Fernandez Palanca  \\
+			                  & Rubén Modino López        \\
+			                  & Juan Diego Niño González  \\ [5pt]
+			\textbf{Tutor:}   & Roberto Getino De La Mano
+		\end{tabular}
+	\end{flushright}
+
+	\vspace{1.5cm}
+
+	% --- FECHA (CENTRADA Y CON TAMAÑO ESPECÍFICO DE 22pt) ---
+	\begin{center}
+		{\fontsize{22pt}{26pt}\selectfont (Marzo, 2026)}
+	\end{center}
+
+	\thispagestyle{empty}
 \end{titlepage}
 
 %%%% Indices -----------------------------------------------
@@ -67,30 +68,30 @@
 \tableofcontents\thispagestyle{empty}
 
 {
-\let\oldnumberline\numberline	% Añade Figura 1.1 en lugar de 1.1
-\renewcommand{\numberline}{\figurename~\oldnumberline}
-\cleardoublepage						% En pagina nueva
-\listoffigures\thispagestyle{empty}	% Pone el encabezado y pie
-\phantomsection
-\addcontentsline{toc}{section}{\listfigurename}	%Lo añade al indice
+	\let\oldnumberline\numberline	% Añade Figura 1.1 en lugar de 1.1
+	\renewcommand{\numberline}{\figurename~\oldnumberline}
+	\cleardoublepage						% En pagina nueva
+	\listoffigures\thispagestyle{empty}	% Pone el encabezado y pie
+	\phantomsection
+	\addcontentsline{toc}{section}{\listfigurename}	%Lo añade al indice
 
 }
 
 {
-\let\oldnumberline\numberline	% Añade Tabla 1.1 en lugar de 1.1
-\renewcommand{\numberline}{\tablename~\oldnumberline}
-\cleardoublepage		% En pagina nueva
-\listoftables\thispagestyle{empty}	% Pone el encabezado y pie
-\phantomsection
-\addcontentsline{toc}{section}{\listtablename}%Lo añade al indice
+	\let\oldnumberline\numberline	% Añade Tabla 1.1 en lugar de 1.1
+	\renewcommand{\numberline}{\tablename~\oldnumberline}
+	\cleardoublepage		% En pagina nueva
+	\listoftables\thispagestyle{empty}	% Pone el encabezado y pie
+	\phantomsection
+	\addcontentsline{toc}{section}{\listtablename}%Lo añade al indice
 }
 
 % En el encabezado se modifican aspectos gen. del indice.
 
 \hypersetup{
-    linkcolor=blue,
-    citecolor=blue,
-    urlcolor=blue
+	linkcolor=blue,
+	citecolor=blue,
+	urlcolor=blue
 }
 
 
@@ -98,8 +99,8 @@
 %%%%%%%%%%%%%%%%%%%%% Contenido %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    \section{Introducción}
-    \label{Introducción}
+\section{Introducción}
+\label{Introducción}
 
 \subsection{Objetivo del proyecto}
 \label{subsec:objetivo-proyecto}
@@ -446,27 +447,7 @@ En la sección~\ref{subsec:puntos-consumo-requerimientos} se determinó el cauda
 
 El factor de seguridad $K = 1{,}15$ adoptado en el dimensionamiento corresponde exclusivamente a la compensación de pérdidas por fugas en la red de distribución. La práctica industrial establece márgenes típicos comprendidos entre el 10\% y el 20\% para este concepto, habiéndose seleccionado un valor intermedio del 15\% acorde con instalaciones de vapor industrial de tamaño medio.
 
-La \tabref{tab:desglose-factor-seguridad} presenta el desglose de los factores que podrían considerarse en el margen de seguridad, indicando cuáles han sido incluidos en el diseño y su justificación correspondiente.
-
-\begin{table}[H]
-	\centering
-	\caption{Desglose de factores considerados en el margen de seguridad}
-	\label{tab:desglose-factor-seguridad}
-	\begin{tabular}{lccp{5.5cm}}
-		\toprule
-		\textbf{Factor}             & \textbf{Valor} & \textbf{Incluido} & \textbf{Justificación}                                                \\
-		\midrule
-		Pérdidas por fugas          & 15\%           & Sí                & Fugas en juntas, válvulas, purgadores y accesorios de la instalación  \\
-		Factor de simultaneidad     & ---            & No                & Diseño conservador: operación simultánea al 100\% de los consumidores \\
-		Factor de ampliación        & ---            & No                & Instalación existente sin previsión de ampliaciones futuras           \\
-		Transitorios de arranque    & ---            & No                & No considerados; régimen permanente de operación                      \\
-		\midrule
-		\textbf{Factor total ($K$)} & \textbf{1,15}  & ---               & ---                                                                   \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-La decisión de no aplicar un factor de simultaneidad responde a un criterio de diseño conservador: se asume que todos los consumidores pueden operar de forma simultánea a su caudal nominal. En instalaciones con múltiples procesos independientes, la aplicación de factores de simultaneidad (típicamente entre 0,7 y 0,9) podría reducir el caudal de diseño, si bien requeriría un análisis detallado de los perfiles de consumo que excede el alcance del presente proyecto.
+La decisión de no aplicar un factor de simultaneidad responde a un criterio de diseño conservador: se asume que todos los consumidores pueden operar de forma simultánea a su caudal nominal. En instalaciones con múltiples procesos independientes, la aplicación de factores de simultaneidad (típicamente entre 0,7 y 0,9) podría reducir el caudal de diseño, si bien requeriría un análisis detallado de los perfiles de consumo que excede el alcance del presente proyecto. Asimismo, dado que la instalación es existente y no se prevén ampliaciones futuras, no se ha considerado un factor de ampliación adicional. Finalmente, los transitorios de arranque, aunque pueden generar picos de demanda, no se han incluido en el cálculo del caudal de diseño, asumiendo que la caldera y la red de distribución están dimensionadas para operar en régimen permanente.
 
 \paragraph{Cálculo de la potencia térmica}
 
@@ -787,15 +768,6 @@ Las pérdidas de carga en la red se calculan mediante la ecuación de \textbf{Da
 	\label{eq:darcy-weisbach}
 \end{equation}
 
-\noindent donde:
-\begin{itemize}[leftmargin=2em, label={}]
-	\item $\Delta P$ = pérdida de presión por fricción [Pa]
-	\item $f$ = factor de fricción de Darcy [adimensional]
-	\item $L$ = longitud total de cálculo [m]
-	\item $D$ = diámetro interior de la tubería [m]
-	\item $\rho$ = densidad del vapor [kg/m³]
-	\item $v$ = velocidad del vapor [m/s]
-\end{itemize}
 
 El factor de fricción $f$ depende del número de Reynolds y de la rugosidad relativa de la tubería ($\varepsilon/D$), obteniéndose mediante el diagrama de Moody o mediante correlaciones empíricas como la ecuación de Colebrook-White para régimen turbulento.
 
@@ -837,7 +809,7 @@ La \tabref{tab:rugosidades-materiales} presenta los valores de rugosidad absolut
 	\end{tabular}
 \end{table}
 
-La \tabref{tab:diam_tuberias_norma_DIN} presenta los diámetros normalizados según la norma DIN~2448, que serán utilizados para la selección de tuberías comerciales en cada tramo de la instalación.
+Los diámetros normalizados según la norma DIN~2448 serán utilizados para la selección de tuberías comerciales en cada tramo de la instalación.
 
 \paragraph{Ecuaciones fundamentales de dimensionado}
 
@@ -891,7 +863,7 @@ Las longitudes equivalentes de los accesorios se expresan habitualmente como mú
 	\end{tabular}
 \end{table}
 
-La \tabref{tab:perdidas_carga_accesorios} proporciona información adicional sobre pérdidas de carga en accesorios para diferentes diámetros de tubería.
+Las pérdidas de carga en accesorios se consideran mediante las longitudes equivalentes expresadas en la \tabref{tab:longitudes-equivalentes}.
 
 \paragraph{Propiedades del vapor para el cálculo}
 
@@ -1209,7 +1181,7 @@ El diámetro teórico se obtiene a partir de la ecuación de continuidad:
 	\label{eq:diametro-teorico-tramo1}
 \end{equation}
 
-Consultando la tabla de diámetros normalizados según DIN~2448 (\tabref{tab:diam_tuberias_norma_DIN}), se selecciona el diámetro comercial inmediatamente superior: \textbf{DN~150 Schedule~80}.
+Consultando los diámetros normalizados según DIN~2448, se selecciona el diámetro comercial inmediatamente superior: \textbf{DN~150 Schedule~80}.
 
 La \tabref{tab:seleccion-tuberia-tramo1} recoge las características de la tubería seleccionada.
 
@@ -1759,16 +1731,16 @@ En la \tabref{tab:resumen-red-vapor} se presenta el resumen completo de los resu
 	\label{tab:resumen-red-vapor}
 	\begin{tabular}{lcccccc}
 		\toprule
-		\textbf{Tramo} & \textbf{Tubería} & \textbf{$D_{int}$} & \textbf{$L_{cálc}$} & \textbf{$\dot{m}$} & \textbf{$v$} & \textbf{$\Delta P$} \\
-		               &                  & (mm)               & (m)                 & (kg/h)             & (m/s)        & (bar)               \\
+		\textbf{Tramo} & \textbf{Tubería} & \textbf{$D_{int}$} & \textbf{$L_{\text{calc}}$} & \textbf{$\dot{m}$} & \textbf{$v$} & \textbf{$\Delta P$} \\
+		               &                  & (mm)               & (m)                        & (kg/h)             & (m/s)        & (bar)               \\
 		\midrule
-		1: Caldera-P   & Sch.80 DN~150    & 146{,}4            & 15{,}29             & 5400               & 19{,}17      & 0{,}01              \\
-		2: P-C$_1$     & Sch.160 DN~80    & 66{,}6             & 97{,}43             & 679                & 18{,}93      & 0{,}24              \\
-		3: P-S         & DIN DN~125       & 131{,}7            & 131{,}44            & 3737               & 20{,}28      & 0{,}16              \\
-		4: S-C$_2$     & DIN DN~80        & 82{,}5             & 30                  & 1359               & 21{,}45      & 0{,}07              \\
-		5: S-T         & DIN DN~100       & 107{,}1            & 78                  & 2378               & 20{,}79      & 0{,}12              \\
-		6: T-C$_3$     & Sch.40 DN~50     & 52{,}5             & 18                  & 340                & 20{,}42      & 0{,}07              \\
-		7: T-C$_4$     & Sch.40 DN~100    & 102{,}3            & 57{,}4              & 2038               & 20{,}11      & 0{,}09              \\
+		1: Caldera-P   & Sch.80 DN~150    & 146{,}4            & 15{,}29                    & 5400               & 19{,}17      & 0{,}01              \\
+		2: P-C$_1$     & Sch.160 DN~80    & 66{,}6             & 97{,}43                    & 679                & 18{,}93      & 0{,}24              \\
+		3: P-S         & DIN DN~125       & 131{,}7            & 131{,}44                   & 3737               & 20{,}28      & 0{,}16              \\
+		4: S-C$_2$     & DIN DN~80        & 82{,}5             & 30                         & 1359               & 21{,}45      & 0{,}07              \\
+		5: S-T         & DIN DN~100       & 107{,}1            & 78                         & 2378               & 20{,}79      & 0{,}12              \\
+		6: T-C$_3$     & Sch.40 DN~50     & 52{,}5             & 18                         & 340                & 20{,}42      & 0{,}07              \\
+		7: T-C$_4$     & Sch.40 DN~100    & 102{,}3            & 57{,}4                     & 2038               & 20{,}11      & 0{,}09              \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -2731,869 +2703,77 @@ El dimensionado del aislamiento térmico se ha realizado conforme a las siguient
 \end{itemize}
 
 % SECCIÓN 3: CONCLUSIONES Y LIMITACIONES
-\section{Conclusiones y Limitaciones}
+\section{Conclusiones}
 \label{sec:conclusiones}
 
-El presente capítulo sintetiza los resultados obtenidos en el diseño termohidráulico de la instalación de vapor y condensados, destacando los aspectos técnicos más relevantes de cada subsistema analizado. Además, se identifican las limitaciones inherentes al alcance del trabajo y se proponen líneas de desarrollo futuro que permitirían optimizar aún más el funcionamiento global de la instalación.
+El presente trabajo ha desarrollado el diseño termohidráulico completo de una instalación industrial de vapor y condensados, abarcando desde la selección de la caldera generadora hasta el dimensionamiento detallado de las redes de distribución, el cálculo del aislamiento térmico y el diseño constructivo del tramo enterrado. Los resultados obtenidos demuestran la viabilidad técnica de la instalación propuesta y su cumplimiento con la normativa española vigente en materia de instalaciones térmicas.
 
-\subsection{Conclusiones principales}
-\label{subsec:conclusiones-principales}
+La caldera seleccionada, modelo Viessmann VITOMAX 100-HS M33A, proporciona un caudal de vapor de 5400 kg/h a 10 bar(a) y 220°C, con un margen del 6,3\% sobre el caudal de diseño calculado de 5078,4 kg/h. Este margen de reserva resulta suficiente para absorber variaciones de demanda sin sobredimensionar excesivamente la inversión. La presión de diseño de 9,068 bar(g), corregida por la altitud del emplazamiento a 700 m sobre el nivel del mar, garantiza presiones adecuadas en todos los puntos de consumo. La selección de vapor sobrecalentado a 220°C minimiza el riesgo de condensación prematura en los tramos de mayor longitud, especialmente en el tramo enterrado TR2 de 88,19 m, asegurando la calidad del vapor suministrado.
 
-Se presenta a continuación una síntesis estructurada de los resultados obtenidos en cada fase del diseño, agrupados por subsistemas. Los valores cuantitativos recogidos corresponden a los resultados finales del dimensionamiento y han sido verificados mediante las metodologías de cálculo establecidas por la normativa de aplicación.
+La red de distribución de vapor consta de 7 tramos con una longitud total de 351,93 m, dimensionados adoptando una velocidad objetivo de 20 m/s. Las velocidades reales obtenidas se sitúan en el rango 18,93--21,45 m/s, cumpliendo holgadamente con el criterio de velocidad máxima de 30 m/s y minimizando el riesgo de erosión en codos y accesorios. La pérdida de carga máxima acumulada en el camino más desfavorable es de 0,38 bar, muy inferior al límite de 1 bar establecido como criterio de diseño. Todos los puntos de consumo reciben vapor con presiones superiores a 8,69 bar(g), excediendo ampliamente las presiones requeridas de 4 bar(g) para el consumidor C$_1$ y 7 bar(g) para los consumidores C$_2$, C$_3$ y C$_4$. El diseño combina tuberías normalizadas según DIN 2448 para los tramos de mayor diámetro y tuberías Schedule API para los tramos de menor diámetro, facilitando la adquisición de materiales y la ejecución de la obra.
 
-\subsubsection{Selección de equipos y parámetros de diseño}
-\label{subsubsec:conclusiones-equipos}
+La red de retorno de condensados, dimensionada para operar a 3 bar(g), presenta una longitud total de 321,61 m distribuidos en 7 tramos. El dimensionado de esta red reviste especial complejidad debido a la naturaleza bifásica del flujo, que incluye tanto condensado líquido como vapor flash generado por la expansión desde las condiciones de consumo. La expansión del condensado desde presiones entre 4 y 7 bar(g) hasta la presión del colector de 3 bar(g) genera 402,54 kg/h de vapor flash, representando el 7,45\% en masa del caudal total. Aunque esta fracción másica es reducida, el vapor flash domina el comportamiento hidráulico del sistema debido a su baja densidad, ocupando aproximadamente el 98\% del volumen total del flujo bifásico. Las velocidades obtenidas se sitúan en el rango 17,41--19,31 m/s, dentro del rango recomendado de 15--20 m/s para flujo bifásico, y la pérdida de carga máxima acumulada es de 0,30 bar, valor razonable que no compromete el retorno gravitatorio del condensado. El vapor flash generado, equivalente a aproximadamente 266 kW térmicos, constituye una oportunidad de mejora energética que podría aprovecharse mediante tanques separadores para precalentar el agua de alimentación de la caldera.
 
-La caldera Viessmann VITOMAX 100-HS modelo M33A ha sido seleccionada como equipo generador tras un análisis comparativo de capacidades comerciales disponibles. Los parámetros característicos del equipo y su relación con la demanda de la instalación se resumen en la \tabref{tab:conclusiones-seleccion-caldera}.
+El sistema de aislamiento térmico ha sido dimensionado empleando lana de roca con conductividad térmica de 0,04 W/(m·K), adoptando una estrategia de estandarización por rangos de diámetro nominal para simplificar la especificación de materiales. Los espesores adoptados varían entre 60 y 100 mm para la red de vapor (según el rango de diámetro) y entre 40 y 50 mm para la red de condensados. Las pérdidas térmicas totales calculadas son de 30,81 kW, representando únicamente el 0,73\% de la potencia térmica nominal de la caldera de 4217 kW. Este valor se encuentra muy por debajo del límite recomendado del 2--3\% establecido por las guías de eficiencia energética del IDAE, validando la efectividad del diseño propuesto. La temperatura superficial del aislamiento en los tramos aéreos se sitúa en el rango 16,3--18,2°C, muy inferior al límite de 30°C establecido por el RITE, eliminando completamente el riesgo de quemaduras por contacto accidental.
 
-\begin{table}[H]
-	\centering
-	\caption{Comparación entre demanda de la instalación y capacidad de la caldera seleccionada}
-	\label{tab:conclusiones-seleccion-caldera}
-	\begin{tabular}{lccc}
-		\toprule
-		\textbf{Concepto}                            & \textbf{Valor} & \textbf{Unidad} & \textbf{Margen} \\
-		\midrule
-		Caudal nominal consumidores (C1+C2+C3+C4)    & 4416           & kg/h            & ---             \\
-		Factor de seguridad por fugas ($K$)          & 1,15           & ---             & +15\%           \\
-		Caudal de diseño calculado                   & 5078,4         & kg/h            & ---             \\
-		Caudal comercial caldera Vitomax 100-HS M33A & 5400           & kg/h            & +6,3\%          \\
-		\midrule
-		Presión de diseño (absoluta)                 & 10             & bar(a)          & ---             \\
-		Presión de diseño (manométrica)              & 9,068          & bar(g)          & ---             \\
-		Temperatura vapor sobrecalentado             & 220            & °C              & ---             \\
-		Grado de sobrecalentamiento                  & $\sim$40       & °C              & ---             \\
-		\midrule
-		Potencia térmica nominal                     & 4217           & kW              & ---             \\
-		Potencia térmica nominal                     & 4,2            & MW              & ---             \\
-		\bottomrule
-	\end{tabular}
-\end{table}
+El tramo enterrado TR2, que conecta el punto de bifurcación P con el consumidor C$_1$, requiere consideraciones especiales tanto en el diseño constructivo como en el cálculo térmico. Con una longitud de 88,19 m para cada tubería (vapor y condensados), la profundidad del eje de tubería se ha establecido en 1,09 m, con una profundidad total de zanja de 1,34 m y un ancho de 1,50 m. La morfología de la zanja, de abajo hacia arriba, incluye una capa de arena de asiento de 10 cm, aislamiento térmico de lana de roca de 5 cm para vapor y 4 cm para condensados, envolvente de arena de relleno de 19 cm, losa de hormigón HA-25 de 10 cm de espesor para protección mecánica, y relleno de tierras compactadas de 80 cm. Las pérdidas térmicas del tramo enterrado totalizan 7,08 kW, representando el 23\% de las pérdidas totales de la instalación pese a constituir solo el 5,5\% de la longitud total. Esta concentración de pérdidas se debe al menor espesor de aislamiento aplicado, limitado por restricciones geométricas de la excavación, y al efecto del terreno como sumidero térmico adicional.
 
-El margen de reserva del 6,3\% sobre el caudal de diseño (equivalente al 22,3\% sobre el caudal nominal de consumidores) proporciona flexibilidad operativa suficiente para absorber variaciones de carga sin sobredimensionar excesivamente la inversión. La selección de vapor sobrecalentado a 220~°C minimiza el riesgo de condensación prematura en los tramos de mayor longitud, garantizando la calidad del vapor suministrado a los consumidores.
+El desarrollo de este proyecto ha permitido reforzar y aplicar de forma integrada conocimientos procedentes de múltiples disciplinas de la ingeniería térmica y de fluidos. En el ámbito de la termodinámica aplicada, se han utilizado extensivamente las tablas de vapor IAPWS-IF97 para determinar propiedades del vapor sobrecalentado y saturado, se han realizado balances entálpicos considerando procesos de cambio de fase, y se ha cuantificado la generación de vapor flash en la red de condensados. En mecánica de fluidos, se ha aplicado la ecuación de Darcy-Weisbach para el cálculo de pérdidas de carga, se han incorporado longitudes equivalentes de accesorios mediante el método Le/D, se ha trabajado con el diagrama de Moody y el número de Reynolds, y se han establecido criterios de velocidad para prevenir erosión y ruido. En transferencia de calor, se ha resuelto la conducción térmica en geometría cilíndrica multicapa, se han calculado resistencias térmicas en serie incluyendo la resistencia térmica del terreno para el tramo enterrado, y se han determinado temperaturas superficiales del aislamiento. Finalmente, en ingeniería de instalaciones, se ha consultado documentación comercial de fabricantes, se han interpretado y aplicado normativas españolas y europeas, y se ha desarrollado una estrategia de estandarización de materiales que equilibra optimización técnica con viabilidad constructiva.
 
-La corrección de la presión manométrica por altitud del emplazamiento (700~m s.n.m., $P_{\text{atm}} = 0{,}932$~bar) resulta en una presión efectiva de 9,068~bar(g), valor que ha sido considerado como condición de contorno para el dimensionamiento hidráulico de la red de distribución.
-
-\subsubsection{Red de distribución de vapor}
-\label{subsubsec:conclusiones-red-vapor}
-
-La red de distribución de vapor consta de 7 tramos con una longitud total de 351,93~m. El dimensionado hidráulico se ha realizado adoptando una velocidad objetivo de 20~m/s como criterio principal, valor que permite compatibilizar pérdidas de carga moderadas con diámetros de tubería comercialmente razonables.
-
-La \tabref{tab:conclusiones-red-vapor} presenta el resumen cuantitativo de los resultados obtenidos para cada tramo de la red de vapor.
-
-\begin{table}[H]
-	\centering
-	\caption{Resumen de resultados del dimensionado de la red de vapor}
-	\label{tab:conclusiones-red-vapor}
-	\begin{tabular}{lccccc}
-		\toprule
-		\textbf{Tramo} & \textbf{Tubería} & \textbf{$D_{\text{int}}$} & \textbf{Velocidad} & \textbf{$\Delta P$} & \textbf{$P_{\text{salida}}$} \\
-		               &                  & (mm)                      & (m/s)              & (bar)               & (bar(g))                     \\
-		\midrule
-		TR1: Caldera-P & Sch.80 DN150     & 146,4                     & 19,17              & 0,01                & 9,058                        \\
-		TR2: P-C$_1$   & Sch.160 DN80     & 66,6                      & 18,93              & 0,24                & 8,818                        \\
-		TR3: P-S       & DIN DN125        & 131,7                     & 20,28              & 0,16                & 8,90                         \\
-		TR4: S-C$_2$   & DIN DN80         & 82,5                      & 21,45              & 0,07                & 8,83                         \\
-		TR5: S-T       & DIN DN100        & 107,1                     & 20,79              & 0,12                & 8,78                         \\
-		TR6: T-C$_3$   & Sch.40 DN50      & 52,5                      & 20,42              & 0,07                & 8,71                         \\
-		TR7: T-C$_4$   & Sch.40 DN100     & 102,3                     & 20,11              & 0,09                & 8,69                         \\
-		\midrule
-		\textbf{Total} & ---              & ---                       & ---                & ---                 & ---                          \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-Del análisis de los resultados de la \tabref{tab:conclusiones-red-vapor} se desprenden las siguientes conclusiones técnicas:
-
-\begin{enumerate}[label=\arabic*., leftmargin=2em]
-	\item \textbf{Cumplimiento del criterio de velocidad:} Todos los tramos presentan velocidades comprendidas entre 18,93~m/s y 21,45~m/s, valores que se sitúan dentro del rango objetivo de diseño ($\sim$20~m/s) y muy por debajo del límite máximo admisible de 30~m/s. Este resultado garantiza la minimización del riesgo de erosión en codos y accesorios, así como niveles de ruido aceptables.
-
-	\item \textbf{Pérdidas de carga contenidas:} La pérdida de carga máxima acumulada se produce en el camino Caldera-P-S-T-C$_4$, totalizando 0,38~bar. Este valor se encuentra muy por debajo del criterio de diseño de 1~bar establecido para el conjunto de la instalación.
-
-	\item \textbf{Presiones en consumidores:} Todos los puntos de consumo reciben vapor con presiones superiores a los 8,69~bar(g), valores que exceden ampliamente las presiones requeridas (4~bar(g) para C$_1$ y 7~bar(g) para C$_2$, C$_3$ y C$_4$). Este margen de presión disponible garantiza el correcto funcionamiento de los procesos industriales asociados.
-
-	\item \textbf{Tramo enterrado:} El tramo TR2 (P-C$_1$), único tramo con disposición soterrada, presenta la mayor pérdida de carga de la red (0,24~bar) debido a su considerable longitud (88,19~m). La selección de tubería Schedule~160 proporciona la resistencia mecánica necesaria frente a las cargas del terreno.
-
-	\item \textbf{Estandarización de tuberías:} El diseño combina tuberías normalizadas según DIN~2448 (tramos de mayor diámetro) y sistema Schedule API (tramos de menor diámetro y aplicaciones específicas), lo que facilita la adquisición de materiales y la ejecución de la obra.
-\end{enumerate}
-
-\paragraph{Resumen de longitudes y distribución de la red}
-
-La distribución geométrica de la red se caracteriza por los siguientes datos:
-
-\begin{table}[H]
-	\centering
-	\caption{Distribución de longitudes de la red de vapor}
-	\label{tab:conclusiones-longitudes-vapor}
-	\begin{tabular}{lccc}
-		\toprule
-		\textbf{Concepto}                 & \textbf{Longitud} & \textbf{Porcentaje} & \textbf{Tipo} \\
-		                                  & (m)               & (\%)                &               \\
-		\midrule
-		Longitud total real               & 351,93            & 100                 & ---           \\
-		Tramos aéreos                     & 263,74            & 74,9                & 6 tramos      \\
-		Tramos soterrados                 & 88,19             & 25,1                & 1 tramo (TR2) \\
-		\midrule
-		Longitud equivalente (accesorios) & 65,13             & 18,5                & ---           \\
-		Longitud total de cálculo         & 427,56            & ---                 & ---           \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-\subsubsection{Red de retorno de condensados}
-\label{subsubsec:conclusiones-red-condensados}
-
-La red de condensados, dimensionada para operar a una presión de 3~bar(g), presenta una longitud total de 321,61~m distribuidos en 7 tramos que retornan el condensado desde los puntos de consumo hasta la entrada de la caldera. El dimensionado de esta red reviste especial complejidad debido a la naturaleza bifásica del flujo, que incluye tanto condensado líquido como vapor flash generado por la expansión desde las condiciones de consumo hasta la presión del colector de retorno.
-
-\paragraph{Caracterización del vapor flash}
-
-La expansión del condensado desde las condiciones de saturación en los consumidores (presiones entre 4 y 7~bar(g)) hasta la presión del colector de retorno (3~bar(g)) provoca la vaporización parcial del líquido, fenómeno conocido como generación de vapor flash. La \tabref{tab:conclusiones-vapor-flash} cuantifica la magnitud de este fenómeno.
-
-\begin{table}[H]
-	\centering
-	\caption{Caracterización del vapor flash en la red de condensados}
-	\label{tab:conclusiones-vapor-flash}
-	\begin{tabular}{lcc}
-		\toprule
-		\textbf{Parámetro}                   & \textbf{Valor} & \textbf{Unidad} \\
-		\midrule
-		Caudal másico total de condensados   & 5403,95        & kg/h            \\
-		Fracción másica de vapor flash       & 7,45           & \%              \\
-		Caudal másico de vapor flash         & 402,54         & kg/h            \\
-		Caudal másico de líquido             & 5001,41        & kg/h            \\
-		\midrule
-		Fracción volumétrica de vapor flash  & $\sim$98       & \%              \\
-		Temperatura de saturación (3~bar(g)) & 143,6          & °C              \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-La fracción másica de vapor flash del 7,45\% representa únicamente el 2\% del volumen total del flujo bifásico, si bien domina completamente el comportamiento hidráulico del sistema debido a la baja densidad del vapor. Este fenómeno condiciona el criterio de velocidad adoptado (15--20~m/s) y justifica la necesidad de instalar separadores flash en los puntos de consumo para evitar el transporte innecesario de grandes volúmenes de vapor a baja presión.
-
-\paragraph{Resultados del dimensionado hidráulico}
-
-La \tabref{tab:conclusiones-red-condensados} presenta el resumen de los resultados del dimensionado de la red de retorno de condensados.
-
-\begin{table}[H]
-	\centering
-	\caption{Resumen de resultados del dimensionado de la red de condensados}
-	\label{tab:conclusiones-red-condensados}
-	\begin{tabular}{lccccc}
-		\toprule
-		\textbf{Tramo}                                           & \textbf{Caudal}              & \textbf{Tubería} & \textbf{$D_{\text{int}}$} & \textbf{Velocidad} & \textbf{$\Delta P$} \\
-		                                                         & (kg/h)                       &                  & (mm)                      & (m/s)              & (bar)               \\
-		\midrule
-		TR1: Caldera-P                                           & 5403,95                      & DN 65            & 58                        & 19,31              & 0,02                \\
-		TR2: P-C$_1$                                             & 2160                         & DN 32            & 28                        & 17,78              & 0,25                \\
-		TR3: P-S                                                 & 3243,95                      & DN 65            & 58                        & 19,13              & 0,14                \\
-		TR4: S-C$_2$                                             & 1080                         & DN 50            & 39                        & 18,04              & 0,05                \\
-		TR5: S-T                                                 & 2163,95                      & DN 65            & 50                        & 17,70              & 0,08                \\
-		TR6: T-C$_3$                                             & 756                          & DN 25            & 24                        & 17,96              & 0,05                \\
-		TR7: T-C$_4$                                             & 1407,95                      & DN 50            & 48                        & 17,41              & 0,06                \\
-		\midrule
-		\multicolumn{2}{l}{\textbf{Longitud total}}              & \multicolumn{2}{c}{321,61~m} & ---              & ---                                                                  \\
-		\multicolumn{2}{l}{\textbf{$\Delta P$ máximo acumulado}} & \multicolumn{2}{c}{---}      & ---              & 0,30~bar                                                             \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-Las principales conclusiones técnicas extraídas del dimensionado de la red de condensados son:
-
-\begin{enumerate}[label=\arabic*., leftmargin=2em]
-	\item \textbf{Velocidades dentro del rango bifásico:} Todos los tramos presentan velocidades comprendidas entre 17,41~m/s y 19,31~m/s, valores que se sitúan dentro del rango recomendado (15--20~m/s) para flujo bifásico con alto contenido de vapor flash.
-
-	\item \textbf{Pérdidas de carga moderadas:} La pérdida de carga máxima acumulada en el camino más desfavorable (C$_1$-P-Caldera) es de 0,30~bar, valor razonable para una red de estas características y que no compromete el retorno gravitatorio del condensado.
-
-	\item \textbf{Aprovechamiento del vapor flash:} La generación de 402,54~kg/h de vapor flash (equivalente a aproximadamente 266~kW térmicos) constituye una oportunidad de mejora energética. Este vapor podría aprovecharse en tanques separadores flash para precalentar el agua de alimentación de la caldera, incrementando la eficiencia global del ciclo.
-
-	\item \textbf{Material seleccionado:} Todas las tuberías de condensados emplean acero al carbono Schedule~40, material que proporciona resistencia adecuada frente a la corrosión por CO$_2$ disuelto en el condensado caliente.
-\end{enumerate}
-
-\subsubsection{Aislamiento térmico}
-\label{subsubsec:conclusiones-aislamiento}
-
-El sistema de aislamiento térmico ha sido dimensionado para cumplir simultáneamente el criterio de temperatura superficial máxima establecido por el RITE ($T_{\text{surf}} < 30$~°C) y minimizar las pérdidas térmicas hacia el ambiente. El material seleccionado es lana de roca con conductividad térmica $\lambda = 0{,}04$~W/(m$\cdot$K), material de referencia en instalaciones industriales por su estabilidad térmica, resistencia al fuego y coste competitivo.
-
-\paragraph{Estrategia de estandarización}
-
-Para simplificar la especificación de materiales y facilitar la ejecución de la obra, se ha adoptado una estrategia de estandarización que agrupa los espesores de aislamiento por rangos de diámetro nominal, en lugar de calcular un espesor individualizado para cada tramo. La \tabref{tab:conclusiones-espesores-estandarizados} presenta los espesores adoptados para cada rango.
-
-\begin{table}[H]
-	\centering
-	\caption{Espesores de aislamiento estandarizados por rango de diámetro}
-	\label{tab:conclusiones-espesores-estandarizados}
-	\begin{tabular}{lccc}
-		\toprule
-		\textbf{Red} & \textbf{Rango DN} & \textbf{Espesor} & \textbf{Temperatura fluido}                              \\
-		             &                   & (mm)             & (°C)                                                     \\
-		\midrule
-		Vapor        & DN $\geq$ 125     & 100              & 220                                                      \\
-		Vapor        & DN 50--100        & 80               & 220                                                      \\
-		Vapor        & DN $<$ 50         & 60               & 220                                                      \\
-		\midrule
-		Condensados  & DN $\geq$ 50      & 50               & 143,6                                                    \\
-		Condensados  & DN $<$ 50         & 40               & 143,6                                                    \\
-		\midrule
-		\multicolumn{4}{l}{\textit{Excepción: Tramo enterrado TR2 (vapor+condensados): 50~mm / 40~mm respectivamente}} \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-\paragraph{Resultados del dimensionado térmico}
-
-La \tabref{tab:conclusiones-perdidas-termicas} presenta el resumen cuantitativo de las pérdidas térmicas calculadas para el conjunto de la instalación.
-
-\begin{table}[H]
-	\centering
-	\caption{Resumen de pérdidas térmicas por subsistema}
-	\label{tab:conclusiones-perdidas-termicas}
-	\begin{tabular}{lccccc}
-		\toprule
-		\textbf{Subsistema}        & \textbf{Longitud} & \textbf{$T_{\text{surf}}$} & \textbf{$q_L$ rango} & \textbf{Pérdidas} & \textbf{Porcentaje} \\
-		                           & (m)               & (°C)                       & (W/m)                & (kW)              & (\%)                \\
-		\midrule
-		Red de vapor               & 351,93            & 16,3--18,2                 & 39,3--65,1           & 20,24             & 65,7                \\
-		Red de condensados         & 321,61            & 16,3--18,2                 & 25,8--36,7           & 10,57             & 34,3                \\
-		\midrule
-		\textbf{Total instalación} & \textbf{673,54}   & ---                        & ---                  & \textbf{30,81}    & \textbf{100}        \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-Las pérdidas térmicas totales de 30,81~kW representan únicamente el 0,73\% de la potencia térmica nominal de la caldera (4217~kW). Este valor se encuentra muy por debajo del límite recomendado del 2--3\% establecido por las guías de eficiencia energética del IDAE, lo que valida la efectividad del diseño de aislamiento propuesto.
-
-La \tabref{tab:conclusiones-eficiencia-aislamiento} presenta el análisis de eficiencia térmica del sistema de aislamiento.
-
-\begin{table}[H]
-	\centering
-	\caption{Eficiencia térmica del sistema de aislamiento}
-	\label{tab:conclusiones-eficiencia-aislamiento}
-	\begin{tabular}{lcc}
-		\toprule
-		\textbf{Concepto}                       & \textbf{Valor} & \textbf{Criterio/Límite} \\
-		\midrule
-		Potencia térmica útil caldera           & 4217           & kW                       \\
-		Pérdidas térmicas totales               & 30,81          & kW                       \\
-		Porcentaje de pérdidas                  & 0,73           & \%                       \\
-		\midrule
-		Límite recomendado IDAE                 & 2--3           & \%                       \\
-		Cumplimiento                            & \textbf{Sí}    & \checkmark               \\
-		\midrule
-		Temperatura superficial (tramos aéreos) & 16,3--18,2     & °C                       \\
-		Límite RITE                             & $<$ 30         & °C                       \\
-		Cumplimiento                            & \textbf{Sí}    & \checkmark               \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-La temperatura superficial del aislamiento en los tramos aéreos se sitúa en el rango 16,3--18,2~°C, muy inferior al límite de 30~°C establecido por el RITE. Este resultado elimina completamente el riesgo de quemaduras por contacto accidental y garantiza condiciones de seguridad excelentes para el personal de operación y mantenimiento.
-
-\subsubsection{Detalles de instalación: tramo enterrado}
-\label{subsubsec:conclusiones-tramo-enterrado}
-
-El tramo TR2 (P-C$_1$), único tramo con disposición enterrada, requiere consideraciones especiales tanto en el diseño constructivo como en el cálculo térmico. La \tabref{tab:conclusiones-tramo-enterrado} sintetiza los aspectos técnicos más relevantes de este tramo.
-
-\begin{table}[H]
-	\centering
-	\caption{Características técnicas del tramo enterrado TR2 (P-C$_1$)}
-	\label{tab:conclusiones-tramo-enterrado}
-	\begin{tabular}{lcc}
-		\toprule
-		\textbf{Parámetro}                            & \textbf{Valor}              & \textbf{Unidad} \\
-		\midrule
-		\multicolumn{3}{l}{\textbf{Geometría y disposición}}                                          \\
-		Longitud total (vapor + condensados)          & 176,38                      & m               \\
-		Profundidad del eje de tubería                & 1,09                        & m               \\
-		Ancho de zanja                                & 1,50                        & m               \\
-		Profundidad total de zanja                    & 1,34                        & m               \\
-		Separación entre tuberías (vapor/cond.)       & 1,00                        & m               \\
-		\midrule
-		\multicolumn{3}{l}{\textbf{Morfología de la zanja (de abajo hacia arriba)}}                   \\
-		Capa de arena de asiento                      & 0,10                        & m               \\
-		Aislamiento térmico (lana de roca)            & 0,05 (vapor) / 0,04 (cond.) & m               \\
-		Envolvente arena de relleno                   & 0,19                        & m               \\
-		Losa de hormigón HA-25 (protección)           & 0,10                        & m               \\
-		Relleno de tierras compactadas                & 0,80                        & m               \\
-		\midrule
-		\multicolumn{3}{l}{\textbf{Desempeño térmico}}                                                \\
-		Pérdidas térmicas tubería vapor               & 4,74                        & kW              \\
-		Pérdidas térmicas tubería condensados         & 2,34                        & kW              \\
-		Pérdidas térmicas totales tramo               & 7,08                        & kW              \\
-		Porcentaje sobre pérdidas totales instalación & 23,0                        & \%              \\
-		Porcentaje de longitud sobre total            & 5,5                         & \%              \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-Del análisis del tramo enterrado se extraen las siguientes conclusiones:
-
-\begin{enumerate}[label=\arabic*., leftmargin=2em]
-	\item \textbf{Concentración de pérdidas térmicas:} El tramo enterrado, con tan solo el 5,5\% de la longitud total de la instalación, concentra el 23\% de las pérdidas térmicas totales. Esta sobrerrepresentación se debe al menor espesor de aislamiento aplicado (limitado por restricciones geométricas de la excavación) y al efecto del terreno como sumidero térmico adicional.
-
-	\item \textbf{Restricciones geométricas:} El espesor de aislamiento en el tramo enterrado (50~mm para vapor, 40~mm para condensados) es inferior al adoptado en tramos aéreos de diámetro equivalente (80~mm para vapor DN~80) debido a limitaciones de ancho de zanja y separación mínima entre tuberías.
-
-	\item \textbf{Protección mecánica:} La losa de hormigón HA-25 de 10~cm de espesor proporciona protección eficaz frente a cargas verticales del terreno y posibles sobrecargas superficiales (tráfico de vehículos, maquinaria).
-
-	\item \textbf{Profundidad de enterramiento:} La profundidad del eje de tubería (1,09~m) y la profundidad total de zanja (1,34~m) cumplen con los criterios de profundidad mínima para instalaciones industriales, garantizando la protección de las tuberías frente a acciones externas.
-
-	\item \textbf{Conductividad térmica del terreno:} El cálculo térmico ha considerado una conductividad del terreno de $\lambda_{\text{terr}} = 1{,}5$~W/(m$\cdot$K), valor típico para suelos compactados. La resistencia térmica del terreno ($R_{\text{terr}}$) aporta aproximadamente un 10--12\% adicional a la resistencia térmica total, reduciendo las pérdidas de calor respecto a un tramo aéreo equivalente.
-\end{enumerate}
-
-\subsubsection{Refuerzo de conceptos teóricos}
-\label{subsubsec:conclusiones-conceptos-teoricos}
-
-El diseño de la instalación de vapor y condensados ha requerido la aplicación integrada de conocimientos procedentes de múltiples disciplinas de la ingeniería térmica y de fluidos. La \tabref{tab:conclusiones-conceptos-teoricos} presenta una síntesis de las áreas de conocimiento aplicadas y los conceptos teóricos reforzados durante el desarrollo del proyecto.
-
-\begin{table}[H]
-	\centering
-	\caption{Áreas de conocimiento y conceptos teóricos reforzados en el proyecto}
-	\label{tab:conclusiones-conceptos-teoricos}
-	\begin{tabular}{p{4cm}p{9cm}}
-		\toprule
-		\textbf{Área de conocimiento} & \textbf{Conceptos teóricos aplicados}                                                                                                                                                                                                     \\
-		\midrule
-		Termodinámica aplicada        & Tablas de vapor (IAPWS-IF97), propiedades del vapor sobrecalentado y saturado, balances entálpicos, procesos de cambio de fase, generación de vapor flash, entalpía de vaporización                                                       \\
-		\midrule
-		Mecánica de fluidos           & Ecuación de Darcy-Weisbach, longitudes equivalentes de accesorios ($L_e/D$), diagrama de Moody, número de Reynolds, criterios de velocidad (erosión/ruido), régimen turbulento, acumulación de pérdidas de carga                          \\
-		\midrule
-		Transferencia de calor        & Conducción térmica en geometría cilíndrica, resistencias térmicas en serie, flujos de calor lineales ($q_L$), temperatura superficial del aislamiento, coeficientes de convección, resistencia térmica del terreno                        \\
-		\midrule
-		Ingeniería de instalaciones   & Consulta de catálogos comerciales (Viessmann, DIN 2448, Schedule API), interpretación de normativas (RITE, ISO 12241, IDAE, EREN), estandarización de materiales vs.~optimización individual, detalles constructivos de tramos enterrados \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-La integración de estos conocimientos teóricos en un diseño real ha permitido reforzar la comprensión de las interacciones entre subsistemas (por ejemplo, cómo las pérdidas de carga en la red de vapor condicionan la presión de diseño de la caldera, o cómo la generación de vapor flash afecta al dimensionado hidráulico de la red de condensados).
-
-\subsubsection{Cumplimiento normativo y criterios de diseño}
-\label{subsubsec:conclusiones-cumplimiento-normativo}
-
-El diseño de la instalación se ha desarrollado en estricto cumplimiento del marco normativo aplicable a instalaciones de vapor industrial en España. La \tabref{tab:conclusiones-cumplimiento-normativo} presenta la verificación del cumplimiento de los principales criterios técnicos establecidos por la normativa de referencia.
-
-\begin{table}[H]
-	\centering
-	\caption{Verificación del cumplimiento de criterios normativos}
-	\label{tab:conclusiones-cumplimiento-normativo}
-	\begin{tabular}{p{5cm}ccc}
-		\toprule
-		\textbf{Criterio normativo}       & \textbf{Límite/Objetivo} & \textbf{Resultado}  & \textbf{Cumple} \\
-		\midrule
-		\multicolumn{4}{l}{\textbf{RITE (RD 1027/2007): Temperatura superficial}}                            \\
-		$T_{\text{surf}}$ tramos aéreos   & $<$ 30~°C                & 16,3--18,2~°C       & \checkmark      \\
-		\midrule
-		\multicolumn{4}{l}{\textbf{IDAE: Pérdidas térmicas en distribución}}                                 \\
-		Pérdidas totales                  & $<$ 2--3~\%              & 0,73~\%             & \checkmark      \\
-		\midrule
-		\multicolumn{4}{l}{\textbf{EREN / Spirax Sarco: Criterios hidráulicos}}                              \\
-		Velocidad vapor (objetivo)        & $\sim$20~m/s             & 18,93--21,45~m/s    & \checkmark      \\
-		Velocidad vapor (máxima)          & $<$ 30~m/s               & $<$ 22~m/s          & \checkmark      \\
-		Velocidad condensados (bifásico)  & 15--20~m/s               & 17,41--19,31~m/s    & \checkmark      \\
-		Pérdida de carga total red vapor  & $<$ 1~bar                & 0,38~bar (máx.)     & \checkmark      \\
-		\midrule
-		\multicolumn{4}{l}{\textbf{DIN 2448 / Schedule API: Materiales}}                                     \\
-		Tuberías comerciales normalizadas & ---                      & DIN / Sch.40/80/160 & \checkmark      \\
-		\midrule
-		\multicolumn{4}{l}{\textbf{Presiones en consumidores}}                                               \\
-		C$_1$ (requerido 4~bar(g))        & ---                      & 8,818~bar(g)        & \checkmark      \\
-		C$_2$ (requerido 7~bar(g))        & ---                      & 8,830~bar(g)        & \checkmark      \\
-		C$_3$ (requerido 7~bar(g))        & ---                      & 8,710~bar(g)        & \checkmark      \\
-		C$_4$ (requerido 7~bar(g))        & ---                      & 8,690~bar(g)        & \checkmark      \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-Todos los criterios normativos y técnicos establecidos en la fase de diseño han sido verificados satisfactoriamente, lo que garantiza la viabilidad técnica de la instalación propuesta y su conformidad con la reglamentación vigente en materia de instalaciones térmicas.
-
-\paragraph{Rugosidad del material}
-
-El valor de rugosidad absoluta adoptado para el acero comercial nuevo ($\varepsilon = 0{,}045$~mm) es coherente con la literatura técnica de referencia y se encuentra en el extremo inferior del rango habitual (0,045--0,05~mm), lo que proporciona un ligero margen de seguridad en el cálculo de pérdidas de carga frente a posibles irregularidades superficiales de las tuberías reales.
+El diseño desarrollado cumple satisfactoriamente todos los criterios normativos establecidos en el RITE en cuanto a temperatura superficial, los criterios del IDAE sobre pérdidas térmicas máximas admisibles, los criterios hidráulicos recomendados por EREN y Spirax Sarco para velocidades y pérdidas de carga, y las especificaciones de tuberías comerciales normalizadas según DIN 2448 y Schedule API. Este cumplimiento normativo, junto con los amplios márgenes de seguridad mantenidos en parámetros críticos como presiones en consumidores y pérdidas de carga, garantiza la viabilidad técnica de la instalación propuesta y su conformidad con la reglamentación vigente en materia de instalaciones térmicas industriales.
 
 \subsection{Limitaciones del trabajo}
 \label{subsec:limitaciones}
 
-El presente trabajo se ha centrado en el dimensionamiento termohidráulico de las redes de distribución de vapor y condensados, así como en la selección de la caldera generadora y el cálculo del aislamiento térmico. Si bien estos aspectos constituyen el núcleo fundamental del diseño, existen diversos elementos complementarios que no han sido desarrollados en la presente memoria técnica debido a limitaciones de alcance, tiempo o información disponible.
+El presente trabajo se ha centrado en el dimensionamiento termohidráulico de las redes de distribución de vapor y condensados, así como en la selección de la caldera generadora y el cálculo del aislamiento térmico. Si bien estos aspectos constituyen el núcleo fundamental del diseño, existen diversos elementos complementarios que no han sido desarrollados en la presente memoria técnica debido a limitaciones de alcance, tiempo o información disponible. A continuación se identifican las tres limitaciones principales del trabajo:
 
-A continuación se detallan las principales limitaciones identificadas, agrupadas por categorías temáticas. Estas limitaciones no comprometen la validez de los resultados obtenidos en las áreas analizadas, pero deben ser tenidas en cuenta para una posible futura ampliación del proyecto o para la fase de ingeniería de detalle previa a la ejecución de la obra.
+\begin{itemize}[leftmargin=2em]
+	\item \textbf{Control y seguridad:} No se han dimensionado sistemas de control automático ni válvulas de seguridad. El diseño asume condiciones de operación nominales sin considerar transitorios de arranque y parada, secuencias de control de la caldera, regulación automática de presión mediante modulación del quemador, o protecciones de seguridad como válvulas de alivio y discos de ruptura. La selección específica de purgadores de vapor, válvulas reductoras de presión, instrumentación de medida y sistemas SCADA requeriría información detallada sobre los procesos industriales de cada consumidor y sus requisitos de control, aspectos que exceden el alcance del dimensionamiento termohidráulico básico.
 
-\subsubsection{Elementos de control y seguridad}
-\label{subsubsec:limitaciones-control-seguridad}
+	\item \textbf{Tratamiento de agua:} No se ha incluido el dimensionamiento de la estación de tratamiento de agua de alimentación, aspecto crítico para garantizar la vida útil de la caldera y prevenir incrustaciones y corrosión. El diseño de los sistemas de descalcificación, desoxigenación, ajuste de pH y dosificación química, así como el cálculo de purgas de fondo y sus sistemas de recuperación de calor, requeriría datos sobre la composición del agua de red disponible en el emplazamiento (dureza, contenido en sales, oxígeno disuelto, pH), información no disponible en el presente proyecto. La ausencia de este sistema condiciona directamente la eficiencia operativa y la vida útil esperada de la instalación.
 
-El diseño presentado no incluye la selección específica, dimensionado ni ubicación de los siguientes elementos de control y seguridad, cuya incorporación es imprescindible en una instalación industrial real:
-
-\begin{enumerate}[label=\arabic*., leftmargin=2em]
-	\item \textbf{Purgadores de vapor:} No se ha realizado la selección de modelos comerciales específicos de purgadores (termodinámicos, termostáticos, de boya, etc.) para cada punto de la instalación. Únicamente se ha identificado la necesidad de su instalación y se han estimado caudales de condensado, pero no se han dimensionado ni ubicado con precisión.
-
-	\item \textbf{Válvulas de control:}
-	      \begin{itemize}[noitemsep]
-		      \item Válvulas reductoras de presión (especialmente en C$_1$, donde se requiere reducción de 8,8 a 4~bar(g))
-		      \item Válvulas de retención (prevención de retroceso de flujo)
-		      \item Válvulas de alivio de presión (protección contra sobrepresiones)
-		      \item Válvulas motorizadas o neumáticas (regulación automática)
-	      \end{itemize}
-
-	\item \textbf{Instrumentación:}
-	      \begin{itemize}[noitemsep]
-		      \item Manómetros y termómetros (monitorización local)
-		      \item Caudalímetros (medición de consumos)
-		      \item Transmisores de presión y temperatura (señalización remota)
-		      \item Indicadores de nivel (tanques y depósitos)
-	      \end{itemize}
-
-	\item \textbf{Sistemas de seguridad:}
-	      \begin{itemize}[noitemsep]
-		      \item Válvulas de seguridad (alivio por sobrepresión en caldera y líneas principales)
-		      \item Discos de ruptura (protección contra sobrepresión catastrófica)
-		      \item Sistemas de protección contra sobrecalentamiento
-		      \item Dispositivos de detección de fugas
-	      \end{itemize}
-\end{enumerate}
-
-La ausencia de estos elementos en el presente proyecto se debe a que su selección requiere información adicional sobre los procesos industriales específicos de cada consumidor, los requisitos de control automático del sistema y las condiciones de operación detalladas (arranques, paradas, transitorios, etc.) que exceden el alcance del dimensionamiento termohidráulico básico.
-
-\subsubsection{Automatización y control}
-\label{subsubsec:limitaciones-automatizacion}
-
-No se ha desarrollado el diseño del sistema de control automático de la instalación, aspecto fundamental para garantizar un funcionamiento eficiente y seguro en condiciones reales de operación. Los siguientes aspectos de automatización no están incluidos en el presente trabajo:
-
-\begin{enumerate}[label=\arabic*., leftmargin=2em]
-	\item \textbf{Sistema de control de la caldera:}
-	      \begin{itemize}[noitemsep]
-		      \item Secuencias de arranque y parada automática
-		      \item Regulación automática de presión mediante modulación del quemador
-		      \item Control de nivel de agua en caldera (control continuo + alarmas)
-		      \item Protecciones de seguridad (bajo nivel de agua, fallo de llama, sobrepresión)
-	      \end{itemize}
-
-	\item \textbf{Sistema de control del tanque de condensados:}
-	      \begin{itemize}[noitemsep]
-		      \item Control de nivel mediante válvulas motorizadas
-		      \item Arranque/parada automática de bombas de alimentación
-		      \item Gestión del vapor flash generado
-	      \end{itemize}
-
-	\item \textbf{Sistema SCADA o gestión energética:}
-	      \begin{itemize}[noitemsep]
-		      \item Monitorización remota de parámetros de proceso
-		      \item Registro histórico de consumos y eficiencias
-		      \item Detección temprana de anomalías (fugas, obstrucciones, fallos de purgadores)
-		      \item Optimización automática de condiciones de operación
-	      \end{itemize}
-\end{enumerate}
-
-El desarrollo de estos sistemas de automatización requeriría la definición de una arquitectura de control (PLC, controladores dedicados, sistema distribuido, etc.) y la especificación de algoritmos de regulación, aspectos que quedan fuera del alcance del presente proyecto de dimensionamiento básico.
-
-\subsubsection{Tratamiento de agua}
-\label{subsubsec:limitaciones-tratamiento-agua}
-
-La calidad del agua de alimentación de la caldera constituye un aspecto crítico para garantizar la vida útil del equipo y prevenir problemas de incrustaciones, corrosión y arrastre de sólidos. No obstante, el presente proyecto no ha incluido el diseño del sistema de tratamiento de agua, que debería comprender los siguientes elementos:
-
-\begin{enumerate}[label=\arabic*., leftmargin=2em]
-	\item \textbf{Sistema de tratamiento físico-químico:}
-	      \begin{itemize}[noitemsep]
-		      \item Descalcificación (intercambio iónico, eliminación de Ca$^{2+}$ y Mg$^{2+}$)
-		      \item Desoxigenación térmica o química (eliminación de O$_2$ disuelto)
-		      \item Ajuste de pH (prevención de corrosión por acidez)
-		      \item Dosificación de productos químicos (secuestrantes de oxígeno, dispersantes)
-	      \end{itemize}
-
-	\item \textbf{Sistema de purga de fondo:}
-	      \begin{itemize}[noitemsep]
-		      \item Dimensionado de purgas continuas y discontinuas
-		      \item Cálculo del caudal de purga necesario según concentración de sólidos disueltos
-		      \item Sistema de recuperación de calor de las purgas
-	      \end{itemize}
-
-	\item \textbf{Criterios de calidad del agua:}
-	      \begin{itemize}[noitemsep]
-		      \item Límites de dureza, sílice, hierro, oxígeno disuelto, pH, conductividad
-		      \item Prevención de incrustaciones (carbonato cálcico, sílice)
-		      \item Prevención de corrosión (oxígeno, CO$_2$, pH ácido)
-		      \item Prevención de arrastre de gotas (TDS, alcalinidad)
-	      \end{itemize}
-\end{enumerate}
-
-La ausencia de este análisis se debe a la falta de datos sobre la composición del agua de red disponible en el emplazamiento (dureza, contenido en sales, pH, etc.), información que sería necesaria para dimensionar correctamente los sistemas de tratamiento.
-
-\subsubsection{Aspectos económicos}
-\label{subsubsec:limitaciones-economicos}
-
-El proyecto se ha centrado exclusivamente en el dimensionamiento técnico de la instalación, sin abordar aspectos económicos que serían relevantes para la toma de decisiones en un contexto industrial real. Los siguientes análisis económicos no han sido realizados:
-
-\begin{enumerate}[label=\arabic*., leftmargin=2em]
-	\item \textbf{Análisis del coste del ciclo de vida (LCC):}
-	      \begin{itemize}[noitemsep]
-		      \item Comparación de alternativas de diseño considerando inversión inicial, costes de operación (combustible, electricidad), costes de mantenimiento y vida útil esperada
-		      \item Análisis de sensibilidad respecto a parámetros críticos (precio del combustible, horas de operación anuales, factor de carga)
-		      \item Valoración económica de medidas de eficiencia energética (aislamiento reforzado, aprovechamiento de vapor flash, economizador)
-	      \end{itemize}
-
-	\item \textbf{Análisis de rentabilidad:}
-	      \begin{itemize}[noitemsep]
-		      \item Cálculo del período de retorno de la inversión (payback)
-		      \item Valor actual neto (VAN) y tasa interna de retorno (TIR)
-		      \item Comparación económica entre alternativas de aislamiento (espesores, materiales)
-	      \end{itemize}
-
-	\item \textbf{Presupuesto detallado:}
-	      \begin{itemize}[noitemsep]
-		      \item Coste de equipos principales (caldera, purgadores, válvulas)
-		      \item Coste de materiales (tuberías, aislamiento, soportes)
-		      \item Coste de ejecución (montaje, soldaduras, pruebas)
-		      \item Costes indirectos (ingeniería, gestión, licencias)
-	      \end{itemize}
-\end{enumerate}
-
-La incorporación de estos análisis económicos permitiría justificar cuantitativamente las decisiones de diseño (por ejemplo, la viabilidad económica de incrementar el espesor de aislamiento más allá del mínimo normativo) y facilitaría la evaluación de alternativas tecnológicas.
-
-\subsubsection{Otros elementos no incluidos}
-\label{subsubsec:limitaciones-otros-elementos}
-
-Además de las limitaciones anteriormente expuestas, existen otros elementos técnicos relevantes que no han sido desarrollados en el presente trabajo:
-
-\begin{enumerate}[label=\arabic*., leftmargin=2em]
-	\item \textbf{Economizador:}
-	      \begin{itemize}[noitemsep]
-		      \item Intercambiador de calor instalado en el conducto de gases de escape de la caldera
-		      \item Permite precalentar el agua de alimentación mediante aprovechamiento de calor residual
-		      \item Potencial de incremento de eficiencia global del 5--10\% según condiciones de operación
-		      \item No evaluado por falta de datos sobre temperatura y caudal de gases de combustión
-	      \end{itemize}
-
-	\item \textbf{Desaireador térmico:}
-	      \begin{itemize}[noitemsep]
-		      \item Equipo que elimina oxígeno y CO$_2$ disueltos en el agua de alimentación mediante desgasificación térmica
-		      \item Previene corrosión en caldera y tuberías
-		      \item Típicamente opera a 0,2--0,5~bar(g) y 105--110~°C
-		      \item No incluido por falta de especificaciones sobre calidad requerida del agua
-	      \end{itemize}
-
-	\item \textbf{Estructura y soportación:}
-	      \begin{itemize}[noitemsep]
-		      \item Diseño de soportes fijos y deslizantes para tramos aéreos
-		      \item Dimensionado de anclajes y cimentaciones
-		      \item Cálculo de liras de dilatación o compensadores de expansión térmica
-		      \item Diseño de \textit{pipe racks} (bancadas de tuberías)
-		      \item Análisis de esfuerzos mecánicos por dilatación térmica
-	      \end{itemize}
-
-	\item \textbf{Planos constructivos detallados:}
-	      \begin{itemize}[noitemsep]
-		      \item Aunque se incluyen planos de situación y esquemas generales, no se han desarrollado planos completos de montaje con detalles de soldaduras, conexionados, pendientes, soportes y derivaciones
-		      \item Planos isométricos de tuberías para taller
-		      \item Listas de materiales detalladas (bill of materials)
-	      \end{itemize}
-\end{enumerate}
-
-Estas limitaciones corresponden a elementos que, si bien son necesarios en una instalación real completa, requieren información adicional (datos del fabricante de la caldera, análisis estructural, etc.) o exceden el alcance académico del presente proyecto de dimensionamiento básico.
+	\item \textbf{Análisis económico:} No se ha realizado un estudio de costes de inversión inicial (CAPEX) ni de costes de operación y mantenimiento (OPEX), ni tampoco un análisis de retorno de inversión o del coste del ciclo de vida. La incorporación de análisis económicos permitiría justificar cuantitativamente decisiones de diseño como la viabilidad de incrementar espesores de aislamiento más allá del mínimo normativo, la rentabilidad de incorporar economizadores o sistemas de aprovechamiento de vapor flash, o la comparación entre alternativas de materiales aislantes. Sin estos análisis, la evaluación de la viabilidad real del proyecto en un contexto industrial queda limitada exclusivamente a criterios técnicos y normativos.
+\end{itemize}
 
 \subsection{Trabajos futuros propuestos}
 \label{subsec:trabajos-futuros}
 
-Con el objetivo de completar el diseño de la instalación y optimizar su eficiencia energética y operativa, se proponen las siguientes líneas de trabajo futuro. Estas propuestas se han priorizado en función de su potencial de mejora de la eficiencia, su viabilidad técnica y su interés académico y profesional.
-
-\subsubsection{Incorporación de economizador}
-\label{subsubsec:trabajo-futuro-economizador}
-
-La instalación de un economizador en el conducto de gases de escape de la caldera constituye una de las medidas de eficiencia energética más efectivas en instalaciones de vapor industrial. Este equipo permite aprovechar el calor residual contenido en los gases de combustión para precalentar el agua de alimentación antes de su entrada en la caldera, reduciendo el consumo de combustible necesario para generar el vapor.
-
-\paragraph{Objetivos del estudio propuesto}
-
-El estudio técnico-económico del economizador debería abordar los siguientes aspectos:
+Con el objetivo de completar el diseño de la instalación y optimizar su eficiencia energética y operativa, se proponen las siguientes líneas de trabajo futuro prioritarias:
 
 \begin{enumerate}[label=\arabic*., leftmargin=2em]
-	\item \textbf{Análisis termodinámico:}
-	      \begin{itemize}[noitemsep]
-		      \item Caracterización de los gases de escape (temperatura, caudal, composición)
-		      \item Cálculo del calor recuperable según temperatura final de los gases (límite: punto de rocío ácido, $\sim$120--140~°C)
-		      \item Estimación del incremento de temperatura del agua de alimentación (típicamente de 15~°C a 80--90~°C)
-		      \item Cuantificación del ahorro de combustible asociado
-	      \end{itemize}
+	\item \textbf{Sistema de monitorización IoT y mantenimiento predictivo.} La implementación de un sistema de monitorización en tiempo real basado en tecnologías IoT permitiría supervisar continuamente parámetros críticos de la instalación como presiones, temperaturas, caudales y estado de purgadores mediante sensores conectados. Este sistema facilitaría la transición hacia un modelo de mantenimiento predictivo en lugar de reactivo, optimizando la planificación de intervenciones, reduciendo paradas no programadas y maximizando la disponibilidad de la instalación. El impacto esperado incluye reducción de costes operativos, aumento de la eficiencia energética global y mejora de la seguridad operativa.
 
-	\item \textbf{Dimensionamiento del intercambiador:}
-	      \begin{itemize}[noitemsep]
-		      \item Selección del tipo de economizador (tubos rectos, serpenteados, con aletas)
-		      \item Cálculo de la superficie de intercambio requerida
-		      \item Estimación de pérdidas de carga en el lado de gases y en el lado de agua
-	      \end{itemize}
+	\item \textbf{Integración de energías renovables para generación de vapor.} La hibridación del sistema actual de generación de vapor mediante combustibles fósiles con tecnologías renovables como colectores solares térmicos de concentración o biomasa procedente de residuos forestales o agrícolas locales permitiría reducir significativamente las emisiones de CO$_2$ y la dependencia de combustibles fósiles.
 
-	\item \textbf{Análisis económico:}
-	      \begin{itemize}[noitemsep]
-		      \item Inversión inicial del economizador
-		      \item Ahorro energético anual (kWh o GJ/año)
-		      \item Ahorro económico anual (€/año según precio del combustible)
-		      \item Período de retorno de la inversión (payback)
-		      \item Valor actual neto (VAN) a 10--15 años
-	      \end{itemize}
-
-	\item \textbf{Comparación de tecnologías:}
-	      \begin{itemize}[noitemsep]
-		      \item Economizador de tubos de acero al carbono (coste bajo, vida útil limitada)
-		      \item Economizador de tubos de acero inoxidable (mayor inversión, mayor durabilidad)
-		      \item Economizador con tubos aleteados (mayor superficie, menor tamaño)
-	      \end{itemize}
+	\item \textbf{Optimización del sistema de recuperación de condensados y aprovechamiento de vapor flash.} El diseño actual identifica la generación de 402,54 kg/h de vapor flash (equivalente a 266 kW térmicos, un 6,3\% de la potencia de la caldera) pero no incluye su aprovechamiento energético. La instalación de tanques separadores flash con sistemas de control automático permitiría recuperar este vapor para precalentar el agua de alimentación de la caldera, reduciendo el consumo de combustible primario. Adicionalmente, la implementación de bombas de condensados con variadores de frecuencia optimizaría el consumo eléctrico del bombeo y la instalación de sensores de temperatura y ultrasonidos en purgadores permitiría identificar fallos y fugas. El impacto esperado incluye la reducción del consumo eléctrico de auxiliares, disminución del consumo de agua de aportación y mejora de la calidad del condensado retornado, con el consiguiente aumento de la vida útil de la caldera.
 \end{enumerate}
 
-\paragraph{Estimación preliminar del potencial de ahorro}
+%%%% Referencias------------------------
 
-Estudios de referencia en la bibliografía técnica (IDAE, Spirax Sarco) indican que la incorporación de un economizador en calderas de vapor puede proporcionar incrementos de eficiencia del orden del 5--10\%, dependiendo de la temperatura inicial del agua de alimentación y de la temperatura de los gases de escape. Para la presente instalación, con una potencia térmica de 4,2~MW, un incremento de eficiencia del 7\% representaría un ahorro de aproximadamente 294~kW, equivalente a:
+% Contenido de las conclusiones.
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{section}{Bibliografía}
+\printbibliography[title={Bibliografía}]
 
-\begin{table}[H]
-	\centering
-	\caption{Estimación preliminar del potencial de ahorro mediante economizador}
-	\label{tab:trabajo-futuro-economizador-ahorro}
-	\begin{tabular}{lcc}
-		\toprule
-		\textbf{Concepto}                     & \textbf{Valor estimado} & \textbf{Unidad} \\
-		\midrule
-		Potencia térmica actual               & 4217                    & kW              \\
-		Incremento de eficiencia esperado     & 5--10                   & \%              \\
-		Ahorro energético (estimación al 7\%) & 295                     & kW              \\
-		Ahorro energético anual (8000~h/año)  & 2\,360                  & MWh/año         \\
-		\bottomrule
-	\end{tabular}
-\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Anexos %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Este potencial de ahorro justifica plenamente la realización de un estudio de viabilidad detallado que determine la rentabilidad económica de la inversión en función del precio del combustible y las horas de operación anuales de la instalación.
+\myappendix{Planos}
+\label{anexo:Planos}
+\includepdf[
+	pages=-,
+	pagecommand={\thispagestyle{empty}},
+	fitpaper=true
+]{Figuras/planos/plano_vapor-Instalacion.pdf}
 
-\subsubsection{Automatización de la gestión de purgadores y condensados}
-\label{subsubsec:trabajo-futuro-purgadores}
+\includepdf[
+	pages=-,
+	pagecommand={\thispagestyle{empty}},
+	fitpaper=true
+]{Figuras/planos/plano_vapor-Parcela.pdf}
 
-La gestión eficiente de los purgadores de vapor y la optimización del retorno de condensados constituyen aspectos clave para maximizar la eficiencia energética de instalaciones de vapor industrial. Se propone el desarrollo de un sistema inteligente de monitorización y control que comprenda los siguientes elementos:
-
-\begin{enumerate}[label=\arabic*., leftmargin=2em]
-	\item \textbf{Monitorización del estado de purgadores:}
-	      \begin{itemize}[noitemsep]
-		      \item Instalación de sensores de temperatura en la salida de cada purgador
-		      \item Empleo de sensores de ultrasonidos para detección de flujo anómalo
-		      \item Identificación automática de fallos (bloqueo por suciedad, fuga continua de vapor)
-		      \item Sistema de alarmas y notificaciones al personal de mantenimiento
-	      \end{itemize}
-
-	\item \textbf{Optimización del tanque separador flash:}
-	      \begin{itemize}[noitemsep]
-		      \item Sistema de control de nivel mediante válvulas motorizadas
-		      \item Gestión automática del vapor flash generado (aprovechamiento para precalentamiento o venteo controlado)
-		      \item Separación eficiente de fases líquido-vapor mediante deflectores y ciclones internos
-		      \item Prevención de arrastre de gotas hacia la línea de vapor flash
-	      \end{itemize}
-
-	\item \textbf{Sistema de bombeo inteligente:}
-	      \begin{itemize}[noitemsep]
-		      \item Bombas de retorno de condensados con variador de frecuencia (ajuste automático de caudal)
-		      \item Minimización del consumo eléctrico mediante regulación de velocidad
-		      \item Prevención de cavitación por control de NPSH (Net Positive Suction Head)
-		      \item Redundancia de equipos (bombas en paralelo con arranque alternado)
-	      \end{itemize}
-\end{enumerate}
-
-\paragraph{Beneficios esperados}
-
-La implementación de estos sistemas de automatización proporcionaría los siguientes beneficios operativos:
-
-\begin{table}[H]
-	\centering
-	\caption{Beneficios esperados de la automatización de purgadores y condensados}
-	\label{tab:trabajo-futuro-purgadores-beneficios}
-	\begin{tabular}{p{6cm}p{7cm}}
-		\toprule
-		\textbf{Beneficio}                            & \textbf{Impacto esperado}                                                                                                              \\
-		\midrule
-		Detección temprana de fallos en purgadores    & Reducción de pérdidas de vapor por fugas (potencial ahorro 5--15\% del caudal total según estudios de Spirax Sarco)                    \\
-		\midrule
-		Aprovechamiento del vapor flash (402,54~kg/h) & Recuperación de $\sim$266~kW térmicos para precalentamiento del agua de alimentación, equivalente a 6,3\% de la potencia de la caldera \\
-		\midrule
-		Optimización del bombeo de condensados        & Reducción del consumo eléctrico de bombas en 20--40\% mediante variadores de frecuencia                                                \\
-		\midrule
-		Mejora de la calidad del condensado retornado & Reducción de arrastre de vapor y gotas, minimización de corrosión en tuberías de retorno                                               \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-El aprovechamiento de los 402,54~kg/h de vapor flash generados en el sistema permitiría recuperar aproximadamente 266~kW térmicos (equivalente al 6,3\% de la potencia de la caldera), cifra comparable al potencial de ahorro mediante economizador y que justifica la inversión en tanques separadores flash con sistemas de control automático.
-
-\subsubsection{Análisis del coste del ciclo de vida del aislamiento}
-\label{subsubsec:trabajo-futuro-lcc-aislamiento}
-
-El dimensionado del aislamiento térmico presentado en este proyecto se ha basado exclusivamente en criterios técnicos (cumplimiento del RITE) y en una estrategia de estandarización por rangos de diámetro. Sin embargo, desde una perspectiva de optimización económica, el espesor de aislamiento debería determinarse mediante un análisis del coste del ciclo de vida (LCC, \textit{Life Cycle Cost}) que considere tanto la inversión inicial como los costes energéticos durante la vida útil de la instalación.
-
-\paragraph{Metodología propuesta}
-
-El análisis LCC del aislamiento debería seguir la siguiente metodología:
-
-\begin{enumerate}[label=\arabic*., leftmargin=2em]
-	\item \textbf{Definición de alternativas:}
-	      \begin{itemize}[noitemsep]
-		      \item Espesores de aislamiento: rango desde el mínimo normativo (30--40~mm) hasta espesores reforzados (120--150~mm)
-		      \item Materiales aislantes: lana de roca, poliuretano proyectado, silicato cálcico, aerogel (para aplicaciones especiales)
-		      \item Configuraciones: capa simple, doble capa con barrera de vapor
-	      \end{itemize}
-
-	\item \textbf{Cálculo de costes para cada alternativa:}
-	      \begin{itemize}[noitemsep]
-		      \item \textbf{Inversión inicial:} Coste de material aislante + coste de instalación (€/m o €/m²)
-		      \item \textbf{Pérdidas energéticas:} Cálculo de pérdidas térmicas anuales según espesor (kWh/año) y coste energético asociado (€/año)
-		      \item \textbf{Mantenimiento:} Coste de reposición periódica del aislamiento (típicamente cada 10--15 años)
-		      \item \textbf{Otros factores:} Vida útil del material, resistencia mecánica, comportamiento ante fuego
-	      \end{itemize}
-
-	\item \textbf{Análisis económico a largo plazo:}
-	      \begin{itemize}[noitemsep]
-		      \item Horizonte temporal de análisis: 20--25 años (vida útil típica de la instalación)
-		      \item Tasa de descuento: 3--5\% (según criterios financieros de la empresa)
-		      \item Evolución del precio del combustible: escenarios conservador, medio y optimista
-		      \item Valor actual neto de cada alternativa
-	      \end{itemize}
-
-	\item \textbf{Análisis de sensibilidad:}
-	      \begin{itemize}[noitemsep]
-		      \item Sensibilidad del espesor óptimo respecto al precio del combustible
-		      \item Impacto de las horas de operación anuales (6000~h, 8000~h, operación continua)
-		      \item Influencia de la tasa de descuento en la decisión óptima
-	      \end{itemize}
-
-	\item \textbf{Consideraciones ambientales:}
-	      \begin{itemize}[noitemsep]
-		      \item Cuantificación de emisiones de CO$_2$ evitadas mediante aislamiento reforzado
-		      \item Impacto ambiental del ciclo de vida del material aislante (producción, transporte, reciclaje)
-		      \item Valoración económica de las externalidades ambientales (precio sombra del carbono)
-	      \end{itemize}
-\end{enumerate}
-
-\paragraph{Resultados esperados del análisis LCC}
-
-La bibliografía técnica (ISO 12241, IDAE) indica que, para instalaciones con más de 4000--5000 horas de operación anuales, el espesor económicamente óptimo de aislamiento suele ser superior al espesor mínimo normativo. La \tabref{tab:trabajo-futuro-lcc-ejemplo} presenta un ejemplo hipotético de comparación LCC entre tres alternativas de espesor para un tramo de vapor DN~100.
-
-\begin{table}[H]
-	\centering
-	\caption{Ejemplo hipotético de análisis LCC para aislamiento de tramo DN~100}
-	\label{tab:trabajo-futuro-lcc-ejemplo}
-	\begin{tabular}{lccc}
-		\toprule
-		\textbf{Concepto}                      & \textbf{Espesor 60~mm} & \textbf{Espesor 80~mm} & \textbf{Espesor 100~mm} \\
-		\midrule
-		\multicolumn{4}{l}{\textit{(Ejemplo ilustrativo --- valores no calculados en este proyecto)}}                      \\
-		\midrule
-		Inversión inicial (€/m)                & 45                     & 55                     & 70                      \\
-		Pérdidas térmicas (W/m)                & 58                     & 48                     & 42                      \\
-		Coste energético anual (€/año, 8000~h) & 1860                   & 1540                   & 1350                    \\
-		VAN a 20 años (tasa 4\%)               & ---                    & ---                    & ---                     \\
-		\midrule
-		\multicolumn{4}{l}{\textit{Nota: Valores ilustrativos para demostrar la metodología. Requiere cálculo detallado.}} \\
-		\bottomrule
-	\end{tabular}
-\end{table}
-
-El desarrollo de este análisis LCC permitiría justificar cuantitativamente la selección del espesor de aislamiento, incorporando criterios económicos además de los técnicos y normativos aplicados en el presente proyecto.
-
-\paragraph{Extensión del análisis a materiales alternativos}
-
-Adicionalmente, el análisis LCC debería considerar materiales aislantes alternativos a la lana de roca convencional:
-
-\begin{itemize}[leftmargin=2em]
-	\item \textbf{Poliuretano proyectado:} Mayor conductividad térmica ($\lambda \sim 0{,}025$~W/(m$\cdot$K)), pero instalación más rápida y sin juntas.
-	\item \textbf{Silicato cálcico:} Resistencia excepcional a altas temperaturas (hasta 1000~°C), indicado para tramos próximos a calderas o sobrecalentadores.
-	\item \textbf{Aerogel:} Conductividad térmica extremadamente baja ($\lambda \sim 0{,}012$~W/(m$\cdot$K)), pero coste muy elevado. Viable únicamente en aplicaciones críticas con restricciones severas de espacio.
-\end{itemize}
-
-La comparación cuantitativa de estas alternativas en términos de LCC permitiría identificar soluciones óptimas para diferentes tramos de la instalación, considerando restricciones específicas (espacio disponible, temperatura de operación, accesibilidad para mantenimiento).
-
-\paragraph{Conclusión}
-
-El análisis del coste del ciclo de vida del aislamiento térmico constituye una línea de trabajo futuro prioritaria, cuyo desarrollo permitiría optimizar económicamente el diseño propuesto y proporcionar criterios cuantitativos para la toma de decisiones de inversión. La metodología sería aplicable no solo al caso de estudio presente, sino también a proyectos similares de ampliación o renovación de instalaciones de vapor industrial.
-
-\section{Bibliografía}
-\label{sec:bibliografia}
-
-A continuación se relacionan las fuentes consultadas para el desarrollo del diseño termohidráulico de la instalación de vapor y condensados. Las referencias se han organizado en cinco categorías según su naturaleza: normativas y reglamentos de obligado cumplimiento, guías técnicas institucionales, manuales de eficiencia energética, catálogos comerciales de fabricantes y tablas de propiedades termodinámicas. La numeración correlativa permite su citación inequívoca a lo largo de la memoria técnica.
-
-\subsection*{Normativas y Reglamentos}
-
-\begin{enumerate}[label={[\arabic*]}, leftmargin=2em]
-	\item \textbf{RITE --- Reglamento de Instalaciones Térmicas en los Edificios.}
-	      Real Decreto 1027/2007, de 20 de julio.
-	      Ministerio de Industria, Turismo y Comercio (España), 2007.
-	      \textit{Criterio de temperatura superficial máxima en zonas accesibles ($T_{\text{sup}} < 30$~°C).}
-
-	\item \textbf{ISO 12241:2022 --- Thermal insulation for building equipment and industrial installations: Calculation rules.}
-	      International Organization for Standardization (ISO), 2022.
-	      \textit{Metodología de cálculo de espesores de aislamiento térmico y flujos de calor.}
-
-	\item \textbf{DIN 2448 --- Seamless steel tubes: Technical delivery conditions.}
-	      Deutsches Institut für Normung (DIN).
-	      \textit{Especificación de tuberías de acero sin soldadura para diámetros nominales DN~80--150.}
-
-	\item \textbf{API Schedule (ANSI B36.10) --- Welded and Seamless Wrought Steel Pipe.}
-	      American Petroleum Institute (API) / American National Standards Institute (ANSI).
-	      \textit{Especificación de espesores de pared para tuberías Schedule~40, 80 y 160.}
-\end{enumerate}
-
-\subsection*{Guías Técnicas Institucionales}
-
-\begin{enumerate}[label={[\arabic*]}, leftmargin=2em, resume]
-	\item \textbf{Guía Técnica de Diseño y Cálculo del Aislamiento Térmico de Conducciones, Aparatos y Equipos.}
-	      Instituto para la Diversificación y Ahorro de la Energía (IDAE).
-	      \textit{Materiales aislantes, cálculo de espesores óptimos y criterios de estandarización por diámetro nominal.}
-
-	\item \textbf{VAPOR SPIRAX SARCO --- Guía de Referencia Técnica.}
-	      Spirax Sarco Limited.
-	      \textit{Dimensionado de tuberías de vapor, líneas de distribución y purga, tablas de factores de presión y prevención de golpe de ariete.}
-
-	\item \textbf{Catálogo General de Productos de Tubería Industrial.}
-	      Tubacero (fabricante).
-	      \textit{Dimensiones nominales, materiales, espesores y conexiones para tuberías de acero.}
-\end{enumerate}
-
-\subsection*{Manuales Técnicos}
-
-\begin{enumerate}[label={[\arabic*]}, leftmargin=2em, resume]
-	\item \textbf{Manual de Eficiencia Energética en Redes de Vapor y Condensados.}
-	      Ente Regional de la Energía de Castilla y León (EREN), 2010.
-	      \textit{Cálculo hidráulico mediante Darcy-Weisbach y Colebrook-White; longitudes equivalentes de accesorios ($L_e/D = 26$ para codos de radio mediano); recuperación de condensados y vapor flash; dimensionamiento de pozos de goteo y estaciones de purga.}
-
-	\item \textbf{Vapor Interesante --- Manual de Referencia Técnica.}
-	      \textit{Información práctica y teórica sobre sistemas de vapor industrial.}
-\end{enumerate}
-
-\subsection*{Catálogos Comerciales}
-
-\begin{enumerate}[label={[\arabic*]}, leftmargin=2em, resume]
-	\item \textbf{Caldera de vapor de alta presión Viessmann Vitomax 100-HS, Modelo M33A --- Datos Técnicos.}
-	      Viessmann Werke GmbH \& Co. KG.
-	      \textit{Especificaciones técnicas del equipo seleccionado: caudal 5400~kg/h, presión 10~bar(g), temperatura 220~°C.}
-
-	\item \textbf{Caldera Viessmann Vitomax 200-HS, Modelo M237 --- Datos Técnicos.}
-	      Viessmann Werke GmbH \& Co. KG.
-	      \textit{Documentación de referencia complementaria (modelo alternativo de mayor capacidad).}
-\end{enumerate}
-
-\subsection*{Tablas Termodinámicas}
-
-\begin{enumerate}[label={[\arabic*]}, leftmargin=2em, resume]
-	\item \textbf{IAPWS-IF97 --- International Association for the Properties of Water and Steam: Industrial Formulation 1997 for the Thermodynamic Properties of Water and Steam.}
-	      International Association for the Properties of Water and Steam (IAPWS), 1997 (con revisiones posteriores).
-	      \textit{Propiedades termofísicas del vapor y agua: entalpías, densidades, viscosidades, temperaturas de saturación, volúmenes específicos.}
-\end{enumerate}
-
-\vspace{0.5cm}
-\noindent\textbf{Nota:} Los criterios técnicos citados a lo largo de la memoria (velocidad objetivo 20~m/s, velocidad máxima de vapor 30~m/s, velocidad en condensados 15--20~m/s, $L_e/D$ de accesorios, pendiente mínima 40~mm/10~m, temperatura superficial máxima 30~°C, profundidad de pozos de goteo 250--700~mm) se fundamentan en las referencias anteriormente listadas, particularmente en el Manual EREN [8], la Guía Spirax Sarco [6], la normativa RITE [1] y la Guía IDAE [5].
-
-
-
-    % 2. Iniciamos el entorno de anexos
-    \myappendix{Planos}
-    \label{anexo:Planos}
-    \includepdf[
-        pages=-, 
-        pagecommand={\thispagestyle{empty}},
-        fitpaper=true
-    ]{Figuras/planos/plano_vapor-Instalacion.pdf}
-
-    \includepdf[
-        pages=-, 
-        pagecommand={\thispagestyle{empty}},
-        fitpaper=true
-    ]{Figuras/planos/plano_vapor-Parcela.pdf}
-        
 
 
 \end{document}

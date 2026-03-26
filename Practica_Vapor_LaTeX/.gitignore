@@ -1,15 +1,22 @@
-*.aux
-*.log
-*.toc
-*.lof
-*.lot
-*.out
+# =============================================================================
+# .gitignore específico de Practica_Vapor_LaTeX/
+# =============================================================================
+# La mayoría de patrones están en .gitignore de la raíz del proyecto
+# Este archivo solo contiene excepciones o reglas específicas de LaTeX
+# =============================================================================
+
+# Directorio de compilación (CRÍTICO - contiene TODOS los archivos temporales)
+build/
+!build/README.md
+
+# PDFs compilados - el PDF se genera en build/ y NO se versiona
 *.pdf
-*.synctex*
-*.auxlock
-TikZ-Cache/
+
+# Archivos auxiliares específicos que no están en la raíz
 *.synctex(busy)
 *.synctex(busy).gz
-*.synctex.gz
-*.yaml
-*.pdf
+
+# IMPORTANTE: NO ignorar archivos de configuración
+# .indentconfig.yaml debe versionarse
+# .latexmkrc debe versionarse
+# .vscode/settings.json debe versionarse
