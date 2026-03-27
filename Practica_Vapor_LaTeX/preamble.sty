@@ -183,6 +183,11 @@
   \hyperref[#1]{Anexo~\ref*{#1}}%
 }
 
+% Comando robusto para referencias de anexos
+\newcommand{\anexoref}[1]{%
+  \hyperref[#1]{Anexo~\ref*{#1}}%
+}
+
 % Comando robusto para referencias de apartados
 \newcommand{\apartadoref}[1]{%
   \hyperref[#1]{apartado~\ref*{#1}}%
@@ -200,6 +205,10 @@
     \cleardoublepage
     \thispagestyle{empty}
     \refstepcounter{appendixcounter}
+    \setcounter{figure}{0} % Reiniciar contador de figuras
+    \setcounter{table}{0}  % Reiniciar contador de tablas
+    \renewcommand{\thefigure}{A.\arabic{figure}} % Formato A.1
+    \renewcommand{\thetable}{A.\arabic{table}}   % Formato A.1
     \vspace*{\fill}
     \begin{center}
         \parbox{0.9\textwidth}{\centering\Huge\bfseries Anexo \theappendixcounter. #1}
