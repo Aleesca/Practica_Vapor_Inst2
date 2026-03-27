@@ -163,11 +163,3 @@ El preamble.sty se adapta dinámicamente según los requerimientos del contenido
 
 ### Detección de Modo de Operación
 El sistema distingue entre invocation única (una tarea) y procesamiento continuo (múltiples tareas relacionadas), ajustando el flujo de trabajo para optimizar el tratamiento de datos en cada modo.
-
----
-
-## Estado del Proyecto
-
-- **Estructura LaTeX**: ~2754 líneas en staging.tex
-- **Secciones completadas**: 1 (Introducción), 2.1-2.4 (Metodología y Dimensionado), 2.3 (Condensados), 2.4 (Aislamiento)
-- **Pendiente**: Sección 3 (Conclusiones y Limitaciones)
