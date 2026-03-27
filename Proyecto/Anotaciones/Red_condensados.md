@@ -55,31 +55,41 @@ Los tramos correspondientes se obtienen de la misma forma. Hay que tener en cuen
 
 
 
-### Tabla de Cálculos de Diámetros y Presiones
+El dimensionamiento hidráulico se integra en el diseño de la siguiente manera: el tramo Caldera-P (DN 65) opera a 19,31 m/s con $\Delta P$=0,02 bar; P-C₁ (DN 32) a 17,78 m/s con $\Delta P$=0,25 bar; P-S (DN 65) a 19,13 m/s con $\Delta P$=0,14 bar; S-C₂ (DN 50) a 18,04 m/s con $\Delta P$=0,05 bar; S-T (DN 65) a 17,70 m/s con $\Delta P$=0,08 bar; T-C₃ (DN 25) a 17,96 m/s con $\Delta P$=0,05 bar; y finalmente T-C₄ (DN 50) a 17,41 m/s con $\Delta P$=0,06 bar.
 
-| Linea de condensados | Lreal (m) | Dtanteo (mm) | Leq (m) | Lcálculo (m) | Tamaño tubería (mm) | Pentrada [bar(g)] | Psalida [bar(g)] |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Caldera-P | 12.74 | N/A | 2.548 | 15.3 | 65 | 3 | 2.98 |
-| P-C1 | 88.2 | 30 | 4.62 | 92.81 | 32 | 2.98 | 2.73 |
-| P-S | 105 | 60 | 12.72 | 117.72 | 65 | 2.73 | 2.59 |
-| S-C2 | 24 | 45 | 5.49 | 29.5 | 50 | 2.59 | 2.54 |
-| S-T | 60 | 50 | 7.5 | 67.5 | 65 | 2.59 | 2.51 |
-| T-C3 | 14 | N/A | 2.8 | 16.8 | 25 | 2.51 | 2.46 |
-| T-C4 | 44 | 50 | 6.2 | 50.2 | 50 | 2.51 | 2.45 |
+---
 
-*Nota: Tuberías Schedule 40. Para la línea de condensados no se ha seguido le metodología anterior de dimensionado se elegía el diámetro a través de la tabla de diámetros de tuberías de la norma DIN 2448 entonces. Entonces se han cogido estas tuberías porque es el estándar para presiones industriales bajas como es este caso $\left(P_{caldera} = 10 bar(a)\right)$*
+<!-- PÁGINA HORIZONTAL INDEPENDIENTE -->
+### Tablas de Verificación (Formato Horizontal)
 
-### Tabla de Verificación de Velocidades, Diámetros interiores y Caídas de Presión
+#### 1. Accesorios por tramo y cálculo de longitudes equivalentes
+| Tramo | $L_{real}$ (m) | Codos | T (recta) | T (derivación) | $D_{tanteo}$ (mm) | $L_{eq}$ (m) | $L_{cálculo}$ (m) |
+|-------|---|---|---|---|---|---|---|
+| Caldera-P | 12,74 | 0 | 0 | 0 | N/A | 2,548 | 15,30 |
+| P-C₁ | 88,20 | 2 | 1 | 0 | 30 | 4,62 | 92,81 |
+| P-S | 105,00 | 1 | 0 | 2 | 60 | 12,72 | 117,72 |
+| S-C₂ | 24,00 | 0 | 0 | 0 | 45 | 5,49 | 29,50 |
+| S-T | 60,00 | 0 | 1 | 1 | 50 | 7,50 | 67,50 |
+| T-C₃ | 14,00 | 0 | 0 | 0 | N/A | 2,80 | 16,80 |
+| T-C₄ | 44,00 | 2 | 1 | 0 | 50 | 6,20 | 50,20 |
 
-| Linea de condensados | Dinterior (mm) | v (m/s) | $\Delta P$ (bar) |
-| :--- | :---: | :---: | :---: |
-| Caldera-P | 58 | 19.31 | 0.02 |
-| P-C1 | 28 | 17.78 | 0.25 |
-| P-S | 58 | 19.13 | 0.14 |
-| S-C2 | 39 | 18.04 | 0.05 |
-| S-T | 50 | 17.7 | 0.08 |
-| T-C3 | 24 | 17.96 | 0.05 |
-| T-C4 | 48 | 17.41 | 0.06 |
+#### 2. Presiones disponibles vs. requeridas en los consumidores
+| Consumidor | $P_{disponible}$ (calculada) [bar(g)] | $P_{requerida}$ (red colector) [bar(g)] |
+|------------|---------------------------------------|-----------------------------------------|
+| C₁ | 2,73 | 3,0 |
+| C₂ | 2,54 | 3,0 |
+| C₃ | 2,46 | 3,0 |
+| C₄ | 2,45 | 3,0 |
+
+*Nota: La presión disponible se indica según el nodo de cálculo de la línea de condensados para mantener la estructura simétrica con la red de vapor.*
+
+#### 3. Pérdida de carga acumulada hasta cada consumidor
+| Consumidor | Ruta de retorno | $\Delta P_{acumulada}$ (bar) |
+|------------|-----------------|------------------------------|
+| C₁ | Caldera $\rightarrow$ P $\rightarrow$ C₁ | 0,02 + 0,25 = 0,27 |
+| C₂ | Caldera $\rightarrow$ P $\rightarrow$ S $\rightarrow$ C₂ | 0,02 + 0,14 + 0,05 = 0,21 |
+| C₃ | Caldera $\rightarrow$ P $\rightarrow$ S $\rightarrow$ T $\rightarrow$ C₃ | 0,02 + 0,14 + 0,08 + 0,05 = 0,29 |
+| C₄ | Caldera $\rightarrow$ P $\rightarrow$ S $\rightarrow$ T $\rightarrow$ C₄ | 0,02 + 0,14 + 0,08 + 0,06 = 0,30 |
   
 
 

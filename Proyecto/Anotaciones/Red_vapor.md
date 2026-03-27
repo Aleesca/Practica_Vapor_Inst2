@@ -17,30 +17,39 @@ Del análisis efectuado se observa que la línea de salida de caldera hasta el p
 
 En consecuencia, puede considerarse que la red queda correctamente dimensionada desde el punto de vista hidráulico, ya que los diámetros seleccionados permiten transportar el caudal requerido con velocidades homogéneas y con pérdidas de presión moderadas en todos los tramos. La metodología seguida combina, por tanto, un primer tanteo basado en criterio de velocidad con una verificación posterior de pérdidas lineales y singulares mediante hoja de cálculo.
 
-### Tabla de longitudes de cálculo y presiones por tramo
+El dimensionado hidráulico de cada tramo se resume a continuación para su integración en el texto: el tramo Caldera-P utiliza tubería Schedule 80 - 150 (v=19,17 m/s, $\Delta P$=0,01 bar); el tramo P-C₁ emplea Schedule 160 - 80 (v=18,93 m/s, $\Delta P$=0,24 bar); P-S usa DIN 2448 - 125 (v=20,28 m/s, $\Delta P$=0,16 bar); S-C₂ con DIN 2448 - 80 (v=21,45 m/s, $\Delta P$=0,07 bar); S-T utiliza DIN 2448 - 100 (v=20,79 m/s, $\Delta P$=0,12 bar); T-C₃ con Schedule 40 - 50 (v=20,42 m/s, $\Delta P$=0,07 bar); y finalmente T-C₄ con Schedule 40 - 100 (v=20,11 m/s, $\Delta P$=0,09 bar).
 
-| Tramo | $L_{real}$ (m) | Codos | T (recta) | T (derivación) | $D_{tanteo}$ (mm) | $L_{eq}$ (m) | $L_{cálculo}$ (m) | $P_{entrada}$ [bar(g)] | $P_{salida}$ [bar(g)] |
-|-------|---|---|---|---|---|---|---|---|---|
-| Caldera-P | 12,74 | 0 | 0 | 0 | N/A | 2,548 | 15,288 | 9,068 | 9,058 |
-| P-C₁ | 88,189 | 2 | 1 | 0 | 60 | 9,24 | 97,429 | 9,058 | 8,818 |
-| P-S | 106 | 1 | 0 | 2 | 120 | 25,44 | 131,44 | 9,058 | 8,90 |
-| S-C₂ | 25 | 0 | 0 | 0 | N/A | 5 | 30 | 8,90 | 8,83 |
-| S-T | 60 | 0 | 1 | 1 | 120 | 7,5 | 78 | 8,90 | 8,78 |
-| T-C₃ | 15 | 0 | 0 | 0 | N/A | 3 | 18 | 8,78 | 8,71 |
-| T-C₄ | 45 | 2 | 1 | 0 | 100 | 12,4 | 57,4 | 8,78 | 8,69 |
+---
 
+<!-- PÁGINA HORIZONTAL INDEPENDIENTE -->
+### Tablas de Verificación (Formato Horizontal)
 
-### Tabla de Verificación hidráulica
+#### 1. Accesorios por tramo y cálculo de longitudes equivalentes
+| Tramo | $L_{real}$ (m) | Codos | T (recta) | T (derivación) | $D_{tanteo}$ (mm) | $L_{eq}$ (m) | $L_{cálculo}$ (m) |
+|-------|---|---|---|---|---|---|---|
+| Caldera-P | 12,74 | 0 | 0 | 0 | N/A | 2,548 | 15,288 |
+| P-C₁ | 88,189 | 2 | 1 | 0 | 60 | 9,24 | 97,429 |
+| P-S | 106 | 1 | 0 | 2 | 120 | 25,44 | 131,44 |
+| S-C₂ | 25 | 0 | 0 | 0 | N/A | 5 | 30 |
+| S-T | 60 | 0 | 1 | 1 | 120 | 7,5 | 78 |
+| T-C₃ | 15 | 0 | 0 | 0 | N/A | 3 | 18 |
+| T-C₄ | 45 | 2 | 1 | 0 | 100 | 12,4 | 57,4 |
 
-| Tramo | Tubería seleccionada | $D_{interior}$ (mm) | $v$ (m/s) | $\Delta P$ (bar) |
-|-------|---|---|---|---|
-| Caldera-P | Schedule 80 - 150 | 146,4 | 19,17 | 0,01 |
-| P-C₁ | Schedule 160 - 80 | 66,6 | 18,93 | 0,24 |
-| P-S | DIN 2448 - 125 | 131,7 | 20,28 | 0,16 |
-| S-C₂ | DIN 2448 - 80 | 82,5 | 21,45 | 0,07 |
-| S-T | DIN 2448 - 100 | 107,1 | 20,79 | 0,12 |
-| T-C₃ | Schedule 40 - 50 | 52,5 | 20,42 | 0,07 |
-| T-C₄ | Schedule 40 - 100 | 102,3 | 20,11 | 0,09 |
+#### 2. Presiones disponibles vs. requeridas en los consumidores
+| Consumidor | $P_{disponible}$ [bar(g)] | $P_{requerida}$ [bar(g)] | Margen [bar] |
+|------------|---------------------------|--------------------------|--------------|
+| C₁ | 8,818 | 4,0 | +4,818 |
+| C₂ | 8,830 | 7,0 | +1,830 |
+| C₃ | 8,710 | 7,0 | +1,710 |
+| C₄ | 8,690 | 7,0 | +1,690 |
+
+#### 3. Pérdida de carga acumulada hasta cada consumidor
+| Consumidor | Ruta | $\Delta P_{acumulada}$ (bar) |
+|------------|------|------------------------------|
+| C₁ | Caldera $\rightarrow$ P $\rightarrow$ C₁ | 0,01 + 0,24 = 0,25 |
+| C₂ | Caldera $\rightarrow$ P $\rightarrow$ S $\rightarrow$ C₂ | 0,01 + 0,16 + 0,07 = 0,24 |
+| C₃ | Caldera $\rightarrow$ P $\rightarrow$ S $\rightarrow$ T $\rightarrow$ C₃ | 0,01 + 0,16 + 0,12 + 0,07 = 0,36 |
+| C₄ | Caldera $\rightarrow$ P $\rightarrow$ S $\rightarrow$ T $\rightarrow$ C₄ | 0,01 + 0,16 + 0,12 + 0,09 = 0,38 |
 
 
 

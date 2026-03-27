@@ -35,6 +35,19 @@
 \tikzexternalize[prefix=TikZ-Cache/] % Crea una carpeta para las imágenes pre-compiladas
 
 
+% --- CONTROL ESTRICTO DE LÍNEAS VIUDAS Y HUÉRFANAS ---
+\widowpenalty=10000         % Penalización para líneas viudas (al inicio de página)
+\clubpenalty=10000          % Penalización para líneas huérfanas (al final de página)
+\brokenpenalty=10000        % Penalización para saltos de página en palabras cortadas
+\displaywidowpenalty=10000  % Penalización para líneas viudas antes de ecuaciones
+\predisplaypenalty=10000    % Penalización para saltos de página antes de ecuaciones
+
+% --- CONTROL DE TÍTULOS HUÉRFANOS (evita títulos solos al final de página) ---
+\usepackage{needspace}      % Permite reservar espacio antes de títulos
+\raggedbottom               % Permite páginas con altura variable para evitar títulos huérfanos
+
+\usepackage[lof,lot]{etoc}
+
 
 % --- AJUSTE DE ESPACIADO PARA TÍTULOS DE ÍNDICES ---
 
