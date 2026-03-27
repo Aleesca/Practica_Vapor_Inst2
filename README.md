@@ -142,3 +142,32 @@ flowchart TD
 - **pdflatex** o **lualatex** en PATH del sistema
 - **IDE con soporte para agentes de IA** (Claude, GPT, Codex, etc.)
 - Paquetes LaTeX: `booktabs`, `graphicx`, `amsmath`, `float`, `siunitx`, `hyperref`
+
+---
+
+## Refinamientos del Sistema
+
+El sistema ha evolucionado para mejorar el tratamiento de datos técnicos mediante los siguientes refinamientos:
+
+### Procesamiento en Lote Continuo
+Los tareas relacionadas se procesan automáticamente sin intervención manual repetida. Esto permite que el flujo Ralph Loop procese secciones completas (ej: todos los tramos de una red) manteniendo coherencia contextual entre generaciones.
+
+### Gestión de Dependencias entre Agentes
+El sistema ahora identifica y resuelve dependencias lógicas entre agentes. Por ejemplo, el agente `latex-writer` requiere que `steam-researcher` haya completado la investigación correspondiente antes de generar código.
+
+### Validación con Retroalimentación
+Se implementó un sistema de puntuación en la validación LaTeX que proporciona retroalimentación cuantitativa al agente escritor. Esto permite al sistemaauto-corregir errores de formato o estructura antes de solicitar confirmación al usuario.
+
+### Estructura Dinámica de Preámbulo
+El preamble.sty se adapta dinámicamente según los requerimientos del contenido generado. Paquetes como `booktabs` se añaden automáticamente cuando el contenido incluye tablas complejas.
+
+### Detección de Modo de Operación
+El sistema distingue entre invocation única (una tarea) y procesamiento continuo (múltiples tareas relacionadas), ajustando el flujo de trabajo para optimizar el tratamiento de datos en cada modo.
+
+---
+
+## Estado del Proyecto
+
+- **Estructura LaTeX**: ~2754 líneas en staging.tex
+- **Secciones completadas**: 1 (Introducción), 2.1-2.4 (Metodología y Dimensionado), 2.3 (Condensados), 2.4 (Aislamiento)
+- **Pendiente**: Sección 3 (Conclusiones y Limitaciones)
